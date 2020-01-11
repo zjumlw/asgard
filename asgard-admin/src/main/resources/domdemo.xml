@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="attrib.css"?>
+<addresslist>
+	<linkman>
+		<name>willmao</name>
+		<id>001</id>
+		<company>Mi</company>
+		<email>maolingwei@xiaomi.com</email>
+		<tel>123456</tel>
+		<site>www.xiaomi.com</site>
+	</linkman>
+</addresslist>

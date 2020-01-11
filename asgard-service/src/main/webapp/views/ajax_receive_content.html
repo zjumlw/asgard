@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Demo</title>
+</head>
+<body>
+<script language="JavaScript">
+    var xmlHttp;
+    function createXMLHttp() {
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            xmlHttp = new ActiveXObject("Mircosoft.XMLHTTP")
+        }
+    }
+    function showMsg() {
+        createXMLHttp();
+        xmlHttp.open("POST", "content.html");
+        xmlHttp.onreadystatechange = showMsgCallback();
+        xmlHttp.send(null);
+    }
+
+    function showMsgCallback() {
+        if (xmlHttp.readyState === 4) {
+            if (xmlHttp.status === 200) {
+                let text = xmlHttp.responseText;
+                document.getElementById("msg").innerHTML = text;
+            }
+        } else {
+            document.getElementById("state").innerHTML = xmlHttp.readyState;
+        }
+    }
+
+    function sleep(delay) {
+        var start = (new Date()).getTime();
+        while(new Date().getTime() - start < delay){
+            continue;
+        }
+    }
+</script>
+<input type="button" onclick="showMsg()" value="ShowMsg">
+<span id="msg"></span>
+<div id="state"></div>
+<div id="cnt"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload</title>
+</head>
+<body>
+<form name="uploadForm" method="post" enctype="multipart/form-data" action="/asgard/uploadServlet">
+<div>
+  <label for="username">User Name: </label>
+  <input type="text" name="username" id="username" placeholder="UserName"/><br>
+  <label for="file1">Upload File1: </label>
+  <input type="file" name="file1" id="file1"><br>
+  <label for="file2">Upload File2: </label>
+  <input type="file" name="file2" id="file2"><br>
+  <input type="submit" name="submit" value="upload"><br>
+  <input type="reset" name="reset" value="reset">
+</div>
+</form>
+</body>
+</html>
