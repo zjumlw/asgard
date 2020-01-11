@@ -7,8 +7,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>asgard-helloworld</artifactId>
-  <name>Hello World Project</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <name>Asgard Hello World</name>
   <build>
     <plugins>
       <plugin>
