@@ -1,6 +1,6 @@
 package com.will.asgard.service.hello;
 
-import com.will.asgard.common.core.model.vo.DeptVO;
+import com.will.asgard.common.model.vo.DeptVO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

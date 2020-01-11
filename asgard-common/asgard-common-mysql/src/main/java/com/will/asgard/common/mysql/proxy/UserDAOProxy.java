@@ -1,6 +1,6 @@
 package com.will.asgard.common.mysql.proxy;
 
-import com.will.asgard.common.core.model.po.UserPO;
+import com.will.asgard.common.model.po.UserPO;
 import com.will.asgard.common.mysql.DatabaseConnection;
 import com.will.asgard.common.mysql.dao.IUserDAO;
 import com.will.asgard.common.mysql.impl.UserDAOImpl;

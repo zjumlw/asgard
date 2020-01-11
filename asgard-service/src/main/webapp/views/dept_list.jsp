@@ -1,4 +1,4 @@
-<%@ page import="com.will.asgard.common.core.model.vo.DeptVO" %>
+<%@ page import="com.will.asgard.common.model.vo.DeptVO" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

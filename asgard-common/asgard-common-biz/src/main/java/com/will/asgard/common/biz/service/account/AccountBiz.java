@@ -1,6 +1,6 @@
 package com.will.asgard.common.biz.service.account;
 
-import com.will.asgard.common.core.employee.Account;
+import com.will.asgard.common.employee.Account;
 import com.will.asgard.common.mysql.dao.AccountDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

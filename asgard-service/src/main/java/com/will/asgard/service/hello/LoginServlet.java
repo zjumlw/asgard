@@ -1,7 +1,7 @@
 package com.will.asgard.service.hello;
 
 import com.google.common.collect.Lists;
-import com.will.asgard.common.core.model.po.UserPO;
+import com.will.asgard.common.model.po.UserPO;
 import com.will.asgard.common.mysql.factory.DAOFactory;
 import org.apache.commons.lang3.StringUtils;
 

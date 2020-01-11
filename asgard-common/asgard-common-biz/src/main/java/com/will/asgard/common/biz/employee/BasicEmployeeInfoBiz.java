@@ -1,6 +1,6 @@
 package com.will.asgard.common.biz.employee;
 
-import com.will.asgard.common.core.employee.Account;
+import com.will.asgard.common.employee.Account;
 
 /**
  * Created by WillMao on 18-9-11

@@ -12,7 +12,7 @@ import com.google.common.collect.Maps;
 public class TrackCounter {
 	private Map<Integer, Integer> trackCounts = Maps.newHashMap();
 
-	@Pointcut("execution(* com.will.asgard.common.core.soundsystem.CompactDisc.playTrack(int)) && args(trackNumber)")
+	@Pointcut("execution(* com.will.asgard.common.soundsystem.CompactDisc.playTrack(int)) && args(trackNumber)")
 	public void trackPlayed(int trackNumber) {
 	}
 

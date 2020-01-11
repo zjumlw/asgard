@@ -1,6 +1,6 @@
 package com.will.asgard.common.mysql.dao;
 
-import com.will.asgard.common.core.employee.Account;
+import com.will.asgard.common.employee.Account;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 import org.springframework.stereotype.Service;

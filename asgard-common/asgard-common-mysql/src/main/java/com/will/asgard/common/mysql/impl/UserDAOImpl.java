@@ -1,6 +1,6 @@
 package com.will.asgard.common.mysql.impl;
 
-import com.will.asgard.common.core.model.po.UserPO;
+import com.will.asgard.common.model.po.UserPO;
 import com.will.asgard.common.mysql.dao.IUserDAO;
 
 import java.sql.Connection;

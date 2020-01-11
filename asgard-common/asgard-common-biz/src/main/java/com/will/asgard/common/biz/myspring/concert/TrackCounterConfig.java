@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import com.google.common.collect.Lists;
-import com.will.asgard.common.core.soundsystem.BlankDisc;
-import com.will.asgard.common.core.soundsystem.CompactDisc;
+import com.will.asgard.common.soundsystem.BlankDisc;
+import com.will.asgard.common.soundsystem.CompactDisc;
 
 @Configuration
 @EnableAspectJAutoProxy // 启动 AspectJ 自动代理

@@ -1,4 +1,4 @@
-<%@ page import="com.will.asgard.common.core.model.vo.UserVO" %>
+<%@ page import="com.will.asgard.common.model.vo.UserVO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
