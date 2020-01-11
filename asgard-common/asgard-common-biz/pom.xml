@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>asgard-common-biz</artifactId>
-  <name>Asgard common biz</name>
+  <name>Asgard Common Biz</name>
 
   <dependencies>
     <dependency>
