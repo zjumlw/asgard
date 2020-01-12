@@ -9,6 +9,12 @@
   <packaging>pom</packaging>
   <name>Asgard Odin</name>
 
+  <modules>
+    <module>asgard-common</module>
+    <module>asgard-loki</module>
+    <module>asgard-thor</module>
+  </modules>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.sersion>1.8</java.sersion>

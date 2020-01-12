@@ -14,6 +14,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>asgard-thor-model</module>
     <module>asgard-thor-service</module>
     <module>asgard-thor-web</module>
   </modules>
@@ -21,4 +22,14 @@
   <properties>
     <log4j_level>info</log4j_level>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.9.5</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

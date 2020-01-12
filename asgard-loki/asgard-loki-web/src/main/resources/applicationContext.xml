@@ -11,14 +11,7 @@
        default-lazy-init="true">
 
   <context:annotation-config/>
-  <context:component-scan base-package="com.will.asgard"/>
+  <context:component-scan base-package="com.will.asgard.loki"/>
 
   <aop:aspectj-autoproxy/>
-
-  <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://127.0.0.1:3306/will?useUnicode=true&amp;characterEncoding=utf-8"/>
-    <property name="username" value="will"/>
-    <property name="password" value="willqwer!@#$"/>
-  </bean>
 </beans>

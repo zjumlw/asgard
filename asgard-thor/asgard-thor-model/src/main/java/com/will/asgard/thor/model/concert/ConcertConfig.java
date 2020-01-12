@@ -1,4 +1,4 @@
-package com.will.asgard.thor.service.concert;
+package com.will.asgard.thor.model.concert;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

@@ -1,4 +1,4 @@
-package com.will.asgard.thor.service.concert;
+package com.will.asgard.thor.model.concert;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -15,7 +15,7 @@ import org.aspectj.lang.annotation.Pointcut;
 public class Audience {
 
 	// 定义命名的切点
-	@Pointcut("execution(* com.will.asgard.thor.service.concert.Performance.perform(..))")
+	@Pointcut("execution(* com.will.asgard.thor.model.concert.Performance.perform(..))")
 	public void performance() {
 	}
 

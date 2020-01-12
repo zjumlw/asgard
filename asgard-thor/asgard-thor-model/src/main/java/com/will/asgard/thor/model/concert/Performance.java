@@ -1,4 +1,4 @@
-package com.will.asgard.thor.service.concert;
+package com.will.asgard.thor.model.concert;
 
 /**
  * Created by WillMao on 19-7-11

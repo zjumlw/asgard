@@ -1,8 +1,8 @@
-package com.will.asgard.thor.service.concert;
+package com.will.asgard.thor.model.concert;
 
 import com.google.common.collect.Lists;
-import com.will.asgard.loki.model.soundsystem.BlankDisc;
-import com.will.asgard.loki.model.soundsystem.CompactDisc;
+import com.will.asgard.thor.model.soundsystem.BlankDisc;
+import com.will.asgard.thor.model.soundsystem.CompactDisc;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

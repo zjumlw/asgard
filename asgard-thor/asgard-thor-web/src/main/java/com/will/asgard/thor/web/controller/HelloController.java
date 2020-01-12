@@ -1,4 +1,4 @@
-package com.will.asgard.web.controller;
+package com.will.asgard.thor.web.controller;
 
 import lombok.extern.slf4j.Slf4j;
 

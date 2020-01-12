@@ -1,4 +1,4 @@
-package com.will.asgard.thor.service.concert;
+package com.will.asgard.thor.model.concert;
 
 import com.google.common.collect.Maps;
 import org.aspectj.lang.annotation.Aspect;
@@ -11,7 +11,7 @@ import java.util.Map;
 public class TrackCounter {
 	private Map<Integer, Integer> trackCounts = Maps.newHashMap();
 
-	@Pointcut("execution(* com.will.asgard.loki.model.soundsystem.CompactDisc.playTrack(int)) && args(trackNumber)")
+	@Pointcut("execution(* com.will.asgard.thor.model.soundsystem.CompactDisc.playTrack(int)) && args(trackNumber)")
 	public void trackPlayed(int trackNumber) {
 	}
 
