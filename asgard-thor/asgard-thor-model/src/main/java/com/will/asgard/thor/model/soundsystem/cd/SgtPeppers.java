@@ -2,7 +2,7 @@ package com.will.asgard.thor.model.soundsystem.cd;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("sgtPeppers")
 public class SgtPeppers implements CompactDisc {
 
     private String title = "Sgt. Pepper's Lonely Hearts Club Band";

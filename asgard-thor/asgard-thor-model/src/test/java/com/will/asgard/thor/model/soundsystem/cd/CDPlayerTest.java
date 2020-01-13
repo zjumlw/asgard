@@ -1,4 +1,4 @@
-package com.will.asgard.thor.model.soundsystem;
+package com.will.asgard.thor.model.soundsystem.cd;
 
 import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
 import com.will.asgard.thor.model.soundsystem.player.CDPlayerConfig;
