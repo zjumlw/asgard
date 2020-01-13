@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+  <Properties>
+    <Property name="service">asgard-thor-model</Property>
+    <Property name="logFileRoot">log/${service}/log</Property>
+    <Property name="pattern">[%p %d] %c{1.} [%t] %m%n</Property>
+    <Property name="log4j_level">info</Property>
+  </Properties>
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout>
+        <Pattern>${pattern}</Pattern>
+      </PatternLayout>
+    </Console>
+    <RollingRandomAccessFile name="fileAppender" fileName="${logFileRoot}/${service}.log"
+                             filePattern="${logFileRoot}/bk/${service}-%d{yyyy-MM-dd}-%i.log.gz">
+      <PatternLayout>
+        <Pattern>${pattern}</Pattern>
+      </PatternLayout>
+      <Policies>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+      </Policies>
+    </RollingRandomAccessFile>
+    <RollingRandomAccessFile name="otherAppender" fileName="${logFileRoot}/${service}-other.log"
+                             filePattern="${logFileRoot}/bk/${service}-other-%d{yyyy-MM-dd}-%i.log.gz">
+    <PatternLayout>
+      <Pattern>${pattern}</Pattern>
+    </PatternLayout>
+    <Policies>
+      <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+    </Policies>
+    </RollingRandomAccessFile>
+    <RollingRandomAccessFile name="rootAppender" fileName="${logFileRoot}/${service}-root.log"
+                             filePattern="${logFileRoot}/bk/${service}-root-%d{yyyy-MM-dd}-%i.log.gz">
+      <PatternLayout>
+        <Pattern>${pattern}</Pattern>
+      </PatternLayout>
+      <Policies>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+      </Policies>
+    </RollingRandomAccessFile>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.will" level="${log4j_level}" additivity="false">
+      <AppenderRef ref="fileAppender"/>
+      <AppenderRef ref="console"/>
+
+    </Logger>
+    <Root level="info">
+      <AppenderRef ref="rootAppender"/>
+    </Root>
+  </Loggers>
+</Configuration>

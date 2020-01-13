@@ -1,7 +1,8 @@
-package com.will.asgard.thor.model.soundsystem;
+package com.will.asgard.thor.model.soundsystem.cd;
 
 public interface CompactDisc {
-	void play();
+
+    void play();
 
 	void playTrack(int trackNumber);
 }

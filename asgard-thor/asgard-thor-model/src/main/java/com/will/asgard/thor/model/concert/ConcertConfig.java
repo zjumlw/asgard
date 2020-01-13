@@ -15,6 +15,8 @@ public class ConcertConfig {
 
 	@Bean
 	public Audience audience() {
-		return new Audience();
+        Audience audience = new Audience();
+        audience.setName("Jack");
+        return audience;
 	}
 }

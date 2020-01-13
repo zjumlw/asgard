@@ -1,46 +1,46 @@
 package com.will.asgard.thor.model.concert;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 
 /**
  * Created by WillMao on 19-7-11
  */
 @Aspect
 public class Audience {
+    @Setter
+    @Getter
+    private String name;
 
 	// 定义命名的切点
 	@Pointcut("execution(* com.will.asgard.thor.model.concert.Performance.perform(..))")
-	public void performance() {
+	public void perform() {
 	}
 
-	@Before("performance()")
-	public void silenceCellPhones() {
-		System.out.println("Silencing cell phone");
-	}
-
-	@Before("performance()")
-	public void takeSeats() {
-		System.out.println("Taking seats");
-	}
-
-	@AfterReturning("performance()")
-	public void applause() {
-		System.out.println("CLAP CLAP CLAP!!!");
-	}
-
-	@AfterThrowing("performance()")
-	public void demandRefund() {
-		System.out.println("Demanding a refund");
-	}
+//	@Before("perform()")
+//	public void silenceCellPhones() {
+//		System.out.println("Silencing cell phone");
+//	}
+//
+//	@Before("perform()")
+//	public void takeSeats() {
+//		System.out.println("Taking seats");
+//	}
+//
+//	@AfterReturning("perform()")
+//	public void applause() {
+//		System.out.println("CLAP CLAP CLAP!!!");
+//	}
+//
+//	@AfterThrowing("perform()")
+//	public void demandRefund() {
+//		System.out.println("Demanding a refund");
+//	}
 
 	// 环绕通知方法
-	@Around("performance()")
+	@Around("perform()")
 	public void watchPerformance(ProceedingJoinPoint jp) {
 		try {
 			System.out.println("Silencing cell phones");

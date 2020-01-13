@@ -1,12 +1,5 @@
 package com.will.asgard.common.util;
 
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.google.common.base.Strings;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
@@ -15,19 +8,23 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+
 public class GsonUtil {
 
 	private GsonUtil() {
 		throw new IllegalStateException();
 	}
 
-	private static final ThreadLocal<Gson> THREAD_LOCAL_GSON = ThreadLocal.withInitial(Gson::new);
-
-	public static final Type TOKEN_LIST_INT = new TypeToken<List<Integer>>() { }.getType();
-
-	public static final Type TOKEN_LIST_LONG = new TypeToken<List<Long>>() { }.getType();
-
-	public static final Type TOKEN_LIST_STRING = new TypeToken<List<String>>() { }.getType();
+    public static final Type TOKEN_LIST_INT = new TypeToken<List<Integer>>() { }.getType();
+    public static final Type TOKEN_LIST_LONG = new TypeToken<List<Long>>() { }.getType();
+    public static final Type TOKEN_LIST_STRING = new TypeToken<List<String>>() { }.getType();
+    private static final ThreadLocal<Gson> THREAD_LOCAL_GSON = ThreadLocal.withInitial(Gson::new);
 
 	public static String toJson(Object obj) {
 		return obj == null ? null : gson().toJson(obj);
