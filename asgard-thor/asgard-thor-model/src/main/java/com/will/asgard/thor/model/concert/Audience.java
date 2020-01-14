@@ -1,18 +1,17 @@
 package com.will.asgard.thor.model.concert;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by WillMao on 19-7-11
  */
+@Component()
 @Aspect
 public class Audience {
-    @Setter
-    @Getter
-    private String name;
 
 	// 定义命名的切点
 	@Pointcut("execution(* com.will.asgard.thor.model.concert.Performance.perform(..))")
@@ -49,6 +48,7 @@ public class Audience {
 			System.out.println("CLAP CLAP CLAP!!!");
 		} catch (Throwable ex) {
 			System.out.println("Demanding a refund");
+            ex.printStackTrace();
 		}
 	}
 

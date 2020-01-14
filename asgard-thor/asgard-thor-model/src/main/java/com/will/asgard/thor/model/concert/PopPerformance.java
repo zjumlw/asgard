@@ -1,8 +1,8 @@
 package com.will.asgard.thor.model.concert;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service("popPerformance")
+@Component("popPerformance")
 public class PopPerformance implements Performance {
     @Override
     public void perform() {
