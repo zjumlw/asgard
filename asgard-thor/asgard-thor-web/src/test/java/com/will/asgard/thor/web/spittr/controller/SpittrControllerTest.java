@@ -1,6 +1,5 @@
-package com.will.asgard.thor.web.controller;
+package com.will.asgard.thor.web.spittr.controller;
 
-import com.will.asgard.thor.web.spittr.controller.SpittrController;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
