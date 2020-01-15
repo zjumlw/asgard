@@ -1,4 +1,4 @@
-package com.will.asgard.thor.web.config;
+package com.will.asgard.thor.web.spittr.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.will.asgard.thor.web.controller")
+@ComponentScan("com.will.asgard.thor.web.spittr")
 public class WebConfig implements WebMvcConfigurer {
 
     @Bean

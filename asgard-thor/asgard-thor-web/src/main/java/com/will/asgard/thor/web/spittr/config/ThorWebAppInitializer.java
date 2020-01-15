@@ -1,4 +1,4 @@
-package com.will.asgard.thor.web.config;
+package com.will.asgard.thor.web.spittr.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
