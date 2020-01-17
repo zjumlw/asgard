@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.will.asgard.thor.web.spittr")
+@ComponentScan(basePackages = {"com.will.asgard.thor.web.spittr", "com.will.asgard.thor.service.spittr"})
 public class WebConfig implements WebMvcConfigurer {
 
     @Bean
