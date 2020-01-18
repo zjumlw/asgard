@@ -10,8 +10,7 @@
 <html>
 <head>
   <title>Spittles</title>
-  <link rel="stylesheet" type="text/css" href="<c:url value="/css/style.css"/>">
-</head>
+  <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css"></head>
 <body>
 <c:forEach items="${spittleList}" var="spittle">
   <li id="spittle_<c:out value="spittle.id"/>">
