@@ -23,4 +23,14 @@ label{
 
 input{
     font-size: inherit;
+    background-color: #ffcccc;
+}
+
+div.error {
+    background-color: #ffcccc;
+    border: 2px solid red;
+}
+
+label.error {
+    color: red;
 }

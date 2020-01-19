@@ -1,5 +1,6 @@
 package com.will.asgard.thor.web.spittr.controller;
 
+import com.will.asgard.common.util.GsonUtil;
 import com.will.asgard.thor.model.spittr.Spitter;
 import com.will.asgard.thor.model.spittr.SpitterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,8 @@ public class SpitterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String showRegistrationForm() {
+    public String showRegistrationForm(Model model) {
+        model.addAttribute(new Spitter());
         return "registerForm";
     }
 
@@ -40,12 +42,14 @@ public class SpitterController {
     public String processRegistration(
             @Valid Spitter spitter,
             Errors errors) {
+        System.out.println(GsonUtil.toJson(spitter));
         if (errors.hasErrors()) {
+            System.out.println("register has errors: " + GsonUtil.toJson(errors.getAllErrors()));
             return "registerForm";
         }
 
         spitterRepository.save(spitter);
-        return "redirect:/spitter" + spitter.getUsername();
+        return "redirect:/spitter/" + spitter.getUsername();
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
