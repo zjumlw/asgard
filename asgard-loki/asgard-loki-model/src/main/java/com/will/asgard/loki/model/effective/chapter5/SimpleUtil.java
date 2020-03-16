@@ -17,10 +17,7 @@ public class SimpleUtil {
 	private SimpleUtil() {
 	}
 
-	public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
-		if (s1 == null) {
-			return s2;
-		}
+	public static <E> Set<E> union(Set<? extends E> s1, Set<? extends E> s2) {
 		Set<E> result = new HashSet<>(s1);
 		if (s2 != null) {
 			result.addAll(s2);
@@ -39,8 +36,8 @@ public class SimpleUtil {
 		return (UnaryFunction<T>) IDENTITY_FUNCTION;
 	}
 
-	public static <T extends Comparable<T>> T max(List<T> list) {
-		Iterator<T> it = list.iterator();
+	public static <T extends Comparable<? super T>> T max(List<? extends T> list) {
+		Iterator<? extends T> it = list.iterator();
 		T result = it.next();
 		while (it.hasNext()) {
 			T t = it.next();

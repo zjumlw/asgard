@@ -1,7 +1,10 @@
 package com.will.asgard.loki.model.effective.chapter5;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.EmptyStackException;
+
+import com.will.asgard.common.util.GsonUtil;
 
 /**
  * @ClassName Stack
@@ -24,6 +27,12 @@ public class Stack<E> {
 		elements[size++] = e;
 	}
 
+	public void pushAll(Iterable<? extends E> src) {
+		for (E e : src) {
+			push(e);
+		}
+	}
+
 	public E pop() {
 		if (size == 0) {
 			throw new EmptyStackException();
@@ -34,6 +43,12 @@ public class Stack<E> {
 		return result;
 	}
 
+	public void popAll(Collection<? super E> dst) {
+		while (!isEmpty()) {
+			dst.add(pop());
+		}
+	}
+
 	public boolean isEmpty() {
 		return size == 0;
 	}
@@ -42,5 +57,16 @@ public class Stack<E> {
 		if (elements.length == size) {
 			elements = Arrays.copyOf(elements, 2 * size + 1);
 		}
+	}
+
+	public Object[] getElements() {
+		return elements;
+	}
+
+	public void status() {
+		System.out.println("elements:" + GsonUtil.toJson(elements));
+		System.out.println("elements length: " + elements.length);
+		System.out.println("size: " + size);
+		System.out.println("--------");
 	}
 }

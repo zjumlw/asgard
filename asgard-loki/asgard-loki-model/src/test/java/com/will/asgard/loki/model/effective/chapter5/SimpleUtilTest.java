@@ -4,14 +4,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ScheduledFuture;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-
-import static org.junit.Assert.*;
+import com.google.common.collect.Sets;
 
 public class SimpleUtilTest {
 
@@ -34,6 +34,15 @@ public class SimpleUtilTest {
 
 		s3 = SimpleUtil.union(null, null);
 		Assert.assertEquals(null, s3);
+	}
+
+	@Test
+	public void testUnion1() {
+		Set<Integer> integers = Sets.newHashSet(1, 2, 3);
+		Set<Double> doubles = Sets.newHashSet(1.1, 2.2, 3.3);
+
+		Set<Number> numbers = SimpleUtil.union(integers, doubles);
+		System.out.println(numbers);
 	}
 
 	@Test
@@ -63,5 +72,11 @@ public class SimpleUtilTest {
 		List<Integer> numbers = Lists.newArrayList(1, 3, 5, 7, 9);
 		Integer maxNumber = SimpleUtil.max(numbers);
 		Assert.assertEquals(9, maxNumber.intValue());
+	}
+
+	@Test
+	public void testMax1() {
+		List<ScheduledFuture<?>> scheduledFutures = Lists.newArrayList();
+		// ...
 	}
 }

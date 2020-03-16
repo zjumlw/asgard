@@ -1,8 +1,11 @@
 package com.will.asgard.loki.model.effective;
 
+import java.util.Collection;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import com.google.common.collect.Lists;
+import com.will.asgard.loki.model.effective.chapter5.Stack;
 
 public class StackTest {
 
@@ -22,5 +25,18 @@ public class StackTest {
 
 		Object[] elements = stack.getElements();
 		System.out.println(elements[16]);
+	}
+
+	@Test
+	public void testPushAll() {
+		Stack<Number> numberStack = new Stack<>();
+		Iterable<Integer> integers = Lists.newArrayList(1, 2, 3, 4, 5);
+		numberStack.pushAll(integers);
+
+		numberStack.status();
+
+		Collection<Object> dst = Lists.newArrayList();
+		numberStack.popAll(dst);
+		System.out.println(dst);
 	}
 }
