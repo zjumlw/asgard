@@ -36,7 +36,9 @@ public class HttpClientWithPoolTest extends BaseHttpClientTest {
 	private void initHttpClient() {
 		PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
 		connectionManager.setMaxTotal(1);
-		connectionManager.setMaxPerRoute(new HttpRoute(new HttpHost("www.baidu.com")), 1);
+		// 可为每个域名设置单独的连接池数量
+//		connectionManager.setMaxPerRoute(new HttpRoute(new HttpHost("www.baidu.com")), 1);
+		connectionManager.setDefaultMaxPerRoute(1);
 
 		RequestConfig requestConfig = RequestConfig.custom()
 				.setConnectTimeout(1000) // 建立连接的超时时间
@@ -56,20 +58,20 @@ public class HttpClientWithPoolTest extends BaseHttpClientTest {
 		// 服务端假设关闭了连接，对客户端是不透明的，HttpClient为了缓解这一问题，在某个连接使用前会检测这个连接是否过时，
 		// 如果过时则连接失效，但是这种做法会为每个请求
 		// 增加一定额外开销，因此有一个定时任务专门回收长时间不活动而被判定为失效的连接，可以某种程度上解决这个问题
-		Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				try {
-					// 关闭失效连接并从连接池中移除
-					connectionManager.closeExpiredConnections();
-					// 关闭30秒钟内不活动的连接并从连接池中移除，空闲时间从交还给连接管理器时开始
-					connectionManager.closeIdleConnections(30, TimeUnit.SECONDS);
-				} catch (Throwable t) {
-					t.printStackTrace();
-				}
-			}
-		}, 0 , 1000 * 5);
+//		Timer timer = new Timer();
+//		timer.schedule(new TimerTask() {
+//			@Override
+//			public void run() {
+//				try {
+//					// 关闭失效连接并从连接池中移除
+//					connectionManager.closeExpiredConnections();
+//					// 关闭30秒钟内不活动的连接并从连接池中移除，空闲时间从交还给连接管理器时开始
+//					connectionManager.closeIdleConnections(30, TimeUnit.SECONDS);
+//				} catch (Throwable t) {
+//					t.printStackTrace();
+//				}
+//			}
+//		}, 0 , 1000 * 5);
 	}
 
 	@Test
