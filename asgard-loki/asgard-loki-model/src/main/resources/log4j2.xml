@@ -2,7 +2,7 @@
 <Configuration status="info">
   <Properties>
     <Property name="service">asgard-loki-model</Property>
-    <Property name="logFileRoot">src/test/log</Property>
+    <Property name="logFileRoot">asgard-loki/${service}/log</Property>
     <Property name="pattern">[%p %d] %c{1.} [%t] %m%n</Property>
     <Property name="log4j_level">debug</Property>
     <Property name="log4j_other_level">debug</Property>

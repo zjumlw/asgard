@@ -2,6 +2,9 @@ package com.will.asgard.loki.model.effective.chapter10;
 
 import org.junit.Test;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ConcurrentExampleTest {
 
 	@Test

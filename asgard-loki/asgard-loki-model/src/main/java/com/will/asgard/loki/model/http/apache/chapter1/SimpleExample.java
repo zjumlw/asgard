@@ -5,6 +5,15 @@ import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.HttpVersion;
 import org.apache.http.message.BasicHttpResponse;
+import java.io.IOException;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @ClassName SimpleExample
@@ -15,7 +24,7 @@ import org.apache.http.message.BasicHttpResponse;
  **/
 public class SimpleExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		HttpResponse response = new BasicHttpResponse(HttpVersion.HTTP_1_1,
 				HttpStatus.SC_OK, "OK");
 		response.addHeader("Set-Cookie",
@@ -28,5 +37,16 @@ public class SimpleExample {
 		System.out.println(h2);
 		Header[] hs = response.getHeaders("Set-Cookie");
 		System.out.println(hs.length);
+
+
+		CloseableHttpClient httpclient = HttpClients.createDefault();
+		HttpGet httpget = new HttpGet("http://prod.api.xiaomi.cn/hello/test");
+		CloseableHttpResponse resp = httpclient.execute(httpget);
+		try {
+			String entityString = EntityUtils.toString(resp.getEntity());
+			System.out.println(entityString);
+		} finally {
+			resp.close();
+		}
 	}
 }
