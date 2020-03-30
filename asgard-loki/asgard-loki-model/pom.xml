@@ -31,4 +31,18 @@
       <version>1.11.3</version>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>aliyun</id>
+      <name>aliyun maven repo remote</name>
+      <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>
