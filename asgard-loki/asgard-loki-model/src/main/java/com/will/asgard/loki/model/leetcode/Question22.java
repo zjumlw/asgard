@@ -12,7 +12,7 @@ import com.google.gson.Gson;
  * @Date 2020-04-09 22:00
  * @Version 1.0
  **/
-public class Problem22 {
+public class Question22 {
 
 	private static final String LEFT = "(";
 	private static final String RIGHT = ")";
@@ -73,7 +73,7 @@ public class Problem22 {
 
 	public static void main(String[] args) {
 		int n = 3;
-		List<String> result = new Problem22().generateParenthesis(n);
+		List<String> result = new Question22().generateParenthesis(n);
 		System.out.println(new Gson().toJson(result));
 
 //		System.out.println(new Problem22().getWithLeftAndRight(3, 3).substring(2));

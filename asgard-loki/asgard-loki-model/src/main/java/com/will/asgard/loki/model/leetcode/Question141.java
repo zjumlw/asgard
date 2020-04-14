@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * LinkedList Cycle
  */
-public class Problem141 {
+public class Question141 {
 
 	public boolean hasCycle(ListNode head) {
 		if (head == null) {

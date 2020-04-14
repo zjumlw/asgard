@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.leetcode;
 /**
  * 反转二叉树
  */
-public class Problem226 {
+public class Question226 {
 
 	public static void main(String[] args) {
 

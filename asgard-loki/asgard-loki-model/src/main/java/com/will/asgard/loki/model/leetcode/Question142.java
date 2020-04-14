@@ -1,6 +1,6 @@
 package com.will.asgard.loki.model.leetcode;
 
-public class Problem142 {
+public class Question142 {
 
 	public ListNode detectCycle(ListNode head) {
 		if (head == null) {

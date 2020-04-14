@@ -18,7 +18,7 @@ import com.will.asgard.common.util.GsonUtil;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class Problem1 {
+public class Question1 {
 
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
@@ -57,7 +57,7 @@ public class Problem1 {
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 9;
 
-        int[] result = new Problem1().twoSumSolutionMap(nums, target);
+        int[] result = new Question1().twoSumSolutionMap(nums, target);
 
         System.out.println(GsonUtil.toJson(result));
     }

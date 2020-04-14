@@ -14,7 +14,7 @@ package com.will.asgard.loki.model.leetcode;
  * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807
  */
-public class Problem2 {
+public class Question2 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode res = new ListNode(0);
@@ -62,7 +62,7 @@ public class Problem2 {
         ListNode l2 = createListNode(9);
         System.out.println("l2: " + showNumber(l2));
 
-        ListNode result = new Problem2().addTwoNumbers(l1, l2);
+        ListNode result = new Question2().addTwoNumbers(l1, l2);
         System.out.println("result: " + showNumber(result));
     }
 
