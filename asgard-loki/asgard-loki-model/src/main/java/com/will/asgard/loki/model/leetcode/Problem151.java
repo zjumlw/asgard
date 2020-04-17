@@ -1,7 +1,7 @@
 package com.will.asgard.loki.model.leetcode;
 
 /**
- * @ClassName Question151
+ * @ClassName Problem151
  * @Description 给定一个字符串，逐个翻转字符串中的每个单词。
  * 输入: "the sky is blue"
  * 输出: "blue is sky the"
