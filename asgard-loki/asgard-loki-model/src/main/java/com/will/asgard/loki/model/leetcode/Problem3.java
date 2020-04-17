@@ -31,7 +31,7 @@ import java.util.Set;
  *
  * Need review
  */
-public class Question3 {
+public class Problem3 {
 
     public int lengthOfLongestSubstring(String s) {
         if (s == null) {
@@ -71,7 +71,7 @@ public class Question3 {
 
     public static void main(String[] args) {
         String str = "pwwkew";
-        System.out.println(new Question3().lengthOfLongestSubstring(str));
+        System.out.println(new Problem3().lengthOfLongestSubstring(str));
 
     }
 

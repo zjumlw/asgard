@@ -26,7 +26,7 @@ package com.will.asgard.loki.model.leetcode;
  * @Date 2020-04-14 22:52
  * @Version 1.0
  **/
-public class Question151 {
+public class Problem151 {
 
 	public String reverseWords(String s) {
 		int length = s.length();

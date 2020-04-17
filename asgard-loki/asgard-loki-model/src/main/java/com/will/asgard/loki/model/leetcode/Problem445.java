@@ -23,7 +23,7 @@ import java.util.Stack;
  * @Date 2020-04-14 23:52
  * @Version 1.0
  **/
-public class Question445 {
+public class Problem445 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode r1 = reverse(l1);
@@ -122,7 +122,7 @@ public class Question445 {
         int[] arr2 = new int[]{5,5};
         ListNode l2 = initList(arr2);
 
-        ListNode added = new Question445().addTwoNumbers(l1, l2);
+        ListNode added = new Problem445().addTwoNumbers(l1, l2);
         printList(added);
     }
 }

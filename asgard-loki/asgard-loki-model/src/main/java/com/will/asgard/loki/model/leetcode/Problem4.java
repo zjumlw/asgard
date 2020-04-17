@@ -5,7 +5,7 @@ import com.will.asgard.common.util.GsonUtil;
 
 import java.util.List;
 
-public class Question4 {
+public class Problem4 {
 
 	public static void main(String[] args) {
 		List<String> list = Lists.newArrayList();
