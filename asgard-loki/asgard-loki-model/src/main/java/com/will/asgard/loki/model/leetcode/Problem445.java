@@ -25,104 +25,76 @@ import java.util.Stack;
  **/
 public class Problem445 {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode r1 = reverse(l1);
-        ListNode r2 = reverse(l2);
+	@SuppressWarnings("Duplicates")
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		ListNode r1 = reverse(l1);
+		ListNode r2 = reverse(l2);
 
-        ListNode head = new ListNode(-1);
-        ListNode cursor = head;
-        int flag = 0;
-        while (r1 != null || r2 != null || flag != 0) {
-            int tmp = flag;
-            int r1Value = r1 != null ? r1.val : 0;
-            int r2Value = r2 != null ? r2.val : 0;
-            tmp = tmp + r1Value + r2Value;
+		ListNode head = new ListNode(-1);
+		ListNode cursor = head;
+		int flag = 0;
+		while (r1 != null || r2 != null || flag != 0) {
+			int tmp = flag;
+			int r1Value = r1 != null ? r1.val : 0;
+			int r2Value = r2 != null ? r2.val : 0;
+			tmp = tmp + r1Value + r2Value;
 
-            cursor.next = new ListNode(tmp % 10);
-            cursor = cursor.next;
-            flag = tmp / 10;
+			cursor.next = new ListNode(tmp % 10);
+			cursor = cursor.next;
+			flag = tmp / 10;
 
-            r1 = r1 != null ? r1.next : null;
-            r2 = r2 != null ? r2.next : null;
-        }
+			r1 = r1 != null ? r1.next : null;
+			r2 = r2 != null ? r2.next : null;
+		}
 
-        return reverse(head.next);
-    }
+		return reverse(head.next);
+	}
 
-    private ListNode reverse(ListNode l) {
-        ListNode res = null;
-        while (l != null) {
-            ListNode next = l.next;
-            l.next = res;
-            res = l;
-            l = next;
-        }
-        return res;
-    }
+	private ListNode reverse(ListNode l) {
+		ListNode res = null;
+		while (l != null) {
+			ListNode next = l.next;
+			l.next = res;
+			res = l;
+			l = next;
+		}
+		return res;
+	}
 
-    public ListNode addTwoNumbersV2(ListNode l1, ListNode l2) {
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
-        while (l1 != null) {
-            stack1.push(l1.val);
-            l1 = l1.next;
-        }
-        while (l2 != null) {
-            stack2.push(l2.val);
-            l2 = l2.next;
-        }
+	public ListNode addTwoNumbersV2(ListNode l1, ListNode l2) {
+		Stack<Integer> stack1 = new Stack<>();
+		Stack<Integer> stack2 = new Stack<>();
+		while (l1 != null) {
+			stack1.push(l1.val);
+			l1 = l1.next;
+		}
+		while (l2 != null) {
+			stack2.push(l2.val);
+			l2 = l2.next;
+		}
 
-        int carry = 0;
-        ListNode head = null;
-        while (!stack1.isEmpty() || !stack2.isEmpty() || carry != 0) {
-            int sum = carry;
-            sum += stack1.isEmpty() ? 0 : stack1.pop();
-            sum += stack2.isEmpty() ? 0 : stack2.pop();
-            ListNode node = new ListNode(sum % 10);
-            node.next = head;
-            head = node;
-            carry = sum / 10;
-        }
-        return head;
-    }
+		int carry = 0;
+		ListNode head = null;
+		while (!stack1.isEmpty() || !stack2.isEmpty() || carry != 0) {
+			int sum = carry;
+			sum += stack1.isEmpty() ? 0 : stack1.pop();
+			sum += stack2.isEmpty() ? 0 : stack2.pop();
+			ListNode node = new ListNode(sum % 10);
+			node.next = head;
+			head = node;
+			carry = sum / 10;
+		}
+		return head;
+	}
 
-    private static ListNode initList(int[] arr) {
-        ListNode head = null;
-        ListNode cursor = null;
-        for (int value : arr) {
-            ListNode newOne = new ListNode(value);
-            if (cursor == null) {
-                head = newOne;
-                cursor = head;
-            } else {
-                cursor.next = newOne;
-                cursor = cursor.next;
-            }
-        }
+	public static void main(String[] args) {
+		int[] arr1 = new int[]{5,5};
+		ListNode l1 = ListNodeUtil.initList(arr1);
 
-        return head;
-    }
+		int[] arr2 = new int[]{5,5};
+		ListNode l2 = ListNodeUtil.initList(arr2);
 
-    private static void printList(ListNode l) {
-        StringBuilder sb = new StringBuilder();
-        while (l != null) {
-            if (sb.length() != 0) {
-                sb.append("->");
-            }
-            sb.append(l.val);
-            l = l.next;
-        }
-        System.out.println(sb.toString());
-    }
-
-    public static void main(String[] args) {
-        int[] arr1 = new int[]{5,5};
-        ListNode l1 = initList(arr1);
-
-        int[] arr2 = new int[]{5,5};
-        ListNode l2 = initList(arr2);
-
-        ListNode added = new Problem445().addTwoNumbers(l1, l2);
-        printList(added);
-    }
+		ListNode added = new Problem445().addTwoNumbers(l1, l2);
+		ListNodeUtil.printList(added);
+	}
 }

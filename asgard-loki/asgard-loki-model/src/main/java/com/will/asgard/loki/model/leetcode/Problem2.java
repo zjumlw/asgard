@@ -16,85 +16,33 @@ package com.will.asgard.loki.model.leetcode;
  */
 public class Problem2 {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode res = new ListNode(0);
-        ListNode point = res;
+	@SuppressWarnings("Duplicates")
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		ListNode head = new ListNode(-1);
+		ListNode cursor = head;
 
-        int flag = 0;
-        while (l1 != null || l2 != null) {
+		int flag = 0;
+		while (l1 != null || l2 != null || flag!=0) {
+			int sum = flag;
+			int l1Value = l1 != null ? l1.val : 0;
+			int l2Value = l2 != null ? l2.val : 0;
+			sum = sum + l1Value + l2Value;
 
+			cursor.next = new ListNode(sum % 10);
+			cursor = cursor.next;
+			flag = sum / 10;
 
-            int num = 0;
-            if (l1 != null) {
-                num += l1.val;
-                l1 = l1.next;
-            }
+			l1 = l1 != null ? l1.next : null;
+			l2 = l2 != null ? l2.next : null;
+		}
 
-            if (l2 != null) {
-                num += l2.val;
-                l2 = l2.next;
-            }
+		return head.next;
+	}
 
-            if (flag == 1) {
-                num += 1;
-                flag = 0;
-            }
-
-            if (num >= 10) {
-                flag = 1;
-                num = num - 10;
-            }
-
-            point.next = new ListNode(num);
-            if (flag == 1) {
-                point.next.next = new ListNode(1);
-            }
-            point = point.next;
-        }
-
-        return res.next;
-    }
-
-    public static void main(String[] args) {
-        ListNode l1 = createListNode(1);
-        System.out.println("l1: " + showNumber(l1));
-
-        ListNode l2 = createListNode(9);
-        System.out.println("l2: " + showNumber(l2));
-
-        ListNode result = new Problem2().addTwoNumbers(l1, l2);
-        System.out.println("result: " + showNumber(result));
-    }
-
-    private static ListNode createListNode(int... array) {
-        if (array.length == 0) {
-            return null;
-        }
-
-        ListNode result = new ListNode(0);
-        ListNode current = result;
-
-        for (int value : array) {
-            current.next = new ListNode(value);
-            current = current.next;
-        }
-
-        return result.next;
-    }
-
-    private static String showNumber(ListNode listNode) {
-        if (listNode == null) {
-            return "";
-        }
-
-        StringBuilder sb = new StringBuilder();
-        ListNode curNode = listNode;
-        sb.insert(0, curNode.val);
-        while (curNode.next != null) {
-            sb.insert(0, curNode.next.val);
-            curNode = curNode.next;
-        }
-
-        return sb.toString();
-    }
+	public static void main(String[] args) {
+		ListNode l1 = ListNodeUtil.initList(new int[]{1});
+		ListNode l2 = ListNodeUtil.initList(new int[]{9});
+		ListNode result = new Problem2().addTwoNumbers(l1, l2);
+		ListNodeUtil.printList(result);
+	}
 }
