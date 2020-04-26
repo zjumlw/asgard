@@ -10,10 +10,20 @@ import lombok.Setter;
  * @Date 2020-01-21 17:05
  * @Version 1.0
  **/
+
 public enum SingletonA {
-	INSTANCE;
+	INSTANCE("singletonA");
 
 	@Getter
 	@Setter
 	private String name;
+
+	SingletonA(String name) {
+		this.name = name;
+	}
+
+	public static void main(String[] args) {
+		SingletonA singletonA = SingletonA.INSTANCE;
+		System.out.println(singletonA.getName());
+	}
 }
