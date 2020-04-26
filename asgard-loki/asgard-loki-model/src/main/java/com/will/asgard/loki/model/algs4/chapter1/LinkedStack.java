@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
  * @Date 2020-04-26 20:20
  * @Version 1.0
  **/
-public class Stack<E> implements Iterable<E> {
+public class LinkedStack<E> implements Iterable<E> {
 	private Node first;
 	private int size;
 
