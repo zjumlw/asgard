@@ -1,6 +1,7 @@
 package com.will.asgard.loki.model.proxy;
 
 import java.io.File;
+import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.util.stream.Stream;
 
@@ -17,8 +18,18 @@ public class ProxyTest {
 		MyIntf myIntf = (MyIntf) Proxy.newProxyInstance(MyIntf.class.getClassLoader(),
 				new Class[]{MyIntf.class}, new MyInvocationHandler());
 		myIntf.helloWorld();
-		System.out.println("$Proxy0.class全名: " + Proxy.getProxyClass(MyIntf.class.getClassLoader(), MyIntf.class));
 
+		ClassLoader classLoader = myIntf.getClass().getClassLoader();
+		System.out.println("classLoader: " + classLoader);
+		Class<?> proxyClass = Proxy.getProxyClass(classLoader, MyIntf.class);
+		System.out.println("$Proxy0.class全名: " + proxyClass);
+
+		InvocationHandler invocationHandler = Proxy.getInvocationHandler(myIntf);
+		System.out.println(invocationHandler);
+
+	}
+
+	private static void printFiles() {
 		String bootPath = System.getProperty("sun.boot.class.path");
 		File[] bootFiles = getClassPath(bootPath);
 		System.out.println("bootFiles length: " + bootFiles.length);
