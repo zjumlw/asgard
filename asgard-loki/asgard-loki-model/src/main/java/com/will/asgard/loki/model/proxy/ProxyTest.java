@@ -1,10 +1,5 @@
 package com.will.asgard.loki.model.proxy;
 
-<<<<<<< HEAD
-import java.io.File;
-import java.lang.reflect.InvocationHandler;
-=======
->>>>>>> refactor(classloader): move package
 import java.lang.reflect.Proxy;
 
 /**
