@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.proxy;
+package com.will.asgard.loki.model.classloader;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -56,11 +56,5 @@ public class DiskClassLoader extends ClassLoader {
 		}else{
 			return name.substring(index+1)+".class";
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		String classpath = "/home/will/tmp/Test.class";
-		File file = new File(classpath);
-
 	}
 }

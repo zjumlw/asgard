@@ -1,5 +1,6 @@
-package com.will.asgard.loki.model.proxy;
+package com.will.asgard.loki.model.classloader;
 
+import java.io.File;
 import java.lang.reflect.Method;
 
 /**
@@ -13,7 +14,7 @@ public class ClassLoaderTest {
 	public static void main(String[] args) throws ClassNotFoundException {
 		DiskClassLoader dcl = new DiskClassLoader("/home/will/tmp");
 
-		Class c = dcl.findClass("com.will.asgard.loki.model.proxy.Test");
+		Class<?> c = dcl.findClass("com.will.asgard.loki.model.proxy.Test");
 		try {
 			if (c != null) {
 				Object o = c.newInstance();
@@ -24,6 +25,14 @@ public class ClassLoaderTest {
 			e.printStackTrace();
 		}
 
+		System.out.println(ClassLoaderTest.class.getName());
+		System.out.println(Class.forName("com.will.asgard.loki.model.classloader.ClassLoaderTest"));
 
+		System.out.println(int.class.getName());
+		System.out.println(int[].class);
+		System.out.println(double[].class);
+		System.out.println(String[].class);
+
+		System.out.println(File.separator);
 	}
 }

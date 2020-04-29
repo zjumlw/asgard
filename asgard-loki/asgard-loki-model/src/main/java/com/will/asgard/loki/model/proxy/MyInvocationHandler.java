@@ -13,7 +13,12 @@ import java.lang.reflect.Method;
 public class MyInvocationHandler implements InvocationHandler {
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		System.out.println(method);
+		System.out.println("method: " + method.getName());
+		if (method.getName().contains("helloWorld")) {
+			System.out.println("hi hello");
+		} else if (method.getName().contains("toString")) {
+			return "toString method";
+		}
 		return null;
 	}
 }

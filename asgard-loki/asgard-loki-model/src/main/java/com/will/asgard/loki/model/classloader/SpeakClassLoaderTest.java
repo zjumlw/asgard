@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.proxy;
+package com.will.asgard.loki.model.classloader;
 
 import java.lang.reflect.Method;
 
