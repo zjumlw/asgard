@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * @Date 2020-04-28 22:44
  * @Version 1.0
  **/
-public class ClassLoaderTest {
+public class DiskClassLoaderTest {
 	public static void main(String[] args) throws ClassNotFoundException {
 		DiskClassLoader dcl = new DiskClassLoader("/home/will/tmp");
 
@@ -25,8 +25,8 @@ public class ClassLoaderTest {
 			e.printStackTrace();
 		}
 
-		System.out.println(ClassLoaderTest.class.getName());
-		System.out.println(Class.forName("com.will.asgard.loki.model.classloader.ClassLoaderTest"));
+		System.out.println(DiskClassLoaderTest.class.getName());
+		System.out.println(Class.forName("com.will.asgard.loki.model.classloader.DiskClassLoaderTest"));
 
 		System.out.println(int.class.getName());
 		System.out.println(int[].class);
