@@ -20,3 +20,7 @@ log/
 *.iml
 *.iws
 *.ipr
+
+# jvm
+*.hprof
+*.analysis/
