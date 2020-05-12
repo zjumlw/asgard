@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 public class ResizingArrayStack<E> implements Iterable<E> {
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-	private java.lang.Object[] a;
+	private Object[] a;
 	private int size = 0;
 
 	public ResizingArrayStack() {
