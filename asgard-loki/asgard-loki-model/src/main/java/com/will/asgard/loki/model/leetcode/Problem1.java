@@ -43,8 +43,9 @@ public class Problem1 {
 
 		for (int i = 0; i < nums.length; i++) {
 			int complement = target - nums[i];
-			if (map.containsKey(complement) && map.get(complement) != i) {
-				return new int[]{map.get(complement), i};
+			int index;
+			if (map.containsKey(complement) && (index = map.get(complement)) != i) {
+				return new int[]{index, i};
 			}
 			map.put(nums[i], i);
 		}
