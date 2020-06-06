@@ -1,7 +1,9 @@
 package com.will.asgard.thor.web.spittr.controller;
 
-import com.will.asgard.thor.model.spittr.Spittle;
-import com.will.asgard.thor.model.spittr.SpittleRepository;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -11,9 +13,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.InternalResourceView;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import com.will.asgard.thor.model.spittr.Spittle;
+import com.will.asgard.thor.model.spittr.SpittleRepository;
 
 public class SpittleControllerTest {
 
@@ -39,7 +40,7 @@ public class SpittleControllerTest {
 
     private List<Spittle> createSpittleList(int count) {
         List<Spittle> spittles = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < count; i++) {
             spittles.add(new Spittle("Spittle" + i, new Date()));
         }
         return spittles;

@@ -1,12 +1,12 @@
 package com.will.asgard.thor.model.spittr;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.Date;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Date;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -29,7 +29,7 @@ public class Spittle {
         return EqualsBuilder.reflectionEquals(this, that, "id", "time");
     }
 
-    @Autowired
+    @Override
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this, "id", "time");
     }

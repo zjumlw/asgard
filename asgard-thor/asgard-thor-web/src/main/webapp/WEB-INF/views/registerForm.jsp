@@ -14,32 +14,21 @@
   <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css"></head>
 <body>
 <h1>Register</h1>
-<%--<form method="post">--%>
-<%--    <div>--%>
-<%--      <label for="firstName">FirstName:</label>--%>
-<%--      <input type="text" name="firstName" id="firstName"/><br/>--%>
-<%--    </div>--%>
-<%--    <div>--%>
-<%--      <label for="lastName">LastName:&nbsp;</label>--%>
-<%--      <input type="text" name="lastName" id="lastName"/><br/>--%>
-<%--    </div>--%>
-<%--    <div>--%>
-<%--      <label for="username">Username:&nbsp;</label>--%>
-<%--      <input type="text" name="username" id="username"/><br/>--%>
-<%--    </div>--%>
-<%--    <div>--%>
-<%--      <label for="password">Password:&nbsp;</label>--%>
-<%--      <input type="password" name="password" id="password"/><br/>--%>
-<%--    </div>--%>
-<%--</form>--%>
-<sf:form method="post" modelAttribute="spitter">
-  <sf:label path="firstName" cssErrorClass="error">FirstName: </sf:label>
-  <sf:input path="firstName" cssErrorClass="error"/><br/>
-  LastName: <sf:input path="lastName"/><br/>
-  Email: <sf:input path="email" type="email"/><br/>
-  Username: <sf:input path="username"/><br/>
-  Password: <sf:password path="password"/><br/>
+<form method="post">
+  FirstName:<input type="text" name="firstName" id="firstName"/><br/>
+  LastName:<input type="text" name="lastName" id="lastName"/><br/>
+  Username:<input type="text" name="username" id="username"/><br/>
+  Password:<input type="password" name="password" id="password"/><br/>
   <input type="submit" value="Register">
-</sf:form>
+</form>
+<%--<sf:form method="post" modelAttribute="spitter">--%>
+<%--  <sf:label path="firstName" cssErrorClass="error">FirstName: </sf:label>--%>
+<%--  <sf:input path="firstName" cssErrorClass="error"/><br/>--%>
+<%--  LastName: <sf:input path="lastName"/><br/>--%>
+<%--  Email: <sf:input path="email" type="email"/><br/>--%>
+<%--  Username: <sf:input path="username"/><br/>--%>
+<%--  Password: <sf:password path="password"/><br/>--%>
+<%--  <input type="submit" value="Register">--%>
+<%--</sf:form>--%>
 </body>
 </html>

@@ -1,13 +1,14 @@
 package com.will.asgard.thor.web.spittr.controller;
 
-import com.will.asgard.thor.model.spittr.Spitter;
-import com.will.asgard.thor.model.spittr.SpitterRepository;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.will.asgard.thor.model.spittr.Spitter;
+import com.will.asgard.thor.model.spittr.SpitterRepository;
 
 public class SpitterControllerTest {
 
@@ -46,6 +47,6 @@ public class SpitterControllerTest {
                 .param("password", "24hours"))
                 .andExpect(MockMvcResultMatchers.redirectedUrl("/spitter/jbauer"));
 
-//        Mockito.verify(mockRepository, Mockito.atLeastOnce()).save(unsaved);
+        Mockito.verify(mockRepository, Mockito.atLeastOnce()).save(unsaved);
     }
 }

@@ -1,8 +1,7 @@
 package com.will.asgard.thor.web.spittr.controller;
 
-import com.will.asgard.common.util.GsonUtil;
-import com.will.asgard.thor.model.spittr.Spitter;
-import com.will.asgard.thor.model.spittr.SpitterRepository;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.validation.Valid;
+import com.will.asgard.common.util.GsonUtil;
+import com.will.asgard.thor.model.spittr.Spitter;
+import com.will.asgard.thor.model.spittr.SpitterRepository;
 
 @Controller
 @RequestMapping("/spitter")

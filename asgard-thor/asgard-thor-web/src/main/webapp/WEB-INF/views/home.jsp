@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css">
 </head>
 <body>
-<h1>Welcome to Sipttr</h1>
+<h1>Welcome to The Sipttr</h1>
 <a href="<c:url value="/spittles"/>">Spittles</a> |
 <a href="<c:url value="/spitter/register"/>">Register</a>
 </body>
