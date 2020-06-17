@@ -47,9 +47,31 @@ public class Problem238 {
         return res;
     }
 
+    public static int[] solution(int[] nums) {
+        int a = 1;
+        int b = 1;
+        int n = nums.length;
+        int[] output = new int[n];
+        for (int i = 0; i < n; i++) {
+            output[i] = 1;
+        }
+        for (int i = 0; i < n; i++) {
+            output[i] *= a;
+            a *= nums[i];
+
+            output[n - 1 - i] *= b;
+            b *= nums[n - 1 - i];
+        }
+
+        return output;
+    }
+
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3, 4};
+        int[] nums = new int[]{1, 2, 3, 4, 5};
         int[] res = productExceptSelf(nums);
         ArrayUtil.printArray(res);
+
+        int[] output = solution(nums);
+        ArrayUtil.printArray(output);
     }
 }
