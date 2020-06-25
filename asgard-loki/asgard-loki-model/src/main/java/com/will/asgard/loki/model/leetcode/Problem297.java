@@ -71,9 +71,4 @@ public class Problem297 {
         root.right = deserialize0(l);
         return root;
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }
