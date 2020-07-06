@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.interview.jdk.collection;
+package com.will.asgard.loki.model.interview.jdk.collection.hashmap;
 
 /**
  * @ClassName HashMapExample
@@ -21,7 +21,7 @@ public class HashMapExample {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(tableSizeFor(7));
+
 	}
 
 }
