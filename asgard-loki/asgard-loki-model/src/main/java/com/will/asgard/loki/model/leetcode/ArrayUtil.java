@@ -20,4 +20,14 @@ public class ArrayUtil {
         System.out.println(sb.toString());
     }
 
+    public static void printArray(Object[] array) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            if (i != 0) {
+                sb.append(",");
+            }
+            sb.append(array[i]);
+        }
+        System.out.println(sb.toString());
+    }
 }
