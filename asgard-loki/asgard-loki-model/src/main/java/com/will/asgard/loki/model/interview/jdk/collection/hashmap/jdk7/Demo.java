@@ -1,5 +1,9 @@
 package com.will.asgard.loki.model.interview.jdk.collection.hashmap.jdk7;
 
+import java.lang.reflect.Field;
+
+import sun.misc.Unsafe;
+
 /**
  * @Description TODO
  * @Author maolingwei
@@ -8,7 +12,55 @@ package com.will.asgard.loki.model.interview.jdk.collection.hashmap.jdk7;
  */
 public class Demo {
 
+    private int i = 0;
+    private String name = "demo";
+
+    public String getName() throws IllegalAccessException {
+        throw new IllegalAccessException("Illegal access to field name");
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private static Unsafe UNSAFE;
+    private static long I_OFFSET;
+    static {
+        try {
+            Field field = Unsafe.class.getDeclaredField("theUnsafe");
+            field.setAccessible(true);
+            UNSAFE = (Unsafe) field.get(null);
+            I_OFFSET = UNSAFE.objectFieldOffset(Demo.class.getDeclaredField("i"));
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
+        Demo demo = new Demo();
+
+        Runnable runnable = () -> {
+            while (true) {
+                boolean b = UNSAFE.compareAndSwapInt(demo, I_OFFSET, demo.i, demo.i + 1);
+                if (b) {
+                    System.out.println(UNSAFE.getIntVolatile(demo, I_OFFSET));
+                }
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Thread thread1 = new Thread(runnable);
+        Thread thread2 = new Thread(runnable);
+
+        thread1.start();
+        thread2.start();
+    }
+
+    private static void test1() {
         HashMap<String, String> map = new HashMap<>(5);
         map.put("One", "1");
         map.put("Two", "2");

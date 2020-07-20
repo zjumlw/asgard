@@ -34,6 +34,6 @@ package com.will.asgard.loki.model.leetcode;
  */
 public class Problem820 {
     public int minimumLengthEncoding(String[] words) {
-
+        return 0;
     }
 }
