@@ -1,6 +1,8 @@
 package com.will.asgard.loki.model.interview.jdk.collection.hashmap.jdk7;
 
 import java.lang.reflect.Field;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import sun.misc.Unsafe;
 
@@ -14,6 +16,7 @@ public class Demo {
 
     private int i = 0;
     private String name = "demo";
+    private String[] array = new String[]{"a", "b", "c"};
 
     public String getName() throws IllegalAccessException {
         throw new IllegalAccessException("Illegal access to field name");
@@ -37,8 +40,20 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        Demo demo = new Demo();
+        Map<String, String> map = new ConcurrentHashMap<>();
+        int size = map.size();
+    }
 
+    private static void testGetArrayElement() {
+        Demo demo = new Demo();
+        int base = UNSAFE.arrayBaseOffset(String[].class); // 获取数组头位置
+        int scale = UNSAFE.arrayIndexScale(String[].class); // 获取单个元素大小
+        String str = (String) UNSAFE.getObject(demo.array, base + 1 * scale);
+        System.out.println(str);
+    }
+
+    private static void test2() {
+        Demo demo = new Demo();
         Runnable runnable = () -> {
             while (true) {
                 boolean b = UNSAFE.compareAndSwapInt(demo, I_OFFSET, demo.i, demo.i + 1);

@@ -1,7 +1,6 @@
 package com.will.asgard.loki.model.effective.singleton;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.lang.reflect.Constructor;
 
 /**
  * @ClassName SingletonA
@@ -10,20 +9,17 @@ import lombok.Setter;
  * @Date 2020-01-21 17:05
  * @Version 1.0
  **/
-
 public enum SingletonA {
-	INSTANCE("singletonA");
+    INSTANCE;
 
-	@Getter
-	@Setter
-	private String name;
+    public static void main(String[] args) throws Exception {
+        SingletonA singleton1 = SingletonA.INSTANCE;
+        SingletonA singleton2 = SingletonA.INSTANCE;
+        System.out.println("两个单例是否相同：" + (singleton1 == singleton2));
 
-	SingletonA(String name) {
-		this.name = name;
-	}
-
-	public static void main(String[] args) {
-		SingletonA singletonA = SingletonA.INSTANCE;
-		System.out.println(singletonA.getName());
-	}
+        Constructor<SingletonA> constructor = SingletonA.class.getDeclaredConstructor();
+        constructor.setAccessible(true);
+        SingletonA singleton3 = constructor.newInstance();
+        System.out.println("反射攻击下，是否相同" + (singleton1 == singleton3));
+    }
 }
