@@ -71,4 +71,16 @@ public class ApplicationContextLoadTest {
         HelloWorld helloWorld = (HelloWorld) applicationContext.getBean("helloWorld");
         Assert.assertEquals("default", helloWorld.getMessage());
     }
+
+    @Test
+    public void testFileSystemXmlApplicationContext4() {
+        String xmlName = "beanFactoryTest.xml";
+        String classPath = this.getClass().getResource("/").getPath();
+        String xmlPath = classPath + xmlName;
+
+        // 文件绝对路径
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("/" + xmlPath);
+        HelloWorld helloWorld = (HelloWorld) applicationContext.getBean("helloWorld");
+        Assert.assertEquals("default", helloWorld.getMessage());
+    }
 }
