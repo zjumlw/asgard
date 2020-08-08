@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
- * @Description rt
+ * @Description 各种获取 ApplicationContext 的方法
  * @Author maolingwei
  * @Date 2020-08-08 6:43 下午
  * @Version 1.0
