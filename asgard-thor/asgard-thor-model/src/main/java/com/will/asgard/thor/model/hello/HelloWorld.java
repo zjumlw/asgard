@@ -1,11 +1,10 @@
 package com.will.asgard.thor.model.hello;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class HelloWorld {
-    private String message;
-    public void setMessage(String message){
-        this.message  = message;
-    }
-    public void getMessage(){
-        System.out.println("Your Message : " + message);
-    }
+    private String message = "default";
 }
