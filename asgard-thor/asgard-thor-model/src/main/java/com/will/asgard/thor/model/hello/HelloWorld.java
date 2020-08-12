@@ -6,5 +6,15 @@ import lombok.Setter;
 @Getter
 @Setter
 public class HelloWorld {
-    private String message = "default";
+    private static final String DEFAULT_MSG = "default";
+
+    private String message;
+
+    public HelloWorld() {
+        this(DEFAULT_MSG);
+    }
+
+    public HelloWorld(String message) {
+        this.message = message;
+    }
 }
