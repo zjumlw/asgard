@@ -38,7 +38,7 @@ public class Problem1604 {
         integerMap.put(CharType.CHAR_NUMBER, State.STATE_INTEGER);
         integerMap.put(CharType.CHAR_EXP, State.STATE_EXP);
         integerMap.put(CharType.CHAR_POINT, State.STATE_POINT);
-        initialMap.put(CharType.CHAR_SPACE, State.STATE_END);
+        integerMap.put(CharType.CHAR_SPACE, State.STATE_END);
         transfer.put(State.STATE_INTEGER, integerMap);
 
         Map<CharType, State> pointMap = new HashMap<>();
@@ -80,15 +80,12 @@ public class Problem1604 {
 
         for (int i = 0; i < length; i++) {
             CharType charType = toCharType(s.charAt(i));
-            System.out.println(charType);
             if (!transfer.get(state).containsKey(charType)) {
                 return false;
             } else {
                 state = transfer.get(state).get(charType);
             }
         }
-
-        System.out.println(state);
 
         return state == State.STATE_INTEGER || state == State.STATE_POINT || state == State.STATE_FRACTION
                 || state == State.STATE_EXP_NUMBER || state == State.STATE_END;
