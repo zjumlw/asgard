@@ -33,7 +33,7 @@ public class QuickSort {
         while (true) {
             while (++i <= hi && nums[i] < v);
             while (--j >= lo && nums[j] > v);
-            if (i >= j) {
+            if (i > j) {
                 break;
             }
             int tmp = nums[i];
