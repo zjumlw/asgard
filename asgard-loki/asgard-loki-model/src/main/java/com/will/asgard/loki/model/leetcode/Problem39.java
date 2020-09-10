@@ -56,21 +56,25 @@ public class Problem39 {
     }
 
     private void dfs(int[] candidates, int target, int idx) {
-        // 所有元素都找过了
-        if (idx == candidates.length) {
+        if (target < 0) {
             return;
         }
         if (target == 0) {
             ans.add(new ArrayList<>(tmp));
             return;
         }
-        // 跳过当前数
-        dfs(candidates, target, idx + 1);
-        // 选择当前数
-        if (target - candidates[idx] >= 0) {
-            tmp.add(candidates[idx]);
-            dfs(candidates, target - candidates[idx], idx);
-            tmp.remove(tmp.size() - 1);
+        for (int i = idx; i < candidates.length; i++) {
+            int val = target - candidates[i];
+            if (val >= 0) {
+                tmp.add(candidates[i]);
+                System.out.println("递归之前 => " + tmp + ", 剩余 => " + val);
+                dfs(candidates, target- candidates[i], i);
+                tmp.remove(tmp.size() - 1);
+                System.out.println("递归之后 => " + tmp);
+            } else {
+                System.out.println("剩余小于0，跳过 => " + val);
+                break;
+            }
         }
     }
 
