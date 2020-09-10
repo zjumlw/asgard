@@ -2,8 +2,6 @@ package com.will.asgard.loki.model.leetcode.algs.topk;
 
 import java.util.Arrays;
 
-import com.will.asgard.loki.model.leetcode.ArrayUtil;
-
 /**
  * @Description 用快排切分，找到第K小的数，那么其左边都是小于K的
  * 每次调用partition遍历的元素数目都是上一次遍历的1/2，因此时间复杂度是N + N/2 + N/4 + ... + N/N = 2N, 因此时间复杂度是O(N)
@@ -49,15 +47,5 @@ public class TopKSolution1 {
         nums[lo] = nums[j];
         nums[j] = v;
         return j;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = new int[10];
-        for (int i = 0; i < 10; i++) {
-            nums[i] = i;
-        }
-        TopKSolution1 topKSolution1 = new TopKSolution1();
-        int[] leastNumber = topKSolution1.getLeastNumber(nums, 4);
-        ArrayUtil.printArray(leastNumber);
     }
 }
