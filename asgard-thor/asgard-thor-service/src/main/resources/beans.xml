@@ -8,5 +8,5 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
   <bean id="helloWorld" class="com.will.asgard.thor.model.hello.HelloWorld"/>
-
+  <bean id="applicationContextUtil" class="com.will.asgard.thor.model.hello.ApplicationContextUtil"/>
 </beans>
