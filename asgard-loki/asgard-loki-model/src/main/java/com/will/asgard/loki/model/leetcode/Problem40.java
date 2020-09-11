@@ -86,24 +86,30 @@ public class Problem40 {
         if (target == 0) {
             return ans;
         }
+        // 先排序
         Arrays.sort(candidates);
         dfsV2(candidates, target, 0);
         return ans;
     }
 
     private void dfsV2(int[] candidates, int target, int idx) {
+        // 找到目标集合
         if (target == 0) {
             ans.add(new ArrayList<>(tmp));
             return;
         }
+        // 从idx开始遍历candidates
         for (int i = idx; i < candidates.length; i++) {
+            // 大剪枝，减去当前最小的都小于0了，更不论后面的数更大
             if (target - candidates[i] < 0) {
                 break;
             }
+            // 小剪枝，重复的数字，跳过，因为每个数字只能用一次
             if (i > idx && candidates[i] == candidates[i - 1]) {
                 continue;
             }
             tmp.add(candidates[i]);
+            // 因为元素不可以重复使用，这里递归传递下去的是 i + 1 而不是 i
             dfsV2(candidates, target - candidates[i], i + 1);
             tmp.remove(tmp.size() - 1);
         }
