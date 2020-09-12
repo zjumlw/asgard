@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:/app.properties")
-public class MagicBeanConfig {
+public class  MagicBeanConfig {
 
     @Bean
     @Conditional(MagicExistsCondition.class)

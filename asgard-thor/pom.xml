@@ -15,12 +15,14 @@
 
   <modules>
     <module>asgard-thor-model</module>
+    <module>asgard-thor-mysql</module>
     <module>asgard-thor-service</module>
     <module>asgard-thor-web</module>
   </modules>
 
   <properties>
     <log4j_level>info</log4j_level>
+    <mybatis.version>3.4.6</mybatis.version>
   </properties>
 
   <dependencyManagement>
@@ -46,6 +48,11 @@
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator</artifactId>
         <version>6.1.0.Final</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${mybatis.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
