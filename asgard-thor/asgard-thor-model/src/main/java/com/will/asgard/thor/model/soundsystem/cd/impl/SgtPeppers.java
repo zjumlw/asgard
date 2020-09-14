@@ -1,6 +1,8 @@
-package com.will.asgard.thor.model.soundsystem.cd;
+package com.will.asgard.thor.model.soundsystem.cd.impl;
 
 import org.springframework.stereotype.Component;
+
+import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
 
 @Component("sgtPeppers")
 public class SgtPeppers implements CompactDisc {

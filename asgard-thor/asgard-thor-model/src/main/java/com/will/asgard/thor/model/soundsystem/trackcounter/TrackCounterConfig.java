@@ -1,13 +1,14 @@
 package com.will.asgard.thor.model.soundsystem.trackcounter;
 
-import com.google.common.collect.Lists;
-import com.will.asgard.thor.model.soundsystem.cd.BlankDisc;
-import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-import java.util.List;
+import com.google.common.collect.Lists;
+import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
+import com.will.asgard.thor.model.soundsystem.cd.impl.BlankDisc;
 
 @Configuration
 @EnableAspectJAutoProxy

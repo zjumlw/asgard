@@ -1,9 +1,10 @@
 package com.will.asgard.thor.model.soundsystem;
 
-import com.will.asgard.thor.model.soundsystem.cd.CDConfig;
-import com.will.asgard.thor.model.soundsystem.player.CDPlayerConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+
+import com.will.asgard.thor.model.soundsystem.cd.CDConfig;
+import com.will.asgard.thor.model.soundsystem.player.CDPlayerConfig;
 
 @Configuration
 //@ComponentScan(basePackages = "com.will.asgard.thor.model.soundsystem")

@@ -11,7 +11,7 @@ import java.util.Map;
 public class TrackCounter {
     private Map<Integer, Integer> trackCounts = Maps.newHashMap();
 
-    @Pointcut("execution(* com.will.asgard.thor.model.soundsystem.cd.BlankDisc.playTrack(int))" +
+    @Pointcut("execution(* com.will.asgard.thor.model.soundsystem.cd.impl.BlankDisc.playTrack(int))" +
             "&& args(trackNumber)")
     public void trackPlayed(int trackNumber) {}
 

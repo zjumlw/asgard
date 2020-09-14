@@ -1,6 +1,6 @@
 package com.will.asgard.thor.service.soundsystem;
 
-import com.will.asgard.thor.model.soundsystem.cd.BlankDisc;
+import com.will.asgard.thor.model.soundsystem.cd.impl.BlankDisc;
 import com.will.asgard.thor.model.soundsystem.cd.ExpressiveConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

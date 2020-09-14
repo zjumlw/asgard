@@ -1,8 +1,10 @@
-package com.will.asgard.thor.model.soundsystem.player;
+package com.will.asgard.thor.model.soundsystem.player.impl;
 
-import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
+import com.will.asgard.thor.model.soundsystem.player.MediaPlayer;
 
 @Component("cdPlayer")
 public class CDPlayer implements MediaPlayer {

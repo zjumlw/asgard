@@ -1,14 +1,16 @@
-package com.will.asgard.thor.model.soundsystem.cd;
-
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
+package com.will.asgard.thor.model.soundsystem.cd.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.CollectionUtils;
+
+import com.will.asgard.thor.model.soundsystem.cd.CompactDisc;
+
+import lombok.Data;
+
 @Data
-@Component("blankDisc")
+//@Component("blankDisc")
 public class BlankDisc implements CompactDisc {
 	private String title;
 	private String artist;
