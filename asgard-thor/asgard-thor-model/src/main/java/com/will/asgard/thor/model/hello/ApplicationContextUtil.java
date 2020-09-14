@@ -13,19 +13,23 @@ import org.springframework.context.ApplicationContextAware;
 public class ApplicationContextUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
 
+    public ApplicationContextUtil() {
+        System.out.println("ApplicationContextUtil constructor");
+    }
+
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if (ApplicationContextUtil.applicationContext == null) {
-            System.out.println("applicationContext is initializing...");
+            System.out.println("ApplicationContextUtil is initializing...");
             ApplicationContextUtil.applicationContext = applicationContext;
         } else {
-            System.out.println("applicationContext is exist");
+            System.out.println("ApplicationContextUtil is exist");
         }
     }
 
     public static <T> T getBean(Class<T> clazz) {
         if (applicationContext == null) {
-            System.out.println("applicationContext is null");
+            System.out.println("ApplicationContextUtil is null");
             throw new IllegalStateException("application context is null");
         }
         return applicationContext.getBean(clazz);
