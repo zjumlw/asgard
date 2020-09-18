@@ -54,11 +54,12 @@ public class Problem46 {
             if (!used[i]) {
                 path.add(nums[i]);
                 used[i] = true;
-
+                System.out.println("递归之前 ==> " + path);
                 dfs(nums, depth + 1, used);
 
                 used[i] = false;
                 path.remove(path.size() - 1);
+                System.out.println("递归之后 ==> " +path);
             }
         }
     }
