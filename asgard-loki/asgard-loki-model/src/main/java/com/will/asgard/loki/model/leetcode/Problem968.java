@@ -59,6 +59,36 @@ public class Problem968 {
         return array;
     }
 
+    private static int NO_CAMERA = 0;
+    private static int HAS_CAMERA = 1;
+    private static int NO_NEED = 2;
+    private int count = 0;
+
+    public int minCameraCoverV2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (dfsV2(root) == NO_CAMERA) {
+            count++;
+        }
+        return count;
+    }
+
+    private int dfsV2(TreeNode root) {
+        // 空结点，不需要camera
+        if (root == null) {
+            return NO_NEED;
+        }
+        int left = dfsV2(root.left);
+        int right = dfsV2(root.right);
+        // 左右子树至少有一个没有camera，则当前结点需要放置camera
+        if (left == NO_CAMERA || right == NO_CAMERA) {
+            count++;
+            return HAS_CAMERA;
+        }
+        // 左右子树至少有一个有camera，则当前结点不需要camera，否则为结点和子结点没有被监控
+        return left == HAS_CAMERA || right == HAS_CAMERA ? NO_NEED : NO_CAMERA;
+    }
     public static void main(String[] args) {
         Problem968 problem968 = new Problem968();
 
