@@ -41,7 +41,7 @@ public class TreeNodeUtil {
     }
 
     private static TreeNode deserialize0(List<String> l) {
-        if ("null".equals(l.get(0))) {
+        if ("null".equals(l.get(0)) || "n".equals(l.get(0))) {
             l.remove(0);
             return null;
         }
