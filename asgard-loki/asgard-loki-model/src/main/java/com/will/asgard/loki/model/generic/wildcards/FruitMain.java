@@ -14,15 +14,17 @@ import com.will.asgard.common.util.GsonUtil;
  **/
 public class FruitMain {
 
-	public static void main(String[] args) {
-		List<Fruit> fruits = Lists.newArrayList();
-		fruits.add(new Apple(1.2));
+    public static void main(String[] args) {
+        List<Fruit> fruits = Lists.newArrayList();
+        // 可以在 list 中 add Fruit 以其子类
+        fruits.add(new Fruit(1));
+        fruits.add(new Apple(1.2));
+        fruits.add(new Banana(2));
+        System.out.println(GsonUtil.toJson(fruits));
 
-		System.out.println(GsonUtil.toJson(fruits));
-
-		List<? extends Fruit> plate = Lists.newArrayList();
-		plate = fruits;
-		Fruit res = plate.get(0);
-		System.out.println(GsonUtil.toJson(res));
-	}
+        // 可以将 fruits 赋值给上界通配符的 List
+        List<? extends Fruit> plate = fruits;
+        Fruit res = plate.get(0);
+        System.out.println(GsonUtil.toJson(res));
+    }
 }
