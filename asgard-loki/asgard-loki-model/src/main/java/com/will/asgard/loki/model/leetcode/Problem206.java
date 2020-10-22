@@ -52,6 +52,7 @@ public class Problem206 {
         head.next = null;
         return p;
     }
+
     public static void main(String[] args) {
         Problem206 problem206 = new Problem206();
         int[] data = new int[]{1, 2, 3, 4, 5};
