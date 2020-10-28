@@ -144,17 +144,17 @@ public class Problem145 {
 
     public static void main(String[] args) {
         Problem145 problem145 = new Problem145();
-        String data = "1,null,2,3,null,null,null";
+        String data = "3,9,n,n,4,5,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
         TreeNodeUtil.printTreeNode(root);
 
-        List<Integer> ans1 = problem145.postorderTraversal(root);
-        System.out.println(ans1);
+//        List<Integer> ans1 = problem145.postorderTraversal(root);
+//        System.out.println(ans1);
         List<Integer> ans2 = problem145.postorderTraversalV2(root);
         System.out.println(ans2);
-        List<Integer> ans3 = problem145.postorderTraversalV3(root);
-        System.out.println(ans3);
-        List<Integer> ans4 = problem145.postorderTraversalV4(root);
-        System.out.println(ans4);
+//        List<Integer> ans3 = problem145.postorderTraversalV3(root);
+//        System.out.println(ans3);
+//        List<Integer> ans4 = problem145.postorderTraversalV4(root);
+//        System.out.println(ans4);
     }
 }
