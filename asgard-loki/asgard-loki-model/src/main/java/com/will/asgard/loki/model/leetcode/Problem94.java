@@ -58,15 +58,20 @@ public class Problem94 {
      */
     public List<Integer> inorderTraversalV2(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        Deque<TreeNode> stk = new LinkedList<>();
-        while (root != null || !stk.isEmpty()) {
-            while (root != null) {
-                stk.push(root);
-                root = root.left;
+        if (root == null) {
+            return ans;
+        }
+
+        TreeNode node = root;
+        Deque<TreeNode> stack = new LinkedList<>();
+        while (node != null || !stack.isEmpty()) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
             }
-            root = stk.pop();
-            ans.add(root.val);
-            root = root.right;
+            node = stack.pop();
+            ans.add(node.val);
+            node = node.right;
         }
         return ans;
     }

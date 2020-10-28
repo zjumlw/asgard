@@ -1,8 +1,9 @@
 package com.will.asgard.loki.model.leetcode;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * @Description
@@ -30,7 +31,9 @@ import java.util.Stack;
  */
 public class Problem144 {
 
-    // 递归
+    /**
+     * 递归的方法
+     */
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         if (root == null) {
@@ -49,13 +52,46 @@ public class Problem144 {
         helper(root.right, ans);
     }
 
-    // 迭代
+    /**
+     * 迭代的方法
+     * 前序遍历的顺序是中左右，显式的通过栈来维护node
+     * https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/er-cha-shu-de-qian-xu-bian-li-by-leetcode-solution/
+     */
     public List<Integer> preorderTraversalV2(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         if (root == null) {
             return ans;
         }
-        Stack<TreeNode> stack = new Stack<>();
+
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode node = root;
+        while (!stack.isEmpty() || node != null) {
+            // 当前node不为空
+            while (node != null) {
+                // 加入到结果中
+                ans.add(node.val);
+                // push入栈
+                stack.push(node);
+                // 向左递归
+                node = node.left;
+            }
+            // 到最左下，则pop出栈内的父node，并选择右兄弟
+            node = stack.pop();
+            node = node.right;
+        }
+
+        return ans;
+    }
+
+    /**
+     * 也是迭代实现
+     */
+    public List<Integer> preorderTraversalV3(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        if (root == null) {
+            return ans;
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
@@ -81,5 +117,9 @@ public class Problem144 {
 
         List<Integer> ans2 = problem144.preorderTraversalV2(root);
         System.out.println(ans2);
+
+        List<Integer> ans3 = problem144.preorderTraversalV3(root);
+        System.out.println(ans3);
     }
 }
+
