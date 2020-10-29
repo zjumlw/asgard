@@ -112,7 +112,7 @@ public class QuickSort {
         }
         // 基准值的交换
         swap(nums, left, gt);
-        return lt;
+        return gt;
     }
 
     /**
