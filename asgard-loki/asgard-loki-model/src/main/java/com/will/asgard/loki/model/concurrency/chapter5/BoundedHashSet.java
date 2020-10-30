@@ -22,7 +22,9 @@ public class BoundedHashSet<T> {
 
     public boolean add(T o) throws InterruptedException {
         // 阻塞直到有许可
+        System.out.println(o + " try to acquire permit");
         sem.acquire();
+        System.out.println(o + " success acquire permit");
         boolean wasAdded = false;
         try {
             wasAdded = set.add(o);
@@ -38,8 +40,34 @@ public class BoundedHashSet<T> {
     public boolean remove(Object o) {
         boolean wasRemoved = set.remove(o);
         if (wasRemoved) {
+            System.out.println(o + " release permit");
             sem.release();
         }
         return wasRemoved;
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        BoundedHashSet<Integer> boundedHashSet = new BoundedHashSet<>(10);
+        for (int i = 0; i < 20; i++) {
+            final int num = i;
+            new Thread(() -> {
+                try {
+                    boundedHashSet.add(num);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+
+        for (int i = 0; i < 20; i++) {
+            final int num = i;
+            new Thread(() -> boundedHashSet.remove(num)).start();
+        }
+
+        System.out.println("size: " + boundedHashSet.size());
     }
 }
