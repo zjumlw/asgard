@@ -1,10 +1,10 @@
 package com.will.asgard.loki.model.leetcode;
 
-import com.google.common.collect.Lists;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.google.common.collect.Lists;
 
 /**
  * @Description
@@ -42,8 +42,7 @@ public class Problem139 {
 
     /**
      * 用动态规划来做
-     * dp[i] 表示字符串 ss 前 ii 个字符组成的字符串 s[0..i-1]s[0..i−1] 是否能被空格拆分成若干个字典中出现的单词
-     *
+     * dp[i] 表示字符串 s 前 i 个字符组成的字符串 s[0..i-1] 是否能被空格拆分成若干个字典中出现的单词
      */
     public static boolean wordBreak(String s, List<String> wordDict) {
         Set<String> set = new HashSet<>(wordDict);
