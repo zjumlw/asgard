@@ -1,5 +1,7 @@
 package com.will.asgard.loki.model.leetcode;
 
+import java.util.Arrays;
+
 /**
  * @ClassName CommonUtil
  * @Description rt
@@ -16,6 +18,17 @@ public class ArrayUtil {
                 sb.append(",");
             }
             sb.append(array[i]);
+        }
+        System.out.println(sb.toString());
+    }
+
+    public static void printArray(int[][] array) {
+        StringBuilder sb = new StringBuilder();
+        for (int[] ints : array) {
+            if (sb.length() > 0) {
+                sb.append(",");
+            }
+            sb.append(Arrays.toString(ints));
         }
         System.out.println(sb.toString());
     }

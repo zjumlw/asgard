@@ -33,8 +33,6 @@ public class Renderer {
                 }
             });
         }
-
-
     }
 
     private List<ImageInfo> scanForImageInfo(CharSequence source) {
