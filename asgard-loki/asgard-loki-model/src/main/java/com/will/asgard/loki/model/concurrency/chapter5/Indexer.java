@@ -12,6 +12,7 @@ import java.util.concurrent.BlockingQueue;
 public class Indexer implements Runnable {
 
     private final BlockingQueue<File> queue;
+    private int fileCount = 0;
 
     public Indexer(BlockingQueue<File> queue) {
         this.queue = queue;
@@ -29,6 +30,9 @@ public class Indexer implements Runnable {
     }
 
     private void indexFile(File file) {
+        fileCount++;
+        String absolutePath = file.getAbsolutePath();
+        System.out.println(absolutePath);
         // todo 对文件建立索引
     }
 }

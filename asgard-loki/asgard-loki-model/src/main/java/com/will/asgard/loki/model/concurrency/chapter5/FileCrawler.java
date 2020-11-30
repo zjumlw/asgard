@@ -44,7 +44,6 @@ public class FileCrawler implements Runnable {
     }
 
     private boolean alreadyIndexed(File file) {
-        // todo 文件是否已经加入到索引
-        return false;
+        return fileQueue.contains(file);
     }
 }

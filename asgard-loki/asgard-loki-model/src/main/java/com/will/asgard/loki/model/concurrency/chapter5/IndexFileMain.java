@@ -12,18 +12,19 @@ import java.util.concurrent.LinkedBlockingDeque;
  * @Version 1.0
  */
 public class IndexFileMain {
-    private static final int BOUND = 10;
+    private static final int BOUND = 100;
     private static final int N_CONSUMER = 5;
 
     public static void main(String[] args) {
-        File[] roots = new File[10];
+        String rootPath = "/Users/maolingwei/tmp";
+        File root = new File(rootPath);
+        File[] roots = new File[]{root};
+        startIndexing(roots);
+    }
+
+    public static void startIndexing(File[] roots) {
         BlockingQueue<File> queue = new LinkedBlockingDeque<>(BOUND);
-        FileFilter fileFilter = new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return true;
-            }
-        };
+        FileFilter fileFilter = pathname -> true;
 
         for (File root : roots) {
             if (root != null) {
