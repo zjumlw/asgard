@@ -32,6 +32,7 @@ public class BoundedHashSet<T> {
         } finally {
             if (!wasAdded) {
                 // 返回许可给信号量
+                System.out.println(o + " add failed, release permit");
                 sem.release();
             }
         }
@@ -42,6 +43,8 @@ public class BoundedHashSet<T> {
         if (wasRemoved) {
             System.out.println(o + " release permit");
             sem.release();
+        } else {
+            System.out.println(o + " remove failed");
         }
         return wasRemoved;
     }

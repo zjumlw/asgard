@@ -27,7 +27,7 @@ public class Client {
 
                 BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 String line = is.readLine();
-                System.out.println("received from server: " + line);
+                System.out.println("receive data from server: " + line);
             }
 
 //            pw.close();
