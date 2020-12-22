@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.concurrency.chapter6;
+package com.will.asgard.loki.model.concurrency.chapter7;
 
 import java.io.File;
 import java.io.IOException;

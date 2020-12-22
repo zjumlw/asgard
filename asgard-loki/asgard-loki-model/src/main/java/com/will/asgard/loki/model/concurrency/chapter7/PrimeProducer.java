@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.concurrency.chapter6;
+package com.will.asgard.loki.model.concurrency.chapter7;
 
 import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;

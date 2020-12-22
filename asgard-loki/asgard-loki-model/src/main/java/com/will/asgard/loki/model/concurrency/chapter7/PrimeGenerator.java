@@ -1,4 +1,4 @@
-package com.will.asgard.loki.model.concurrency.chapter6;
+package com.will.asgard.loki.model.concurrency.chapter7;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -47,10 +47,9 @@ public class PrimeGenerator implements Runnable {
         PrimeGenerator generator = new PrimeGenerator();
         List<BigInteger> ans = generator.aSecondOfPrimes();
         System.out.println(ans.size());
-        System.out.println(ans);
 
         List<BigInteger> ans1 = generator.aSecondOfPrimes();
-        System.out.println(ans1);
+        System.out.println(ans1.size());
 
 
     }
