@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="service">asgard-thor-model</Property>
+        <Property name="logFileRoot">logs/${service}/log</Property>
+        <Property name="pattern">[%p %d] %c{1.} [%t] %m%n</Property>
+        <Property name="log4j_level">debug</Property>
+        <Property name="log4j_other_level">debug</Property>
+    </Properties>
+    <Appenders>
+        <RollingRandomAccessFile name="fileAppender" fileName="${logFileRoot}/${service}.log"
+                                 filePattern="${logFileRoot}/bk/${service}-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="otherAppender" fileName="${logFileRoot}/${service}-other.log"
+                                 filePattern="${logFileRoot}/bk/${service}-other-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="rootAppender" fileName="${logFileRoot}/${service}-root.log"
+                                 filePattern="${logFileRoot}/bk/${service}-root-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="com.will.asgard.thor" level="${log4j_level}" additivity="false">
+            <AppenderRef ref="fileAppender"/>
+        </AsyncLogger>
+        <AsyncLogger name="com.will.asgard" level="${log4j_other_level}" additivity="false">
+            <AppenderRef ref="otherAppender"/>
+        </AsyncLogger>
+
+        <AsyncRoot level="info">
+            <AppenderRef ref="rootAppender"/>
+        </AsyncRoot>
+    </Loggers>
+</Configuration>

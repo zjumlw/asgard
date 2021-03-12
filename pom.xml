@@ -13,6 +13,7 @@
     <module>asgard-common</module>
     <module>asgard-loki</module>
     <module>asgard-thor</module>
+      <module>asgard-frigg</module>
   </modules>
 
   <properties>
@@ -23,6 +24,9 @@
     <springframework.version>5.2.1.RELEASE</springframework.version>
     <springframework.security.version>5.2.0.RELEASE</springframework.security.version>
     <apache.logging.log4j.versin>2.12.1</apache.logging.log4j.versin>
+    <mybatis.version>3.5.6</mybatis.version>
+    <mybatis-spring.version>2.0.6</mybatis-spring.version>
+    <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
   </properties>
 
   <dependencyManagement>
@@ -139,6 +143,12 @@
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>20.0</version>
+      </dependency>
+      <!-- spring cloud begin -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+        <version>2.2.6.RELEASE</version>
       </dependency>
       <dependency>
         <groupId>com.google.code.gson</groupId>
@@ -285,12 +295,17 @@
       <dependency>
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis</artifactId>
-        <version>3.5.4</version>
+        <version>${mybatis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>${mybatis-spring.version}</version>
       </dependency>
       <dependency>
         <groupId>org.mybatis.spring.boot</groupId>
         <artifactId>mybatis-spring-boot-starter</artifactId>
-        <version>2.1.2</version>
+        <version>${mybatis-spring-boot-starter.version}</version>
       </dependency>
       <dependency>
         <groupId>org.redisson</groupId>

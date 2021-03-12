@@ -20,7 +20,7 @@ public class StudentDAO {
 
     public Student getStudentById(long id) {
         // 加载mybatis的配置文件
-        InputStream stream = this.getClass().getClassLoader().getResourceAsStream("conf.xml");
+        InputStream stream = this.getClass().getClassLoader().getResourceAsStream("mybatis-config.xml");
         // 构建session的工厂
         SqlSessionFactory ssf = new SqlSessionFactoryBuilder().build(stream);
         // 创建能执行映射文件中sql的sqlSession

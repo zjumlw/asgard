@@ -45,7 +45,7 @@ public class Problem3 {
             if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
                 res = Math.max(res, j - i);
-            }else {
+            } else {
                 set.remove(s.charAt(i++));
             }
         }
@@ -69,10 +69,58 @@ public class Problem3 {
         return ans;
     }
 
-    public static void main(String[] args) {
-        String str = "pwwkew";
-        System.out.println(new Problem3().lengthOfLongestSubstring(str));
+    public int lengthOfLongestSubstringV3(String s) {
+        int n = s.length();
+        // 记录每个字符是否出现过
+        Set<Character> set = new HashSet<>();
+        int ans = 0;
+        int rk = -1;
+        for (int i = 0; i < n; i++) {
+            if (i != 0) {
+                // 左指针右移，移除一个字符
+                set.remove(s.charAt(i - 1));
+            }
+            // 不断移动右指针，直到遇到重复字符
+            while (rk + 1 < n && !set.contains(s.charAt(rk + 1))) {
+                set.add(s.charAt(rk + 1));
+                rk++;
+            }
+            ans = Math.max(ans, rk - i + 1);
+        }
+        return ans;
+    }
 
+    public int lengthOfLongestSubstringV4(String s) {
+        int len = s.length();
+        if (len < 2) {
+            return len;
+        }
+
+        char[] charArray = s.toCharArray();
+        // 描述 [left, right) 里是否有元素的变量
+        int[] hashMap = new int[128];
+        // [left, right) 无重复的元素
+        int res = 1;
+        for (int left = 0, right = 0; right < len; right++) {
+            hashMap[charArray[right]]++;
+
+            if (hashMap[charArray[right]] == 2) {
+                while (hashMap[charArray[right]] == 2) {
+                    hashMap[charArray[left]]--;
+                    left++;
+                }
+            }
+            res = Math.max(res, right - left + 1);
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Problem3 problem3 = new Problem3();
+        String str = "pwwkew";
+        System.out.println(problem3.lengthOfLongestSubstring(str));
+        System.out.println(problem3.lengthOfLongestSubstringV3(str));
+        System.out.println(problem3.lengthOfLongestSubstringV4(str));
     }
 
 }

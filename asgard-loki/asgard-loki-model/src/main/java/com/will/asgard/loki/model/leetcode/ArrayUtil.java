@@ -26,7 +26,7 @@ public class ArrayUtil {
         StringBuilder sb = new StringBuilder();
         for (int[] ints : array) {
             if (sb.length() > 0) {
-                sb.append(",");
+                sb.append("\n");
             }
             sb.append(Arrays.toString(ints));
         }
