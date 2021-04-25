@@ -1,5 +1,7 @@
 package com.will.asgard.frigg.mysql;
 
+import com.will.asgard.frigg.model.User;
+
 /**
  * @Description TODO
  * @Author maolingwei
@@ -9,6 +11,6 @@ package com.will.asgard.frigg.mysql;
 public class Main {
 
     public static void main(String[] args) {
-
+        User user = new User();
     }
 }

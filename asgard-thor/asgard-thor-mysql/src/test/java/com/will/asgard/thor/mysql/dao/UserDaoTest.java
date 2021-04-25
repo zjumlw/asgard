@@ -33,7 +33,7 @@ public class UserDaoTest {
         SqlSession sqlSession = ssf.openSession(true);
 
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        List<User> users = mapper.selectUsers();
+        List<User> users = mapper.getAllUsers();
         System.out.println(GsonUtil.toJson(users));
     }
 
@@ -41,7 +41,7 @@ public class UserDaoTest {
     public void testMyBatisSpring() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserMapper userMapper = applicationContext.getBean("userMapper", UserMapper.class);
-        List<User> users = userMapper.selectUsers();
+        List<User> users = userMapper.getAllUsers();
         System.out.println(GsonUtil.toJson(users));
     }
 }

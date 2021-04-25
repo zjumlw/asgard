@@ -21,13 +21,28 @@ public class UserMapperImpl implements UserMapper {
     }
 
     @Override
-    public List<User> selectUsers() {
+    public List<User> getAllUsers() {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        return mapper.selectUsers();
+        return mapper.getAllUsers();
     }
 
     @Override
-    public User getUser(String userId) {
-        return null;
+    public User getUserById(long userId) {
+        return sqlSession.getMapper(UserMapper.class).getUserById(userId);
+    }
+
+    @Override
+    public long addUser(User user) {
+        return sqlSession.getMapper(UserMapper.class).addUser(user);
+    }
+
+    @Override
+    public long updateUser(User user) {
+        return sqlSession.getMapper(UserMapper.class).updateUser(user);
+    }
+
+    @Override
+    public int deleteUser(long userId) {
+        return sqlSession.getMapper(UserMapper.class).deleteUser(userId);
     }
 }

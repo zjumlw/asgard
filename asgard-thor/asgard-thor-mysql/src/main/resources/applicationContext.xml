@@ -7,10 +7,15 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--倒入mybatis-spring相关的配置-->
     <import resource="spring-dao.xml"/>
 
     <bean id="userMapper" class="com.will.asgard.thor.mysql.mapper.UserMapperImpl">
         <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+
+    <bean id="userMapper2" class="com.will.asgard.thor.mysql.mapper.UserMapperImpl2">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
 </beans>

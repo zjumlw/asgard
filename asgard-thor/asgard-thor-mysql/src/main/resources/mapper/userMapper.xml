@@ -7,7 +7,7 @@
 -->
 <mapper namespace="com.will.asgard.thor.mysql.mapper.UserMapper">
     <!--具体mapper里的内容-->
-  <select id="selectUsers" resultType="com.will.asgard.thor.model.demo.user.User">
-    select * from user;
+  <select id="getAllUsers" resultType="User">
+    select * from user
   </select>
 </mapper>

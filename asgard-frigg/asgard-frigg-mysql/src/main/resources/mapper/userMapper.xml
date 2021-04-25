@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace绑定一个对应的DAO/Mapper接口-->
+<mapper namespace="com.will.asgard.frigg.mysql.dao.UserMapper">
+
+    <!--在该mapper中开启二级缓存-->
+    <cache
+        eviction="FIFO"
+        flushInterval="60000"
+        size="512"
+        readOnly="true"/>
+
+    <!--使用resultMap来映射属性名和列名-->
+<!--    <resultMap id="userResultMap" type="User">-->
+<!--        <result property="password" column="pwd"/>-->
+<!--    </resultMap>-->
+
+    <select id="getUserList" resultType="User">
+        select * from user;
+    </select>
+
+    <select id="getUserById" resultType="User" parameterType="long">
+        select * from user where id = #{id};
+    </select>
+
+    <select id="getUsersByLimit" resultType="User" parameterType="map">
+        select * from user limit #{startIndex},#{pageSize};
+    </select>
+
+    <select id="getUserLike" resultType="User" parameterType="string">
+        select * from user where name like #{key}
+    </select>
+
+    <insert id="addUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        insert into user (`name`, `pwd`) values (#{name}, #{pwd});
+    </insert>
+
+    <insert id="addUser2" parameterType="map">
+        insert into user (`name`, `pwd`) values (#{userName}, #{password});
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update user set name=#{name},pwd=#{pwd} where id=#{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="long">
+        delete from user where id=#{id};
+    </delete>
+</mapper>

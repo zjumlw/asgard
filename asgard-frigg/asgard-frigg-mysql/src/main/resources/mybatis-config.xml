@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心配置文件-->
+<configuration>
+
+    <!--引入外部配置文件-->
+    <properties resource="db.properties">
+    </properties>
+    
+    <settings>
+        <!--日志的设置-->
+<!--        <setting name="logImpl" value="LOG4J2"/>-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--开启全局缓存，默认true-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <!--起别名-->
+    <typeAliases>
+        <!--类完全限定名的别名，实体类较少时使用-->
+<!--        <typeAlias type="com.will.asgard.frigg.model.User" alias="User"/>-->
+        <!--包名，实体类较多时使用-->
+        <package name="com.will.asgard.frigg.model"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mapper/userMapper.xml"/>
+        <mapper resource="mapper/studentMapper.xml"/>
+        <mapper resource="mapper/teacherMapper.xml"/>
+        <mapper resource="mapper/blogMapper.xml"/>
+<!--        <mapper class="com.will.asgard.frigg.mysql.dao.UserMapper"/>-->
+<!--        <package name="com.will.asgard.frigg.mysql.dao"/>-->
+        <mapper class="com.will.asgard.frigg.mysql.dao.UserMapper2"/>
+    </mappers>
+</configuration>

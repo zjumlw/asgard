@@ -11,5 +11,12 @@
 
     <artifactId>asgard-frigg-mysql</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.will.asgard</groupId>
+            <artifactId>asgard-frigg-model</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

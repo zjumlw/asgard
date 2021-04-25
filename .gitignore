@@ -4,6 +4,7 @@ target/
 
 # Log file
 log/
+logs/
 *.log
 
 # Package Files
