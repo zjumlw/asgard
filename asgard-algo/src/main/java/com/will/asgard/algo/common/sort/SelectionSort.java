@@ -29,14 +29,14 @@ public class SelectionSort {
 
         for (int i = 0; i < nums.length - 1; i++) {
             int minIdx = i;
+            // 找到i后最小的数的下标minIdx
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[j] < nums[minIdx]) {
                     minIdx = j;
                 }
             }
-            int tmp = nums[i];
-            nums[i] = nums[minIdx];
-            nums[minIdx] = tmp;
+            // 进行交换（会导致不稳定）
+            SortUtil.swap(nums, i, minIdx);
         }
     }
 
@@ -47,16 +47,20 @@ public class SelectionSort {
 
         for (int i = 0; i < nums.length - 1; i++) {
             int minIdx = i;
+            // 找到i后最小的数的下标minIdx
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[j] < nums[minIdx]) {
                     minIdx = j;
                 }
             }
+            // 记录下最小的数
             int key = nums[minIdx];
+            // 将数组的 [i, minIdx-1] 区间右移一位，替换其中的 [i+1, minIdx] 的数
             while (minIdx > i) {
                 nums[minIdx] = nums[minIdx - 1];
                 minIdx--;
             }
+            // 将最小的数插入到i位置
             nums[i] = key;
         }
     }

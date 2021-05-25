@@ -31,6 +31,11 @@ public class ListNodeUtil {
 	}
 
 	public static void printList(ListNode l) {
+        if (l == null) {
+            System.out.println("null");
+            return;
+        }
+
 		StringBuilder sb = new StringBuilder();
 		while (l != null) {
 			if (sb.length() != 0) {
