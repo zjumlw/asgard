@@ -43,6 +43,7 @@ public class MergeSort {
         // 优化2：「插入排序」在小规模的排序任务上表现出色，这里，我们就可以在小区间里使用插入排序了；
         if (right - left <= 15) {
             // todo 用插入排序进行优化
+            insertionSort(nums, left, right);
         }
 
         // 当带排序的部分只有 1 个元素甚至更少的时候，归并排序就终止了，这一步很关键
@@ -114,6 +115,18 @@ public class MergeSort {
                 nums[i + left] = temp[r];
                 r++;
             }
+        }
+    }
+
+    private void insertionSort(int[] nums, int left, int right) {
+        for (int i = left + 1; i <= right; i++) {
+            int temp = nums[i];
+            int j = i;
+            while (j > left && nums[j - 1] > temp) {
+                nums[j] = nums[j - 1];
+                j--;
+            }
+            nums[j] = temp;
         }
     }
 
