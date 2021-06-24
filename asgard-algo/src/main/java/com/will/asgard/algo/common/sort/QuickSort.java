@@ -26,19 +26,34 @@ public class QuickSort {
     private static final int INSERTION_SORT_THRESHOLD = 7;
     private static final Random RANDOM = new Random();
 
-    public void quickSort(int[] nums) {
-        sort(nums, 0, nums.length - 1);
+    public void basicQuickSort(int[] nums) {
+        sort1(nums, 0, nums.length - 1);
     }
 
-    private void sort(int[] nums, int left, int right) {
+    private void sort1(int[] nums, int left, int right) {
+        if (right - left <= INSERTION_SORT_THRESHOLD) {
+            insertionSort(nums, left, right);
+            return;
+        }
+
+        int j = partition(nums, left, right);
+        sort1(nums, left, j - 1);
+        sort1(nums, j + 1, right);
+    }
+
+    public void twoWayQuickSort(int[] nums) {
+        sort2(nums, 0, nums.length - 1);
+    }
+
+    private void sort2(int[] nums, int left, int right) {
         if (right - left <= INSERTION_SORT_THRESHOLD) {
             insertionSort(nums, left, right);
             return;
         }
 
         int j = partitionV2(nums, left, right); // 寻找切分点
-        sort(nums, left, j - 1);
-        sort(nums, j + 1, right);
+        sort2(nums, left, j - 1);
+        sort2(nums, j + 1, right);
     }
 
     private void insertionSort(int[] nums, int left, int right) {
@@ -115,6 +130,10 @@ public class QuickSort {
         return gt;
     }
 
+    public void threeWayQuickSort(int[] nums) {
+        sortV2(nums, 0, nums.length - 1);
+    }
+
     /**
      * 三路快排
      */
@@ -177,7 +196,7 @@ public class QuickSort {
 
         ArrayUtil.printArray(nums);
 
-        new QuickSort().quickSort(nums);
+        new QuickSort().twoWayQuickSort(nums);
         ArrayUtil.printArray(nums);
     }
 }

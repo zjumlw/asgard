@@ -35,6 +35,10 @@ package com.will.asgard.algo.leetcode;
  */
 public class Problem852 {
 
+    /**
+     * 时间 O(n)
+     * 空间 O(1)
+     */
     public int peakIndexInMountainArray(int[] arr) {
         if (arr == null || arr.length < 3) {
             return -1;
@@ -49,6 +53,11 @@ public class Problem852 {
         return ans;
     }
 
+    /**
+     * 二分
+     * 时间  O(nlogn)
+     * 空间 O(1)
+     */
     public int peakIndexInMountainArrayV2(int[] arr) {
         int lo = 0;
         int hi = arr.length - 1;
