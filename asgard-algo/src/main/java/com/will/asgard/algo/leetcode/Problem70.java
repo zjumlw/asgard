@@ -47,4 +47,10 @@ public class Problem70 {
 
         return dp[n];
     }
+
+    public static void main(String[] args) {
+        Problem70 problem70 = new Problem70();
+        int i = problem70.climbStairs(5);
+        System.out.println(i);
+    }
 }

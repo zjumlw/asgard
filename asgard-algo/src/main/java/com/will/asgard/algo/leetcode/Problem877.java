@@ -1,8 +1,5 @@
 package com.will.asgard.algo.leetcode;
 
-import java.util.Arrays;
-
-import sun.jvm.hotspot.memory.PlaceholderEntry;
 
 /**
  * @Description medium

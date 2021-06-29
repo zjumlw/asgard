@@ -1,7 +1,5 @@
 package com.will.asgard.algo.leetcode;
 
-import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * @Description medium
