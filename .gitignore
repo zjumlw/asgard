@@ -28,3 +28,4 @@ logs/
 
 # macOs
 .DS_Store
+*.DS_Store
