@@ -55,6 +55,7 @@ public class Problem1744 {
         int n = queries.length;
         int m = candiesCount.length;
         boolean[] ans = new boolean[n];
+        // 前缀和，i类糖果之前有多少糖果
         long[] sum = new long[m + 1];
         for (int i = 1; i <= m; i++) {
             sum[i] = sum[i - 1] + candiesCount[i - 1];
@@ -62,13 +63,15 @@ public class Problem1744 {
 
         for (int i = 0; i < n; i++) {
             int t = queries[i][0];
+            // 希望的吃糖时间
             int d = queries[i][1] + 1;
             int c = queries[i][2];
+            // 最快吃糖时间（每天吃c颗糖）
             long a = sum[t] / c + 1;
+            // 最慢吃糖时间（每天吃1颗糖，即吃最后一颗t糖的时间）
             long b = sum[t + 1];
-            ans[i] = a <= d && d <= b;
+            ans[i] = d >= a && d <= b;
         }
-
 
         return ans;
     }

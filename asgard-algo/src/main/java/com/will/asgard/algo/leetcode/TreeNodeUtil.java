@@ -13,7 +13,9 @@ import java.util.List;
  */
 public class TreeNodeUtil {
 
-    // Encodes a tree to a single string.
+    /**
+     * Encodes a tree to a single string.
+      */
     public static String serialize(TreeNode root) {
         String tmp = serialize0(root, "");
         if (tmp.endsWith(",")) {
@@ -22,6 +24,9 @@ public class TreeNodeUtil {
         return tmp;
     }
 
+    /**
+     * 用先序遍历来序列化二叉树
+     */
     private static String serialize0(TreeNode root, String str) {
         if (root == null) {
             str += "null,";
@@ -33,7 +38,9 @@ public class TreeNodeUtil {
         return str;
     }
 
-    // Decodes your encoded data to tree.
+    /**
+     * Decodes your encoded data to tree.
+     */
     public static TreeNode deserialize(String data) {
         String[] split = data.split(",");
         List<String> l = new LinkedList<>(Arrays.asList(split));
@@ -46,7 +53,7 @@ public class TreeNodeUtil {
             return null;
         }
 
-        TreeNode root = new TreeNode(Integer.valueOf(l.get(0)));
+        TreeNode root = new TreeNode(Integer.parseInt(l.get(0)));
         l.remove(0);
         root.left = deserialize0(l);
         root.right = deserialize0(l);
@@ -104,7 +111,7 @@ public class TreeNodeUtil {
             }
             sb.append(treeNode == null ? "N" : treeNode.val);
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 
     public static void main(String[] args) {
