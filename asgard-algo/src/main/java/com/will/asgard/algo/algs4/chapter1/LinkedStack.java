@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 /**
  * @ClassName Stack
  * @Description use node
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-04-26 20:20
  * @Version 1.0
  **/

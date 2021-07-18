@@ -22,7 +22,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/convert-bst-to-greater-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-09-21 10:36
  * @Version 1.0
  **/

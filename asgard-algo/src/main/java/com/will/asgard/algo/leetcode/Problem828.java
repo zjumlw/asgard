@@ -37,7 +37,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/count-unique-characters-of-all-substrings-of-a-given-string
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-04-17 17:53
  * @Version 1.0
  **/

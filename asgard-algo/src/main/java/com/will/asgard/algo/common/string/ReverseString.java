@@ -18,7 +18,7 @@ package com.will.asgard.algo.common.string;
  *
  * 输入：["H","a","n","n","a","h"]
  * 输出：["h","a","n","n","a","H"]
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-05-09 18:32
  * @Version 1.0
  **/

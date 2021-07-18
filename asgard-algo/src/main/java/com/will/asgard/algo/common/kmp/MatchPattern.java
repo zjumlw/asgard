@@ -6,7 +6,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
 
 /**
  * @Description TODO
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-09-16 16:58
  * @Version 1.0
  **/

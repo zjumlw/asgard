@@ -3,7 +3,7 @@ package com.will.asgard.algo.leetcode;
 /**
  * @ClassName ListNodeUtil
  * @Description TODO
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-04-17 14:45
  * @Version 1.0
  **/

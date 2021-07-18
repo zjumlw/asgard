@@ -21,7 +21,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  * 输入: [4,3,2,1]
  * 输出: [4,3,2,2]
  * 解释: 输入数组表示数字 4321。
- * @Auther maolingwei
+ * @Author maolingwei
  * @Date 2020-05-14 19:04
  * @Version 1.0
  **/

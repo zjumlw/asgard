@@ -72,34 +72,34 @@ public class Problem300 {
      * 贪心算法 + 二分
      */
     public int lengthOfLISV2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
+        int n = nums.length;
+        if (n <= 1) {
+            return n;
         }
-        int length = nums.length;
-        int[] d = new int[length + 1];
-        int len = 1;
-        d[len] = nums[0];
-        for (int i = 1; i < length; i++) {
-            if (nums[i] > d[len]) {
-                len = len + 1;
-                d[len] = nums[i];
-            } else {
-                int l = 1;
-                int r = len;
-                int pos = 0;
-                while (l <= r) {
-                    int mid = l + (r - l) / 2;
-                    if (d[mid] < nums[i]) {
-                        pos = mid;
-                        l = mid + 1;
+
+        int[] tail = new int[n];
+        tail[0] = nums[0];
+        int end = 0;
+        for (int i = 1; i < n; i++) {
+            // 当前数大于tail最后的元素，直接加到最后面
+            if (nums[i] > tail[end]) {
+                end++;
+                tail[end] = nums[i];
+            } else { // 二分查找第一个大于nums[i]的数
+                int left = 0;
+                int right = end;
+                while(left < right) {
+                    int mid = left + (right - left)/2;
+                    if (tail[mid] < nums[i]) {
+                        left = mid + 1;
                     } else {
-                        r = mid - 1;
+                        right = mid;
                     }
                 }
-                d[pos + 1] = nums[i];
+                tail[left] = nums[i];
             }
         }
-        return len;
+        return end + 1;
     }
 
     public static void main(String[] args) {
