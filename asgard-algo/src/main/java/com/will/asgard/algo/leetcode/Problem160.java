@@ -74,6 +74,7 @@ public class Problem160 {
 
         ListNode pA = headA;
         ListNode pB = headB;
+        // 至少一个不为null，如果都为null，则一定是不相遇
         while (pA != null || pB != null) {
             if (pA == pB) {
                 return pA;
