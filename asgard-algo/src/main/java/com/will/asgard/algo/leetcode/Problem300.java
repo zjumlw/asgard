@@ -85,7 +85,7 @@ public class Problem300 {
             if (nums[i] > tail[end]) {
                 end++;
                 tail[end] = nums[i];
-            } else { // 二分查找第一个大于nums[i]的数
+            } else { // 二分查找第一个大于等于nums[i]的数
                 int left = 0;
                 int right = end;
                 while(left < right) {

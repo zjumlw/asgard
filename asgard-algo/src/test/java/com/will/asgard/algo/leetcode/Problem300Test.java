@@ -28,4 +28,11 @@ public class Problem300Test {
         int ans = problem300.lengthOfLISV2(nums);
         Assert.assertEquals(4, ans);
     }
+
+    @Test
+    public void test3() {
+        int[] nums = new int[]{4, 10, 4, 3, 8, 9};
+        int ans = problem300.lengthOfLISV2(nums);
+        Assert.assertEquals(3, ans);
+    }
 }
