@@ -49,4 +49,22 @@ public class ArrayUtil {
         }
         System.out.println(sb.toString());
     }
+
+    public static boolean arrayEqualElement(int[] expected, int[] target) {
+        if (expected == null && target == null) {
+            return true;
+        }
+        if (expected == null || target == null) {
+            return false;
+        }
+        if (expected.length != target.length) {
+            return false;
+        }
+        for (int i = 0; i < target.length; i++) {
+            if (expected[i] != target[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
