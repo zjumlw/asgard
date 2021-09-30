@@ -27,13 +27,13 @@ import java.util.Arrays;
  * 提示：
  *
  * 1 <= nums.length <= 2500
- * -104 <= nums[i] <= 104
+ * -10^4 <= nums[i] <= 10^4
  *  
  *
  * 进阶：
  *
- * 你可以设计时间复杂度为 O(n2) 的解决方案吗？
- * 你能将算法的时间复杂度降低到 O(n log(n)) 吗?
+ * 你可以设计时间复杂度为 O(n^2) 的解决方案吗？
+ * 你能将算法的时间复杂度降低到 O(nlog(n)) 吗?
  *
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/longest-increasing-subsequence
@@ -46,7 +46,10 @@ import java.util.Arrays;
 public class Problem300 {
 
     /**
-     * 动态规划，dp[i]由dp[j]而来，dp[i] = Math.max(dp[j]) + 1，0 <= j < i且num[j] < num[i]
+     * 动态规划，dp[i] 表示以 nums[i] 为结尾的上升子序列的长度。这是一种"无后效性"的思考方法。
+     * dp[i]由dp[j]而来，dp[i] = Math.max(dp[j]) + 1，0 <= j < i且num[j] < num[i]
+     * 时间复杂度 O(n^2)
+     * 空间复杂度 O(n)
      */
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
@@ -70,6 +73,7 @@ public class Problem300 {
 
     /**
      * 贪心算法 + 二分
+     * 思路：记录在长度固定的情况下，结尾最小的那个元素的数值
      */
     public int lengthOfLISV2(int[] nums) {
         int n = nums.length;
@@ -77,6 +81,8 @@ public class Problem300 {
             return n;
         }
 
+        // tail[i] 表示长度为 i+1 的所有上升子序列的结尾的最小值
+        // tail 数组是一个严格上升的有序数组
         int[] tail = new int[n];
         tail[0] = nums[0];
         int end = 0;
@@ -96,6 +102,7 @@ public class Problem300 {
                         right = mid;
                     }
                 }
+                // 将大的数换成较小的数，这样就有可能组成更长的子序列。贪心的思想。
                 tail[left] = nums[i];
             }
         }

@@ -1,10 +1,16 @@
 package com.will.asgard.algo.game.lottery;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.will.asgard.algo.game.lottery.api.cwl.Prizegrade;
+import com.will.asgard.algo.game.lottery.api.cwl.SsqResult;
+import com.will.asgard.common.util.GsonUtil;
 
 /**
  * @Description TODO
@@ -47,9 +53,11 @@ public class DoubleColorUtil {
             throw new IllegalStateException("未初始化完成");
         }
 
+        List<Integer> redBolls = new ArrayList<>();
         int red = 0;
         for (int i = 0; i < 6; i++) {
             if (redTargets.contains(src[i])) {
+                redBolls.add(src[i]);
                 red++;
             }
         }
@@ -60,15 +68,34 @@ public class DoubleColorUtil {
         }
 
         int level = levelMatch(red, blue);
+        StringBuilder msg = new StringBuilder();
         if (level > 0) {
             BonusLevel bonusLevel = map.get(level);
-            System.out.println("恭喜您！！您的彩票 " + Arrays.toString(src) + " 中了" + bonusLevel.getName() + "，获得奖金" + bonusLevel.getBonus());
+            msg.append("恭喜您！！您的彩票 ")
+                    .append(Arrays.toString(src))
+                    .append(" 中了")
+                    .append(bonusLevel.getName())
+                    .append("，获得奖金")
+                    .append(bonusLevel.getBonus());
+            if (redBolls.size() > 0) {
+                msg.append(" ==> 红球的相同号码是：").append(GsonUtil.toJson(redBolls));
+            }
+            // 蓝球相同
+            if (blue == 1) {
+                msg.append("，蓝球号码是：").append(blueTarget);
+            }
         } else {
-            System.out.println("不好意思，您的彩票 " + Arrays.toString(src) + " 未中奖");
+            msg.append("不好意思，您的彩票 ")
+                    .append(Arrays.toString(src))
+                    .append(" 未中奖");
+            if (redBolls.size() > 0) {
+                msg.append(" ==> 红球的相同号码是：").append(GsonUtil.toJson(redBolls));
+            }
         }
+        System.out.println(msg);
     }
 
-    private static int levelMatch(int red, int blue) {
+    public static int levelMatch(int red, int blue) {
         if (red == 6 && blue == 1) {
             return 1;
         }
@@ -88,5 +115,53 @@ public class DoubleColorUtil {
             return 6;
         }
         return -1;
+    }
+
+    public static void matchHistory(int[] myBalls, List<SsqResult> historyResult) {
+        for (SsqResult r : historyResult) {
+            int redMatch = 0;
+            int blueMatch = 0;
+
+            Set<Integer> redSets = new HashSet<>();
+            int[] red = r.getRed();
+            for (int e : red) {
+                redSets.add(e);
+            }
+            for (int i = 0; i <= 5; i++) {
+                if (redSets.contains(myBalls[i])) {
+                    redMatch++;
+                }
+            }
+
+            int blue = r.getBlue();
+            if (myBalls[6] == blue) {
+                blueMatch = 1;
+            }
+
+            int level = levelMatch(redMatch, blueMatch);
+            if (level > 0) {
+                List<Prizegrade> prizeGrades = r.getPrizeGrades();
+                for (Prizegrade prizeGrade : prizeGrades) {
+                    if (Integer.parseInt(prizeGrade.getType()) == level) {
+                        StringBuilder sb = new StringBuilder();
+                        sb.append("恭喜您于 ")
+                                .append(r.getDate())
+                                .append(" 中 ")
+                                .append(level)
+                                .append(" 等奖，奖金 ")
+                                .append(prizeGrade.getTypemoney())
+                                .append(" 元，和你一起中奖的有 ")
+                                .append(prizeGrade.getTypenum())
+                                .append(" 人");
+                        if (level == 1) {
+                            sb.append("，他们来自")
+                                    .append(r.getContent());
+                        }
+                        System.out.println(sb);
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

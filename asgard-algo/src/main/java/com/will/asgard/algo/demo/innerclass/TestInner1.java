@@ -1,15 +1,16 @@
-package com.will.asgard.algo.demo;
+package com.will.asgard.algo.demo.innerclass;
 
 /**
- * @Description 内部类的测试
+ * @Description 私有内部类
  * @Author maolingwei
  * @Date 2021-05-25 下午4:00
  * @Version 1.0
  */
 public class TestInner1 {
-    // 内部类可以访问所在类的属性（包括私有属性）
+    // 内部类可以访问外部类的属性（包括私有属性）
     private int number = 10;
 
+    // 私有内部类
     private class Inner {
         private int number = 100;
 
@@ -22,9 +23,7 @@ public class TestInner1 {
     }
 
     public static void main(String[] args) {
-        TestInner1 testInner1 = new TestInner1();
-        // 创建内部类对象需要先创建所在类的对象
-        TestInner1.Inner inner = testInner1.new Inner();
+        TestInner1.Inner inner = new TestInner1().new Inner();
         inner.print();
     }
 }

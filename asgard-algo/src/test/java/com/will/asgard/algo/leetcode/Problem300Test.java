@@ -24,9 +24,9 @@ public class Problem300Test {
 
     @Test
     public void test2() {
-        int[] nums = new int[]{10, 9, 2, 5, 3, 7, 101, 18};
+        int[] nums = new int[]{10, 9, 2, 5, 3, 7, 101, 18, 4, 8, 6, 12};
         int ans = problem300.lengthOfLISV2(nums);
-        Assert.assertEquals(4, ans);
+        Assert.assertEquals(5, ans);
     }
 
     @Test

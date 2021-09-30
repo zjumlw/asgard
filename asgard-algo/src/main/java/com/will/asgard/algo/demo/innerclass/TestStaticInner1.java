@@ -1,6 +1,4 @@
-package com.will.asgard.algo.demo;
-
-import com.will.asgard.common.util.GsonUtil;
+package com.will.asgard.algo.demo.innerclass;
 
 /**
  * @Description 一旦内部类使用static修饰，那么此时这个内部类就升级为顶级类

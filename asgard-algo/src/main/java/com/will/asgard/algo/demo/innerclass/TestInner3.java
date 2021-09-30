@@ -1,4 +1,4 @@
-package com.will.asgard.algo.demo;
+package com.will.asgard.algo.demo.innerclass;
 
 /**
  * @Description TODO

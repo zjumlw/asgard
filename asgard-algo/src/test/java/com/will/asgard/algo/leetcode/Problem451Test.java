@@ -2,9 +2,6 @@ package com.will.asgard.algo.leetcode;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import sun.jvm.hotspot.opto.CallJavaNode;
-
-import static org.junit.Assert.*;
 
 /**
  * @Description
@@ -14,19 +11,26 @@ import static org.junit.Assert.*;
  **/
 public class Problem451Test {
 
-    private static Problem451 problem451;
+    private Problem451 problem451 = new Problem451();
 
-
-
-    @BeforeClass
-    public static void beforeClass() throws Exception {
-        problem451 = new Problem451();
+    @Test
+    public void test1_1() {
+        String s = "tree";
+        String ans = problem451.frequencySort(s);
+        System.out.println(ans);
     }
 
     @Test
-    public void test1() {
-        String s = "tree";
+    public void test1_2() {
+        String s = "Aabb";
         String ans = problem451.frequencySort(s);
+        System.out.println(ans);
+    }
+
+    @Test
+    public void test2_1() {
+        String s = "tree";
+        String ans = problem451.frequencySortV2(s);
         System.out.println(ans);
     }
 }

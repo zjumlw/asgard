@@ -1,8 +1,8 @@
-package com.will.asgard.algo.demo;
+package com.will.asgard.algo.demo.innerclass;
+
+import com.will.asgard.algo.demo.innerclass.TestStaticInner1;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Description TODO

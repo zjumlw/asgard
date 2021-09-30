@@ -1,7 +1,11 @@
 package com.will.asgard.algo.leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
@@ -75,7 +79,7 @@ public class Problem451 {
         StringBuilder sb = new StringBuilder();
         while (!queue.isEmpty()) {
             int[] tmp = queue.poll();
-            System.out.println(Arrays.toString(tmp));
+//            System.out.println(Arrays.toString(tmp));
             char c = (char) (tmp[0]);
             int count = tmp[1];
             while (count > 0) {
@@ -84,6 +88,26 @@ public class Problem451 {
             }
         }
 
+        return sb.toString();
+    }
+
+    public String frequencySortV2(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        List<Character> list = new ArrayList<>(map.keySet());
+        list.sort((a, b) -> map.get(b) - map.get(a));
+        StringBuilder sb = new StringBuilder();
+        for (char c : list) {
+            int freq = map.get(c);
+            for (int j = 0; j < freq; j++) {
+                sb.append(c);
+            }
+        }
         return sb.toString();
     }
 }
