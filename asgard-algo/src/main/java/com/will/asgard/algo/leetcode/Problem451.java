@@ -110,4 +110,42 @@ public class Problem451 {
         }
         return sb.toString();
     }
+
+    /**
+     * 桶排序
+     */
+    public String frequencySort_bucket(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int maxFreq = 0;
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            int freq = map.getOrDefault(c, 0) + 1;
+            map.put(c, freq);
+            maxFreq = Math.max(maxFreq, freq);
+        }
+
+        StringBuilder[] buckets = new StringBuilder[maxFreq + 1];
+        for (int i = 0; i <= maxFreq; i++) {
+            buckets[i] = new StringBuilder();
+        }
+
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            char c = e.getKey();
+            int freq = e.getValue();
+            buckets[freq].append(c);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = maxFreq; i > 0; i--) {
+            StringBuilder bucket = buckets[i];
+            int size = bucket.length();
+            for (int j = 0; j < size; j++) {
+                for (int k = 0; k < i; k++) {
+                    sb.append(bucket.charAt(j));
+                }
+            }
+        }
+        return sb.toString();
+    }
 }

@@ -33,4 +33,11 @@ public class Problem451Test {
         String ans = problem451.frequencySortV2(s);
         System.out.println(ans);
     }
+
+    @Test
+    public void test3_1() {
+        String s = "tree";
+        String ans = problem451.frequencySort_bucket(s);
+        System.out.println(ans);
+    }
 }
