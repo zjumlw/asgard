@@ -98,6 +98,11 @@ public class TreeNodeUtil {
             currentLine = nextLine;
         }
 
+//        doPrintLines(lines);
+        doPrintLinesV2(lines);
+    }
+
+    private static void doPrintLines(List<List<TreeNode>> lines) {
         for (List<TreeNode> line : lines) {
             printOneLine(line);
         }
@@ -114,9 +119,116 @@ public class TreeNodeUtil {
         System.out.println(sb);
     }
 
+    private static void doPrintLinesV2(List<List<TreeNode>> lines) {
+        int n = lines.size();
+        if (n == 0) {
+            return;
+        }
+
+//        System.out.println("新的打印方式");
+        List<String> linesStr = new ArrayList<>();
+
+        List<TreeNode> lastLine = lines.get(n - 1);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < lastLine.size(); i++) {
+            TreeNode tempNode = lastLine.get(i);
+            sb.append(tempNode == null ? "N" : tempNode.val);
+            if (i != lastLine.size() - 1) {
+                sb.append(" ");
+            }
+        }
+        String lastLineStr = sb.toString();
+        linesStr.add(lastLineStr);
+
+        String prevLineStr = lastLineStr;
+        boolean slot = true;
+        for (int i = n - 2; i >= 0; i--) {
+            // 清空 sb
+            sb.delete(0, sb.length());
+            List<TreeNode> currLine = lines.get(i);
+            buildCurrLineStr(sb, prevLineStr, currLine);
+
+            String currLineStr = sb.toString();
+            linesStr.add(currLineStr);
+            prevLineStr = currLineStr;
+        }
+
+        for (int i = linesStr.size() - 1; i >= 0; i--) {
+            System.out.println(linesStr.get(i));
+        }
+    }
+
+    private static void buildCurrLineStr(StringBuilder sb, String prevLineStr, List<TreeNode> currLine) {
+        int n = prevLineStr.length();
+        // 填空模版
+        String[] template = new String[n];
+        Arrays.fill(template, " ");
+
+        for (int i = 0; i < n; i++) {
+            if (prevLineStr.charAt(i) != ' ') {
+                template[i] = "d";
+            }
+        }
+        System.out.println(Arrays.toString(template));
+
+        for (int i = 0; i < n;) {
+            if (template[i].equals("d")) {
+                for (int j = i + 1; j < n; j++) {
+                    if (template[j].equals("d")) {
+                        int mid = (i + j) / 2;
+                        template[mid] = "#";
+                        i = j + 1;
+                        break;
+                    }
+                }
+            } else {
+                i++;
+            }
+        }
+
+        int index = 0;
+        for (String s : template) {
+            if (index == currLine.size()) {
+                break;
+            }
+
+            if (!"#".equals(s)) {
+                sb.append(" ");
+            } else {
+                sb.append(currLine.get(index).val);
+                index++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        String data = "2,1,null,5,null,null,3,null,null";
-        TreeNode root = TreeNodeUtil.deserialize(data);
-        printTreeNode(root);
+        String s = " 4 5 6 N";
+        int n = s.length();
+        String[] template = new String[n];
+        Arrays.fill(template, " ");
+
+        for (int i = 0; i < n; i++) {
+            if (s.charAt(i) != ' ') {
+                template[i] = "d";
+            }
+        }
+        System.out.println(Arrays.toString(template));
+
+        for (int i = 0; i < n;) {
+            if (template[i].equals("d")) {
+                for (int j = i + 1; j < n; j++) {
+                    if (template[j].equals("d")) {
+                        int mid = (i + j) / 2;
+                        template[mid] = "#";
+                        i = j + 1;
+                        break;
+                    }
+                }
+            } else {
+                i++;
+            }
+        }
+
+        System.out.println(Arrays.toString(template));
     }
 }

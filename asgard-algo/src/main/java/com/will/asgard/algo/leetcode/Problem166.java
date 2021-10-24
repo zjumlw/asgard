@@ -1,5 +1,8 @@
 package com.will.asgard.algo.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Description 166. 分数到小数 medium
  * 给定两个整数，分别表示分数的分子 numerator 和分母 denominator，以 字符串形式返回小数 。
@@ -41,7 +44,40 @@ package com.will.asgard.algo.leetcode;
  **/
 public class Problem166 {
 
+    /**
+     *
+     * @param numerator 分子
+     * @param denominator 分母
+     * @return 小数
+     */
     public String fractionToDecimal(int numerator, int denominator) {
-        return "";
+        long a = numerator;
+        long b = denominator;
+        if (a % b == 0) {
+            return String.valueOf(a / b);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        if ((a < 0 && b > 0 || (a > 0 && b < 0))) {
+            sb.append("-");
+        }
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        sb.append(a / b).append(".");
+        a %= b;
+        Map<Long, Integer> map = new HashMap<>();
+        while (a != 0) {
+            map.put(a, sb.length());
+            a *= 10;
+            sb.append(a / b);
+            a %= b;
+            if (map.containsKey(a)) {
+                int u = map.get(a);
+                return String.format("%s(%s)", sb.substring(0, u), sb.substring(u));
+            }
+        }
+
+        return sb.toString();
     }
 }
