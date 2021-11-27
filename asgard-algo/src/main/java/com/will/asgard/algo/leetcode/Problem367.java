@@ -31,11 +31,11 @@ public class Problem367 {
             return true;
         }
 
-        int left = 0;
+        int left = 1;
         int right = num / 2;
         while (left < right) {
             int mid = left + (right - left + 1) / 2;
-            if (mid > num / mid) {
+            if (mid > num / mid) { // 防止越界
                 right = mid - 1;
             } else {
                 left = mid;
