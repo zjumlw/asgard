@@ -33,6 +33,7 @@ public class ShellSort {
             for (int i = h; i < len; i++) {
                 insertionForDelta(nums, h, i);
             }
+            // 缩小增量，直到1
             h = h / 3;
         }
     }
@@ -42,7 +43,7 @@ public class ShellSort {
      *
      * @param nums 数组
      * @param gap 间隔
-     * @param i
+     * @param i 待插入的元素下标
      */
     private void insertionForDelta(int[] nums, int gap, int i) {
         int temp = nums[i];

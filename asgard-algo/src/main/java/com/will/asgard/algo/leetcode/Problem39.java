@@ -1,13 +1,15 @@
 package com.will.asgard.algo.leetcode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.List;
 
 import com.will.asgard.common.util.GsonUtil;
 
 /**
- * @Description
+ * @Description 39. 组合总和 medium
  * 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
  *
  * candidates 中的数字可以无限制重复被选取。
@@ -84,5 +86,62 @@ public class Problem39 {
         int target = 7;
         List<List<Integer>> res = problem39.combinationSum(candidates, target);
         System.out.println(GsonUtil.toJson(res));
+    }
+
+    public List<List<Integer>> combinationSumV1(int[] candidates, int target) {
+        int n = candidates.length;
+        List<List<Integer>> ans = new ArrayList<>();
+        if (n == 0) {
+            return ans;
+        }
+        Deque<Integer> path = new ArrayDeque<>();
+        dfs1(candidates, 0, n, target, path, ans);
+        return ans;
+    }
+
+    private void dfs1(int[] candidates, int begin, int len, int target, Deque<Integer> path, List<List<Integer>> ans) {
+        // target 为0或者负数时，不再产生新的叶子节点
+        if (target < 0) {
+            return;
+        }
+        if (target == 0) {
+            ans.add(new ArrayList<>(path));
+            return;
+        }
+
+        for (int i = begin; i < len; i++) {
+            path.addLast(candidates[i]);
+            dfs1(candidates, i, len, target - candidates[i], path, ans); // 当前元素可以重复使用
+            // 状态重置
+            path.removeLast();
+        }
+    }
+
+    public List<List<Integer>> combinationSumV2(int[] candidates, int target) {
+        int n = candidates.length;
+        List<List<Integer>> ans = new ArrayList<>();
+        if (n == 0) {
+            return ans;
+        }
+        Arrays.sort(candidates);
+        Deque<Integer> path = new ArrayDeque<>();
+        dfs2(candidates, 0, n, target, path, ans);
+        return ans;
+    }
+
+    private void dfs2(int[] candidates, int begin, int len, int target, Deque<Integer> path, List<List<Integer>> ans) {
+        if (target == 0) {
+            ans.add(new ArrayList<>(path));
+            return;
+        }
+        for (int i = begin; i < len; i++) {
+            // 提前剪枝，最小的元素已经大于target了，那么后面的肯定更加不满足，break
+            if (target - candidates[i] < 0) {
+                break;
+            }
+            path.addLast(candidates[i]);
+            dfs2(candidates, i, len, target, path, ans);
+            path.removeLast();
+        }
     }
 }

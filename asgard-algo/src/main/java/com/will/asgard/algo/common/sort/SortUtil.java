@@ -52,6 +52,9 @@ public class SortUtil {
      * @param j 下标2
      */
     public static void swap(int[] nums, int i, int j) {
+        if (i == j) {
+            return;
+        }
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
@@ -86,5 +89,31 @@ public class SortUtil {
             head = head.next;
         }
         return true;
+    }
+
+    public static void insertionSort(int[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return;
+        }
+
+        insertionSort(arr, 0, arr.length - 1);
+    }
+
+    /**
+     * 在一定范围内的插入排序
+     * @param arr 待排序数组
+     * @param left 左边界，能取到
+     * @param right 右边界，能取到
+     */
+    public static void insertionSort(int[] arr, int left, int right) {
+        for (int i = left + 1; i <= right; i++) {
+            int temp = arr[i];
+            int j = i;
+            while (j >= 1 && arr[j - 1] > temp) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = temp;
+        }
     }
 }

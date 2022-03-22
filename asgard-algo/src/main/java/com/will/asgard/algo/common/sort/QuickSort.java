@@ -2,8 +2,6 @@ package com.will.asgard.algo.common.sort;
 
 import java.util.Random;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
-
 /**
  * @Description
  * 快速排序首先想方设法通过排定一个元素，并且在排定这个元素的同时，对整个数组也做了一次划分。这个过程叫做切分。
@@ -26,19 +24,39 @@ public class QuickSort {
     private static final int INSERTION_SORT_THRESHOLD = 7;
     private static final Random RANDOM = new Random();
 
+    /**
+     * 基础版本的快排
+     *  把等于切分元素的所有元素分到了数组的同一侧，可能会造成递归树倾斜
+     * @param nums
+     */
     public void basicQuickSort(int[] nums) {
         sort1(nums, 0, nums.length - 1);
     }
 
     private void sort1(int[] nums, int left, int right) {
         if (right - left <= INSERTION_SORT_THRESHOLD) {
-            insertionSort(nums, left, right);
+            SortUtil.insertionSort(nums, left, right);
             return;
         }
 
-        int j = partition(nums, left, right);
+        int j = partition1(nums, left, right);
         sort1(nums, left, j - 1);
         sort1(nums, j + 1, right);
+    }
+
+    private int partition1(int[] nums, int left, int right) {
+        int randomIndex = RANDOM.nextInt(right - left + 1) + left;
+        SortUtil.swap(nums, left, randomIndex);
+        int pivot = nums[left];
+        // 遍历过程中，要使得lt指向的对象及前面的对象（不包括left指向的pivot）都小于pivot
+        int lt = left;
+        for (int i = left + 1; i <= right; i++) {
+            if (nums[i] < pivot) {
+                SortUtil.swap(nums, i, ++lt);
+            }
+        }
+        SortUtil.swap(nums, left, lt);
+        return lt;
     }
 
     public void twoWayQuickSort(int[] nums) {
@@ -47,62 +65,27 @@ public class QuickSort {
 
     private void sort2(int[] nums, int left, int right) {
         if (right - left <= INSERTION_SORT_THRESHOLD) {
-            insertionSort(nums, left, right);
+            SortUtil.insertionSort(nums, left, right);
             return;
         }
 
-        int j = partitionV2(nums, left, right); // 寻找切分点
+        int j = partition2(nums, left, right); // 寻找切分点
         sort2(nums, left, j - 1);
         sort2(nums, j + 1, right);
     }
 
-    private void insertionSort(int[] nums, int left, int right) {
-        for (int i = left; i <= right; i++) {
-            int temp = nums[i];
-            int j = i;
-            while (j > left && nums[j - 1] > temp) {
-                nums[j] = nums[j - 1];
-                j--;
-            }
-            nums[j] = temp;
-        }
-    }
-
-    /**
-     * 基础版本
-     */
-    private int partition(int[] nums, int left, int right) {
-        // 取随机数，
+    private int partition2(int[] nums, int left, int right) {
         int randomIndex = RANDOM.nextInt(right - left + 1) + left;
-        swap(nums, left, randomIndex);
-        // 基准值
-        int pivot = nums[left];
-        int lt = left;
-        for (int i = left + 1; i <= right; i++) {
-            if (nums[i] < pivot) {
-                lt++;
-                swap(nums, i, lt);
-            }
-        }
-        swap(nums, left, lt);
-        return lt;
-    }
-
-    /**
-     * 两路快排
-     */
-    private int partitionV2(int[] nums, int left, int right) {
-        // 取随机数，
-        int randomIndex = RANDOM.nextInt(right - left + 1) + left;
-        swap(nums, left, randomIndex);
-        // 基准值
+        SortUtil.swap(nums, left, randomIndex);
         int pivot = nums[left];
         int lt = left + 1;
         int gt = right;
         while (true) {
+            // 找到严格大于 pivot 的下标
             while (lt <= right && nums[lt] <= pivot) {
                 lt++;
             }
+            // 找到严格小于 pivot 的下标
             while (gt >= left + 1 && nums[gt] >= pivot) {
                 gt--;
             }
@@ -121,31 +104,30 @@ public class QuickSort {
 //                break;
 //            }
 
-            swap(nums, lt, gt);
+            SortUtil.swap(nums, lt, gt);
             lt++;
             gt--;
         }
-        // 基准值的交换
-        swap(nums, left, gt);
+        // 基准值的交换，为啥用 gt 下标来交换，因为 while 循环后，gt 指向的元素一定严格小于 pivot（或者指向 pivot 本身）
+        SortUtil.swap(nums, left, gt);
         return gt;
-    }
-
-    public void threeWayQuickSort(int[] nums) {
-        sortV2(nums, 0, nums.length - 1);
     }
 
     /**
      * 三路快排
      */
-    private void sortV2(int[] nums, int left, int right) {
-        // 小区间使用插入排序
+    public void threeWayQuickSort(int[] nums) {
+        sort3(nums, 0, nums.length - 1);
+    }
+
+    private void sort3(int[] nums, int left, int right) {
         if (right - left <= INSERTION_SORT_THRESHOLD) {
-            insertionSort(nums, left, right);
+            SortUtil.insertionSort(nums, left, right);
             return;
         }
 
-        int randomIndex = left + RANDOM.nextInt(right - left + 1);
-        swap(nums, randomIndex, left);
+//        int randomIndex = left + RANDOM.nextInt(right - left + 1);
+//        SortUtil.swap(nums, randomIndex, left);
 
         // 循环不变量：
         // all in [left + 1, lt] < pivot
@@ -162,41 +144,20 @@ public class QuickSort {
             // 比pivot小，lt后移一位，交换(i,lt)，i后移一位，因为交换以后的值肯定是看过的
             if (nums[i] < pivot) {
                 lt++;
-                swap(nums, i, lt);
+                SortUtil.swap(nums, i, lt);
                 i++;
-                // 和pivot相等，不用交换，i后移一位即可
-            } else if (nums[i] == pivot) {
+            } else if (nums[i] == pivot) { // 和pivot相等，不用交换，i后移一位即可
                 i++;
-                // 比pivot大，gt前移一位，交换(i,gt)，此时i不能后移，因为交换过来的nums[gt]没有看过
-            } else {
+            } else { // 比pivot大，gt前移一位，交换(i,gt)，此时i不能后移，因为交换过来的nums[gt]没有看过
                 gt--;
-                swap(nums, i, gt);
+                SortUtil.swap(nums, i, gt);
             }
         }
         // 循环停止时，交换left和lt，则nums[left,lt-1]严格小于pivot
-        swap(nums, left, lt);
+        SortUtil.swap(nums, left, lt);
         // 大大减少了两侧分治的区间
-        sortV2(nums, left, lt - 1);
+        sort3(nums, left, lt - 1);
         // nums[gt,right]严格大于pivot
-        sortV2(nums, gt, right);
-    }
-
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = new int[10];
-        Random random = new Random();
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(20);
-        }
-
-        ArrayUtil.printArray(nums);
-
-        new QuickSort().twoWayQuickSort(nums);
-        ArrayUtil.printArray(nums);
+        sort3(nums, gt, right);
     }
 }

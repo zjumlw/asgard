@@ -1,8 +1,5 @@
 package com.will.asgard.algo.common.sort;
 
-import com.will.asgard.common.util.CommonUtil;
-import com.will.asgard.algo.leetcode.ArrayUtil;
-
 /**
  * @Description 了解
  * 选择排序：每一轮选取未排定的部分中最小的那个元素交换到未排定部分的最开头，经过若干个步骤，就能排定整个数组。
@@ -21,6 +18,8 @@ public class SelectionSort {
 
     /**
      * 不稳定的选择排序
+     * 5 8 5 2 9
+     * 2 8 5 5 9 两个5交换了次序
      */
     public void selectionSort(int[] nums) {
         if (nums == null) {
@@ -40,6 +39,9 @@ public class SelectionSort {
         }
     }
 
+    /**
+     * 采用整体右移的方法，保证稳定性
+     */
     public void stableSelectionSort(int[] nums) {
         if (nums == null) {
             return;
@@ -53,35 +55,15 @@ public class SelectionSort {
                     minIdx = j;
                 }
             }
-            // 记录下最小的数
+            // 记录下最小的数，暂存
             int key = nums[minIdx];
             // 将数组的 [i, minIdx-1] 区间右移一位，替换其中的 [i+1, minIdx] 的数
             while (minIdx > i) {
-                nums[minIdx] = nums[minIdx - 1];
+                nums[minIdx] = nums[minIdx - 1]; // 最后一个循环是 nums[i + 1] = nums[i]，此时 minIdx = i + 1
                 minIdx--;
             }
             // 将最小的数插入到i位置
             nums[i] = key;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] nums = SortUtil.generateRandomArray(10000);
-        ArrayUtil.printArray(nums);
-
-        SelectionSort selectionSort = new SelectionSort();
-
-        long t1 = CommonUtil.getCurrentTimestamp();
-        selectionSort.selectionSort(nums);
-        long t2 = CommonUtil.getCurrentTimestamp();
-        System.out.println("unstable selection sort took " + (t2 - t1) + "ms");
-        ArrayUtil.printArray(nums);
-
-        nums = SortUtil.generateRandomArray(10000);
-        t1 = CommonUtil.getCurrentTimestamp();
-        selectionSort.stableSelectionSort(nums);
-        t2 = CommonUtil.getCurrentTimestamp();
-        System.out.println("stable selection sort took " + (t2 - t1) + "ms");
-        ArrayUtil.printArray(nums);
     }
 }

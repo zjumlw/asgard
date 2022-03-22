@@ -1,13 +1,10 @@
 package com.will.asgard.algo.common.sort;
 
+import com.will.asgard.common.util.CommonUtil;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.will.asgard.algo.leetcode.ArrayUtil;
-import com.will.asgard.common.util.CommonUtil;
-
-import static org.junit.Assert.*;
 
 /**
  * @Description TODO
@@ -53,6 +50,7 @@ public class QuickSortTest {
 
     @Test
     public void testThreeWayQuickSort() {
+//        int[] nums = new int[]{6, 4, 1, 9, 6, 6, 6, 6, 2, 10};
         int[] nums = SortUtil.generateRandomArray(arrayLength);
 //        ArrayUtil.printArray(nums);
 

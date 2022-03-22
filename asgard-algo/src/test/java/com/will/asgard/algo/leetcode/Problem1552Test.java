@@ -3,7 +3,6 @@ package com.will.asgard.algo.leetcode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * @Description TODO

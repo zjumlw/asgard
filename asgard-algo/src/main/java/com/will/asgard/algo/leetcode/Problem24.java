@@ -1,8 +1,5 @@
 package com.will.asgard.algo.leetcode;
 
-import com.will.asgard.algo.leetcode.ListNode;
-import com.will.asgard.algo.leetcode.ListNodeUtil;
-
 /**
  * @Description
  * 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
@@ -56,7 +53,7 @@ public class Problem24 {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int[] arr = new int[]{1, 2, 3, 4, 5};
         ListNode head = ListNodeUtil.initList(arr);
         ListNodeUtil.printList(head);
         head = swapPairsV2(head);

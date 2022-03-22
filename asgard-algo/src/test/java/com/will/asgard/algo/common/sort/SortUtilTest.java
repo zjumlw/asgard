@@ -33,4 +33,14 @@ public class SortUtilTest {
         Assert.assertTrue(getMin);
         Assert.assertTrue(getMax);
     }
+
+    @Test
+    public void testInsertionSort() {
+        int[] nums = SortUtil.generateRandomArray(10);
+        System.out.println(Arrays.toString(nums));
+
+        SortUtil.insertionSort(nums);
+        System.out.println(Arrays.toString(nums));
+        Assert.assertTrue(SortUtil.isAscendingArray(nums));
+    }
 }

@@ -3,10 +3,7 @@ package com.will.asgard.algo.common.sort;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
 import com.will.asgard.algo.leetcode.ListNode;
-import com.will.asgard.algo.leetcode.ListNodeUtil;
-import com.will.asgard.algo.leetcode.Node;
 
 /**
  * @Description 了解
@@ -37,9 +34,7 @@ public class BubbleSort {
         for (int i = len - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (nums[j] > nums[j + 1]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+                    SortUtil.swap(nums, j, j + 1);
                 }
             }
         }
@@ -57,9 +52,7 @@ public class BubbleSort {
             boolean sorted = true;
             for (int j = 0; j < i; j++) {
                 if (nums[j] > nums[j + 1]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+                    SortUtil.swap(nums, j, j + 1);
                     sorted = false;
                 }
             }
@@ -91,7 +84,7 @@ public class BubbleSort {
                     lastSwappedIndex = j;
                 }
             }
-
+            // 更新内循环上界
             sortBorder = lastSwappedIndex;
             if (!swapped) {
                 break;
@@ -139,11 +132,13 @@ public class BubbleSort {
                 while (!s1.isEmpty()) {
                     moveStackElement(s1, s2);
                 }
+                // 一顿操作后，s2.pop 出来的就是最大元素
                 nums[length - 1 - i] = s2.pop();
             } else {
                 while (!s2.isEmpty()) {
                     moveStackElement(s2, s1);
                 }
+                // 一顿操作后，s1.pop 出来的就是最大元素
                 nums[length - 1 - i] = s1.pop();
             }
         }
@@ -154,10 +149,11 @@ public class BubbleSort {
         if (to.isEmpty()) {
             to.push(t);
         } else {
+            // to 的顶层大于 t，需要先 push t，再 push top
             if (to.peek() > t) {
-                int temp = to.pop();
+                int top = to.pop();
                 to.push(t);
-                to.push(temp);
+                to.push(top);
             } else {
                 to.push(t);
             }
@@ -217,7 +213,7 @@ public class BubbleSort {
 
         do {
             swapped = false;
-            // 重头节点开始遍历
+            // 从头节点开始遍历
             prev = dummy;
             cur = dummy.next;
 
@@ -249,14 +245,5 @@ public class BubbleSort {
         second.next = first;
         first.next = third;
         return second;
-    }
-
-    public static void main(String[] args) {
-        BubbleSort bubbleSort = new BubbleSort();
-        int[] nums = SortUtil.generateRandomArray(20);
-        ArrayUtil.printArray(nums);
-
-        bubbleSort.bubbleSortV2(nums);
-        ArrayUtil.printArray(nums);
     }
 }
