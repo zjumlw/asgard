@@ -9,4 +9,12 @@ public class CommonUtil {
     public static long getCurrentTimestamp() {
         return System.currentTimeMillis();
     }
+
+    public static int safeParseInteger(String s) {
+        try {
+            return Integer.parseInt(s);
+        } catch (Exception e) {
+            return -1;
+        }
+    }
 }

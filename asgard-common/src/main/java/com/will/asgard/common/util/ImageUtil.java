@@ -1,5 +1,8 @@
 package com.will.asgard.common.util;
 
+import javax.annotation.Nullable;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,16 +12,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
 
-import javax.annotation.Nullable;
-import javax.imageio.ImageIO;
-
-import org.springframework.util.Base64Utils;
-
 import com.google.common.base.Preconditions;
 
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
-import sun.misc.BASE64Decoder;
+import org.springframework.util.Base64Utils;
 import sun.misc.BASE64Encoder;
 
 /**
@@ -163,4 +161,29 @@ public class ImageUtil {
 			throw new Exception("Failed to get base64 from url", e);
 		}
 	}
+
+    public static BufferedImage rotateImage(BufferedImage originImage, int rotateAngle) {
+        if (rotateAngle <= 0) {
+            return originImage;
+        }
+
+        int originWidth = originImage.getWidth();
+        int originHeight = originImage.getHeight();
+        int fixedWidth = originWidth;
+        int fixedHeight = originHeight;
+
+        if (rotateAngle == 90 || rotateAngle == 270) {
+            fixedWidth = originHeight;
+            fixedHeight = originWidth;
+        }
+
+        Rectangle rectangle = new Rectangle(new Dimension(fixedWidth, fixedHeight));
+        BufferedImage res = new BufferedImage(rectangle.width, rectangle.height, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2 = res.createGraphics();
+        g2.translate((rectangle.width - originWidth) / 2, (rectangle.height - originHeight) / 2);
+        g2.rotate(Math.toRadians(rotateAngle), originWidth / 2, originHeight / 2);
+        g2.drawImage(originImage, null, null);
+
+        return res;
+    }
 }
