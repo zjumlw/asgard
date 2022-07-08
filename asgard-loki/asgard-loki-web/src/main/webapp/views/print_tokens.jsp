@@ -13,7 +13,7 @@
 </head>
 <body>
 <%
-  String info = "www.xiaomi.cn";
+  String info = "www.baidu.com";
   pageContext.setAttribute("info", info);
 %>
 <h3>

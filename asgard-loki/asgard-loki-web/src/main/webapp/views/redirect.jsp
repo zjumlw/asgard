@@ -14,7 +14,7 @@
 <body>
 <c:redirect url="param.jsp">
   <c:param name="name" value="Mao"/>
-  <c:param name="url" value="https://www.xiaomi.cn"/>
+  <c:param name="url" value="https://www.baidu.com"/>
 </c:redirect>
 </body>
 </html>

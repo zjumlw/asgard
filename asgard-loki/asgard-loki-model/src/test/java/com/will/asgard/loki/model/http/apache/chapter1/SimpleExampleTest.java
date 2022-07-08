@@ -1,5 +1,6 @@
 package com.will.asgard.loki.model.http.apache.chapter1;
 
+import javax.net.ssl.SSLException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
@@ -10,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.net.ssl.SSLException;
+import com.google.gson.reflect.TypeToken;
+import com.will.asgard.common.util.GsonUtil;
 
 import org.apache.http.Consts;
 import org.apache.http.HeaderElement;
@@ -51,9 +53,6 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
-
-import com.google.gson.reflect.TypeToken;
-import com.will.asgard.common.util.GsonUtil;
 
 public class SimpleExampleTest {
 
@@ -127,7 +126,7 @@ public class SimpleExampleTest {
 	@Test
 	public void testResponseHandler() throws IOException {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
-		HttpGet httpGet = new HttpGet("https://prod.api.xiaomi.cn/hello/test");
+		HttpGet httpGet = new HttpGet("http://www.baidu.com");
 		ResponseHandler<Map<String,String>> rh = new ResponseHandler<Map<String, String>>() {
 			@Override
 			public Map<String, String> handleResponse(HttpResponse response) throws ClientProtocolException, IOException {
@@ -181,7 +180,7 @@ public class SimpleExampleTest {
 				.setConnectTimeout(100)
 				.build();
 
-		HttpGet httpGet = new HttpGet("https://prod.api.xiaomi.cn/hello/test");
+		HttpGet httpGet = new HttpGet("http://www.baidu.com");
 		httpGet.setConfig(requestConfig);
 
 		CloseableHttpResponse response = httpClient.execute(httpGet);
@@ -238,7 +237,7 @@ public class SimpleExampleTest {
 	public void testRewriteRequest() throws IOException {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpClientContext context = HttpClientContext.create();
-		HttpGet httpGet = new HttpGet("https://prod.api.xiaomi.cn/hello");
+		HttpGet httpGet = new HttpGet("http://www.baidu.com");
 		CloseableHttpResponse response = httpClient.execute(httpGet, context);
 		try {
 			HttpHost httpHost = context.getTargetHost();

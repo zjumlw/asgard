@@ -12,6 +12,6 @@
   <title>Import Url</title>
 </head>
 <body>
-<c:import url="https://www.xiaomi.cn" charEncoding="utf-8"/>
+<c:import url="https://www.baidu.com" charEncoding="utf-8"/>
 </body>
 </html>

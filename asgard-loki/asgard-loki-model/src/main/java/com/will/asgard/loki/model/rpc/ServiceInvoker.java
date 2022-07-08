@@ -10,6 +10,6 @@ public class ServiceInvoker {
 
     public static void main(String[] args) {
         AobingService service = AobingRpcFramework.refer(AobingService.class, "127.0.0.1", 2333);
-        System.out.println(service.hello("xiaomi"));
+        System.out.println(service.hello("baidu"));
     }
 }
