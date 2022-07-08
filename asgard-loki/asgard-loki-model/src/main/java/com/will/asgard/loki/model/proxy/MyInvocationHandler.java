@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 /**
  * @ClassName MyInvocationHandler
  * @Description 自动生成代理类
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-28 00:44
  * @Version 1.0
  **/

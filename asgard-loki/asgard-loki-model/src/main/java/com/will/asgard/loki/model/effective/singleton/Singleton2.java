@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @Description 懒汉式单例
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-07-25 6:39 下午
  * @Version 1.0
  */

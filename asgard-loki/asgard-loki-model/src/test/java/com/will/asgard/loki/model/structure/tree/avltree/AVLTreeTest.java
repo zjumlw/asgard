@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * @ClassName AVLTreeTest
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-03-23 15:28
  * @Version 1.0
  **/

@@ -5,7 +5,7 @@ package com.will.asgard.pattern.singleton;
  * 懒汉式
  *  好处：大的单例对象创建耗费资源，也不一定使用，懒加载可以减少资源浪费。
  *  缺点：不是线程安全。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-11-26 4:44 下午
  * @Version 1.0
  **/

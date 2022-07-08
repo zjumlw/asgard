@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Description 用快排切分，找到第K小的数，那么其左边都是小于K的
  * 每次调用partition遍历的元素数目都是上一次遍历的1/2，因此时间复杂度是N + N/2 + N/4 + ... + N/N = 2N, 因此时间复杂度是O(N)
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-09 12:44 上午
  * @Version 1.0
  */

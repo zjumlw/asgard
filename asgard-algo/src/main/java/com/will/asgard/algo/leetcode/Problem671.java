@@ -28,7 +28,7 @@ import java.util.Queue;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-07-27 7:26 上午
  * @Version 1.0
  **/

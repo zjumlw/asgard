@@ -11,7 +11,7 @@ import com.will.asgard.thor.model.soundsystem.player.MediaPlayer;
 
 /**
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-09-14 17:49
  * @Version 1.0
  **/

@@ -17,7 +17,7 @@ import com.will.asgard.algo.leetcode.ListNode;
  * 原地排序
  * 稳定：因为每次比较后如果两个相邻元素相等我们并不会将他们交换，所以冒泡不会改变相同元素的下标，所以冒泡排序是一个稳定的排序
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 8:53 下午
  * @Version 1.0
  */

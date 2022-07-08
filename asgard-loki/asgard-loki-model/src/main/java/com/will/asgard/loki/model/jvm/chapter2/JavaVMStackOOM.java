@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.chapter2;
 /**
  * @ClassName JavaVMStackOOM
  * @Description VM Args: -Xss2M
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 14:38
  * @Version 1.0
  **/

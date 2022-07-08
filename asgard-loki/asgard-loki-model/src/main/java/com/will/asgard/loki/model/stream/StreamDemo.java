@@ -8,7 +8,7 @@ import static java.util.stream.Collectors.toList;
 /**
  * @ClassName StreamDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-21 23:32
  * @Version 1.0
  **/

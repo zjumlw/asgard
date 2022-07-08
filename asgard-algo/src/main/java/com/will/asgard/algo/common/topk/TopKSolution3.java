@@ -11,7 +11,7 @@ import java.util.TreeMap;
  * 1. 若目前map中数字个数小于K，则将map中当前数字对应的个数+1；
  *
  * 2. 否则，判断当前数字与map中最大的数字的大小关系：若当前数字大于等于map中的最大数字，就直接跳过该数字；若当前数字小于map中的最大数字，则将map中当前数字对应的个数+1，并将map中最大数字对应的个数减1.
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-10 1:00 上午
  * @Version 1.0
  */

@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.design.decorator;
 /**
  * @ClassName Soy
  * @Description 豆浆
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-25 20:24
  * @Version 1.0
  **/

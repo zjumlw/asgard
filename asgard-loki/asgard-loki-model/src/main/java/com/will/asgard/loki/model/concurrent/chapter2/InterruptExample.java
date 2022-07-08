@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.concurrent.chapter2;
 /**
  * @ClassName InterruptExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-26 23:01
  * @Version 1.0
  **/

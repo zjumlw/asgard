@@ -6,7 +6,7 @@ package com.will.asgard.pattern.singleton;
  *  理由jvm类加载的特点实现。
  *  优点：线程安全，懒加载
  *  缺点：不是抗反射
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-11-26 5:00 下午
  * @Version 1.0
  **/

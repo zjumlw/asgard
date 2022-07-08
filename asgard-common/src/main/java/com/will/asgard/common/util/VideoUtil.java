@@ -25,7 +25,7 @@ import org.bytedeco.javacv.Java2DFrameConverter;
  *  v1.1 2020-07-07 重构了部分实现，增加了内部静态类 {@link VideoInfoWrapper} 用于包装想要的信息
  *  v1.2 2020-07-30 增加了视频编码形式的转换
  *
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-05-27 20:07
  * @Version 1.2
  **/

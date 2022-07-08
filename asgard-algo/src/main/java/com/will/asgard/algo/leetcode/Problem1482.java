@@ -55,7 +55,7 @@ import java.util.stream.IntStream;
  * 链接：https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-05-09 上午11:38
  * @Version 1.0
  */

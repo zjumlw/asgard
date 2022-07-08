@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.chapter6;
 /**
  * @ClassName AnotherTest
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-02 03:12
  * @Version 1.0
  **/

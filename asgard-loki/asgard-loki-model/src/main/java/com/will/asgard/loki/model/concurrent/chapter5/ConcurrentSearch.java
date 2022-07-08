@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @ClassName ConcurrentSearch
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-13 17:19
  * @Version 1.0
  **/

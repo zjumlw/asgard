@@ -15,7 +15,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  * 稳定
  * 在接近有序的情况下，表现优异
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 9:14 下午
  * @Version 1.0
  */

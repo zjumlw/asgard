@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-21 12:26 上午
  * @Version 1.0
  */
@@ -16,7 +16,7 @@ public class IndexFileMain {
     private static final int N_CONSUMER = 5;
 
     public static void main(String[] args) {
-        String rootPath = "/Users/maolingwei/tmp";
+        String rootPath = "/Users/zjumlw/tmp";
         File root = new File(rootPath);
         File[] roots = new File[]{root};
         startIndexing(roots);

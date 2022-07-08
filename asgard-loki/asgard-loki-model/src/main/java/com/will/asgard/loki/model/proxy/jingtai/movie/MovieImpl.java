@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.proxy.jingtai.movie;
 
 /**
  * @Description 接口的具体实现
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-01-08 下午5:13
  * @Version 1.0
  */

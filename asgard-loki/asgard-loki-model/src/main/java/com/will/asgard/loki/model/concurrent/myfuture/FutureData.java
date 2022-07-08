@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.concurrent.myfuture;
 /**
  * @ClassName FutureData
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-08-28 14:52
  * @Version 1.0
  **/

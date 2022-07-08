@@ -18,7 +18,7 @@ package com.will.asgard.algo.common.string;
  *
  * 进阶:
  * 如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-15 01:25
  * @Version 1.0
  **/

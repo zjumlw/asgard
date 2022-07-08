@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.concurrent.chapter2;
 /**
  * @ClassName JoinMain
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-27 00:13
  * @Version 1.0
  **/

@@ -2,7 +2,7 @@ package com.will.asgard.algo.demo.innerclass;
 
 /**
  * @Description 私有内部类
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-05-25 下午4:00
  * @Version 1.0
  */

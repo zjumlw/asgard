@@ -12,7 +12,7 @@ import lombok.Data;
 /**
  * @ClassName ConcurrentExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-17 22:31
  * @Version 1.0
  **/

@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.chapter5;
 /**
  * @ClassName AbstractFruit
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 21:47
  * @Version 1.0
  **/

@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @ClassName TimeLock
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-30 16:46
  * @Version 1.0
  **/

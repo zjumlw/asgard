@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @ClassName StopThread
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-16 23:44
  * @Version 1.0
  **/

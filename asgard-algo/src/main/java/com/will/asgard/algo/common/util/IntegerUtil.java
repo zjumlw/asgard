@@ -2,7 +2,7 @@ package com.will.asgard.algo.common.util;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-10-20 8:31 下午
  * @Version 1.0
  **/

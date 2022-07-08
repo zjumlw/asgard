@@ -2,7 +2,7 @@ package com.will.asgard.algo.game.lottery;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-08-24 10:19 下午
  * @Version 1.0
  **/

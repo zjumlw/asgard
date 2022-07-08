@@ -22,7 +22,7 @@ import sun.misc.BASE64Encoder;
 /**
  * @ClassName ImageUtil
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-28 23:53
  * @Version 1.0
  **/

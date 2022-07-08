@@ -6,7 +6,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * @ClassName ConcurrentComputation
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-13 16:52
  * @Version 1.0
  **/

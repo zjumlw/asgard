@@ -10,7 +10,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  *
  * 时间复杂度：未证明，leetcode p912 希尔排序9ms比插入排序629ms快很多
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 10:52 下午
  * @Version 1.0
  */

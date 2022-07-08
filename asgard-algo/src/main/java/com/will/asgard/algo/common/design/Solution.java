@@ -25,7 +25,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  *
  * // 随机返回数组[1,2,3]打乱后的结果。
  * solution.shuffle();
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-13 02:36
  * @Version 1.0
  **/

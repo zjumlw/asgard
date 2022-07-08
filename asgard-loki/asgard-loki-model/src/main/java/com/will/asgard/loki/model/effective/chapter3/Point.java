@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * @ClassName Point
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-20 13:21
  * @Version 1.0
  **/

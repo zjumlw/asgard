@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @Description 中国福利彩票api接口
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-09-10 9:58 下午
  * @Version 1.0
  **/

@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.chapter5.genericerasure;
 /**
  * @ClassName ErasedNode
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 18:36
  * @Version 1.0
  **/

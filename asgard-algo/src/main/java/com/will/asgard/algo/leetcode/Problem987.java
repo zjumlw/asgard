@@ -19,7 +19,7 @@ import java.util.PriorityQueue;
  * 树中结点数目总数在范围 [1, 1000] 内
  * 0 <= Node.val <= 1000
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-08-04 12:22 上午
  * @Version 1.0
  **/

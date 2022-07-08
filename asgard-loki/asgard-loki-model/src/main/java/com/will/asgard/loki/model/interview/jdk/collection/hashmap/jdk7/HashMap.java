@@ -10,7 +10,7 @@ import static sun.misc.VM.isBooted;
 
 /**
  * @Description JDK7 HashMap 实现
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-06-25 10:48 下午
  * @Version 1.0
  */

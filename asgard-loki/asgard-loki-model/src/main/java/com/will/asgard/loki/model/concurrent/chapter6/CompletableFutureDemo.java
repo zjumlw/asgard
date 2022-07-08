@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * @ClassName CompletableFutureDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-14 01:03
  * @Version 1.0
  **/

@@ -16,7 +16,7 @@ import com.will.asgard.frigg.model.User;
  * <mappers>
  *  <mapper class="com.will.asgard.frigg.mysql.dao.UserMapper2"/>
  * </mappers>
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-03-17 下午4:29
  * @Version 1.0
  */

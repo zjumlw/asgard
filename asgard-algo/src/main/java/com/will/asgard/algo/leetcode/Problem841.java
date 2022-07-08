@@ -40,7 +40,7 @@ import java.util.Queue;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/keys-and-rooms
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-08-31 8:27 下午
  * @Version 1.0
  */

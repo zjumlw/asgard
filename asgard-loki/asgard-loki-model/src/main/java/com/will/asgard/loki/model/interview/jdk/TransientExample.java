@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * @ClassName TransientExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-05 00:55
  * @Version 1.0
  **/

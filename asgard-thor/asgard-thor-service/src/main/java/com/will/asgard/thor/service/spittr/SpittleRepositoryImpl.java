@@ -12,7 +12,7 @@ import com.will.asgard.thor.model.spittr.SpittleRepository;
 /**
  * @ClassName SpittleRepositoryImpl
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-17 19:05
  * @Version 1.0
  **/

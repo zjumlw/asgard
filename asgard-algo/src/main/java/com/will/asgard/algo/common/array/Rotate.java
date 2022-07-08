@@ -45,7 +45,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  *   [12, 6, 8, 9],
  *   [16, 7,10,11]
  * ]
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-14 20:58
  * @Version 1.0
  **/

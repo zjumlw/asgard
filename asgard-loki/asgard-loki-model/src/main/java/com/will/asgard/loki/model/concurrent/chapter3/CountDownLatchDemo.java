@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 /**
  * @ClassName CountDownLatchDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-07 18:49
  * @Version 1.0
  **/

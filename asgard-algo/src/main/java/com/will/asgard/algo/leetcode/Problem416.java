@@ -34,7 +34,7 @@ package com.will.asgard.algo.leetcode;
  * 1 <= nums.length <= 200
  * 1 <= nums[i] <= 100
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-11 10:20 下午
  * @Version 1.0
  */

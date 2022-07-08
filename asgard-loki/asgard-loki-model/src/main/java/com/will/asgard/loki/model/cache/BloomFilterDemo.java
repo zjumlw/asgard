@@ -9,7 +9,7 @@ import com.google.common.hash.Funnels;
 /**
  * @ClassName BloomFilterDemo
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-29 20:26
  * @Version 1.0
  **/

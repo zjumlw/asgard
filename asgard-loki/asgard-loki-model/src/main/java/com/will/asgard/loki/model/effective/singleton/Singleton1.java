@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.effective.singleton;
 
 /**
  * @Description 饿汉式单例
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-07-25 6:37 下午
  * @Version 1.0
  */

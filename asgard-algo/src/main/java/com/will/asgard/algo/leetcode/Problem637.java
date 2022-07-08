@@ -35,7 +35,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 链接：https://leetcode-cn.com/problems/average-of-levels-in-binary-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-12 12:55 上午
  * @Version 1.0
  */

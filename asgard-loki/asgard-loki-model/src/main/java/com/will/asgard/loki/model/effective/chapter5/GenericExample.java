@@ -13,7 +13,7 @@ import lombok.Data;
 /**
  * @ClassName GenericExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 01:34
  * @Version 1.0
  **/

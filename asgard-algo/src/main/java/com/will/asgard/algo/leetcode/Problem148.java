@@ -35,7 +35,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/sort-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-11-21 下午11:04
  * @Version 1.0
  */

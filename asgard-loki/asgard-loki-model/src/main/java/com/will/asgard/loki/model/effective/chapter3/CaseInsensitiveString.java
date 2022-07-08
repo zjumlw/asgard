@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.chapter3;
 /**
  * @ClassName CaseInsensitiveString
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-19 13:52
  * @Version 1.0
  **/

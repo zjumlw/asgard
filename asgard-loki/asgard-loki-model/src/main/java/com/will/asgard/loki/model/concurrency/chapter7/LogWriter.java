@@ -8,7 +8,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-11-10 1:58 上午
  * @Version 1.0
  */
@@ -67,7 +67,7 @@ public class LogWriter {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        String logPath = "/Users/maolingwei/tmp/test.log";
+        String logPath = "/Users/zjumlw/tmp/test.log";
         File logFile = new File(logPath);
         if (!logFile.exists()) {
             logFile.createNewFile();

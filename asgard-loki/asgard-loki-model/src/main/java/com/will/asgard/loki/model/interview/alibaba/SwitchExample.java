@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.interview.alibaba;
 /**
  * @ClassName SwitchExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-26 23:00
  * @Version 1.0
  **/

@@ -8,7 +8,7 @@ import com.will.asgard.common.util.GsonUtil;
 /**
  * @ClassName AnnotationDemoMain
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-09-01 17:35
  * @Version 1.0
  **/

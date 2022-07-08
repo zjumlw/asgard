@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.proxy.jingtai.movie;
 /**
  * @Description movie 的代理类，需要实现或继承被代理类
  * 这是一个静态代理，因为是事先预定好的
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-01-08 下午5:25
  * @Version 1.0
  */

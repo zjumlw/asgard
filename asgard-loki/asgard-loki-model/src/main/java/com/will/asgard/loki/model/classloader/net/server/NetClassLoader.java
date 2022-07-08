@@ -7,7 +7,7 @@ import java.net.Socket;
 /**
  * @ClassName NetClassLoader
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-30 00:26
  * @Version 1.0
  **/

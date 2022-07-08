@@ -42,7 +42,7 @@ import java.util.Comparator;
  * 链接：https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-26 7:40 下午
  * @Version 1.0
  */

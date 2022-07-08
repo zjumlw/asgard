@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.jmm;
 /**
  * @ClassName MySharedObject
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-03 02:24
  * @Version 1.0
  **/

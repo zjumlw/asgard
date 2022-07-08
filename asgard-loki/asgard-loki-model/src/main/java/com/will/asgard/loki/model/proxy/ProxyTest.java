@@ -5,7 +5,7 @@ import java.lang.reflect.Proxy;
 /**
  * @ClassName Proxytest
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-28 00:45
  * @Version 1.0
  **/

@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * @ClassName RandomUtil
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-10 16:13
  * @Version 1.0
  **/

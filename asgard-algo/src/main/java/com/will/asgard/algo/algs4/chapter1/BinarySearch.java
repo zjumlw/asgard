@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @ClassName BinarySearch
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-26 17:23
  * @Version 1.0
  **/

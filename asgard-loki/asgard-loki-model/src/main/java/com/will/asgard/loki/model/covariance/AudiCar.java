@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.covariance;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-19 11:06 下午
  * @Version 1.0
  */

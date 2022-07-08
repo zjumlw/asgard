@@ -30,7 +30,7 @@ package com.will.asgard.algo.leetcode;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-07-09 5:03 下午
  * @Version 1.0
  **/

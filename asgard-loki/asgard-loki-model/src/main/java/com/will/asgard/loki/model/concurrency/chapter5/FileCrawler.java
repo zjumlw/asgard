@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * @Description 桌面搜索程序中抓取文件的生产者
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-20 11:56 下午
  * @Version 1.0
  */

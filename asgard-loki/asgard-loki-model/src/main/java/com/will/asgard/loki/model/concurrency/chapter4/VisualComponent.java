@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Description 监视器模式，使用 CopyOnWriteArrayList 比较合适
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-04 8:39 下午
  * @Version 1.0
  */

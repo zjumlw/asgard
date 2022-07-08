@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @ClassName IntLock
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-30 16:04
  * @Version 1.0
  **/

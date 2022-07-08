@@ -5,7 +5,7 @@ import org.openjdk.jol.info.ClassLayout;
 /**
  * @ClassName EmptyObject
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-30 20:49
  * @Version 1.0
  **/

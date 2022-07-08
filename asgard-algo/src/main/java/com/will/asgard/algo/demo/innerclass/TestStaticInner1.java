@@ -2,7 +2,7 @@ package com.will.asgard.algo.demo.innerclass;
 
 /**
  * @Description 一旦内部类使用static修饰，那么此时这个内部类就升级为顶级类
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-05-25 下午4:17
  * @Version 1.0
  */

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @ClassName JstatDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 23:32
  * @Version 1.0
  **/

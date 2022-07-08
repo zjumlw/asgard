@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 /**
  * @ClassName ResizingArrayStack
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-26 19:56
  * @Version 1.0
  **/

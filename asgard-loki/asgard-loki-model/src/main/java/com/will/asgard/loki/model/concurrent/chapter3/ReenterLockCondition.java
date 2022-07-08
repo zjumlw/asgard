@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @ClassName ReenterLockCondition
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-30 17:11
  * @Version 1.0
  **/

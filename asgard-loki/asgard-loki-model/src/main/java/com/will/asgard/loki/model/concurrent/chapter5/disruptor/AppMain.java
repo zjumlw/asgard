@@ -12,7 +12,7 @@ import com.lmax.disruptor.dsl.ProducerType;
 /**
  * @ClassName AppMain
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-10 20:10
  * @Version 1.0
  **/

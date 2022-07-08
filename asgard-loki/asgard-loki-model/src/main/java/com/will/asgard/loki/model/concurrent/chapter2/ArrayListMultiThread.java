@@ -7,7 +7,7 @@ import com.google.common.collect.Lists;
 /**
  * @ClassName ArrayListMultiThread
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-27 02:39
  * @Version 1.0
  **/

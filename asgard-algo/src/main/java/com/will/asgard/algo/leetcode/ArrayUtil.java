@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @ClassName ArrayUtil
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-12 23:49
  * @Version 1.0
  **/

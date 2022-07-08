@@ -5,7 +5,7 @@ import java.util.concurrent.locks.LockSupport;
 /**
  * @ClassName LockSupportDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-07 21:03
  * @Version 1.0
  **/

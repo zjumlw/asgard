@@ -5,7 +5,7 @@ package com.will.asgard.pattern.singleton;
  * 饿汉式
  *  优点：编译器就确定了单例对象，保证了线程安全。
  *  缺点：不是懒加载，会浪费资源。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-11-26 4:51 下午
  * @Version 1.0
  **/

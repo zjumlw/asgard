@@ -37,7 +37,7 @@ package com.will.asgard.algo.leetcode;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
  * @see Problem486 问题的特殊情况
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-06-16 下午5:02
  * @Version 1.0
  */

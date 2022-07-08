@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.interview.jdk.collection.hashmap;
 /**
  * @ClassName HashMapExample
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-03-27 16:34
  * @Version 1.0
  **/

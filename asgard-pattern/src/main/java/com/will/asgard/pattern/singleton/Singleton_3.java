@@ -5,7 +5,7 @@ package com.will.asgard.pattern.singleton;
  * 双重检查加锁式单例
  *  优点：懒加载，减少资源浪费；保证线程安全
  *  缺点：不能抗反射
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-11-26 4:53 下午
  * @Version 1.0
  **/

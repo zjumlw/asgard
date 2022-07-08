@@ -22,7 +22,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  * nums2 = [2,5,6],       n = 3
  *
  * 输出: [1,2,2,3,5,6]
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-12 23:07
  * @Version 1.0
  **/

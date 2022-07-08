@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.concurrent.chapter6;
 /**
  * @ClassName PrimeUtil
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-14 00:38
  * @Version 1.0
  **/

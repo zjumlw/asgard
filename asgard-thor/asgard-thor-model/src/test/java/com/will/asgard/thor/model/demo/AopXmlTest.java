@@ -10,7 +10,7 @@ import com.will.asgard.thor.model.demo.user.UserService;
 
 /**
  * @Description 测试使用xml配置aop
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-03-10 下午11:24
  * @Version 1.0
  */

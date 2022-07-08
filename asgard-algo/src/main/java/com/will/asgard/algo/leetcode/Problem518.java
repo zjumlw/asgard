@@ -43,7 +43,7 @@ import com.google.gson.internal.$Gson$Preconditions;
  * 链接：https://leetcode-cn.com/problems/coin-change-2
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-06-10 下午8:10
  * @Version 1.0
  */

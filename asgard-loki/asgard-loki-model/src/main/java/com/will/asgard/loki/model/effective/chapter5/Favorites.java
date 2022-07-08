@@ -7,7 +7,7 @@ import com.google.common.collect.Maps;
 /**
  * @ClassName Favorites
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-11 00:11
  * @Version 1.0
  **/

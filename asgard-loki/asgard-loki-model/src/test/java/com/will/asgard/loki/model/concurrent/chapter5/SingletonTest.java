@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * @ClassName SingletonTest
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-09 20:08
  * @Version 1.0
  **/

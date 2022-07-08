@@ -10,7 +10,7 @@ package com.will.asgard.algo.common.sort;
  * 原地排序
  * 不稳定
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 6:54 下午
  * @Version 1.0
  */

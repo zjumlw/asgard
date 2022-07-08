@@ -41,7 +41,7 @@ import java.util.LinkedList;
  * 链接：https://leetcode-cn.com/problems/reverse-substrings-between-each-pair-of-parentheses
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-05-26 下午2:20
  * @Version 1.0
  */

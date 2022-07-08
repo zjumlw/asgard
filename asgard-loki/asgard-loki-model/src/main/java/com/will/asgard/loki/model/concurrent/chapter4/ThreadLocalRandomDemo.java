@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 /**
  * @ClassName ThreadLocalRandomDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-09 01:39
  * @Version 1.0
  **/

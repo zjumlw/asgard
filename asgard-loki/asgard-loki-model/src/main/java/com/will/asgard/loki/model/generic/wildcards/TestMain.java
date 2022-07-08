@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.generic.wildcards;
 
 /**
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-10-20 18:27
  * @Version 1.0
  **/
