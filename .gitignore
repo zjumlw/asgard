@@ -27,5 +27,5 @@ logs/
 *.analysis/
 
 # macOs
-.DS_Store
 *.DS_Store
+.DS_Store

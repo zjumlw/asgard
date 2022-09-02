@@ -48,14 +48,20 @@ public class TreeNodeUtil {
     }
 
     private static TreeNode deserialize0(List<String> l) {
-        if ("null".equals(l.get(0)) || "n".equals(l.get(0)) || "N".equals(l.get(0))) {
+        // 取出第一个元素
+        String first = l.get(0);
+        // 如果是特殊字符串，移除并返回
+        if ("null".equals(first) || "n".equals(first) || "N".equals(first)) {
             l.remove(0);
             return null;
         }
 
+        // 创建为根节点
         TreeNode root = new TreeNode(Integer.parseInt(l.get(0)));
         l.remove(0);
+        // 构造左子树
         root.left = deserialize0(l);
+        // 构造右子树
         root.right = deserialize0(l);
         return root;
     }
@@ -169,7 +175,7 @@ public class TreeNodeUtil {
                 template[i] = "d";
             }
         }
-        System.out.println(Arrays.toString(template));
+//        System.out.println(Arrays.toString(template));
 
         for (int i = 0; i < n;) {
             if (template[i].equals("d")) {
