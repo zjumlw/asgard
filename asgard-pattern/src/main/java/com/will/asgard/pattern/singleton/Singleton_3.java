@@ -1,13 +1,14 @@
 package com.will.asgard.pattern.singleton;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
- * @Description
  * 双重检查加锁式单例
  *  优点：懒加载，减少资源浪费；保证线程安全
  *  缺点：不能抗反射
- * @Author zjumlw
- * @Date 2021-11-26 4:53 下午
- * @Version 1.0
+ *
+ * @author zjumlw
+ * @date 2021-11-26 4:53 下午
  **/
 public class Singleton_3 {
     private Singleton_3() {
@@ -25,5 +26,18 @@ public class Singleton_3 {
             }
         }
         return instance;
+    }
+
+    private final AtomicInteger count = new AtomicInteger(1);
+
+    private void func() {
+        System.out.println("count: " + count.getAndIncrement());
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10000; i++) {
+            new Thread(() -> Singleton_3.getInstance().func()).start();
+        }
+        // count 始终为 10000
     }
 }

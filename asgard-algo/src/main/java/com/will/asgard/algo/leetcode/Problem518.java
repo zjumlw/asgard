@@ -1,8 +1,6 @@
 package com.will.asgard.algo.leetcode;
 
-import java.util.Arrays;
-
-import com.google.gson.internal.$Gson$Preconditions;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description medium

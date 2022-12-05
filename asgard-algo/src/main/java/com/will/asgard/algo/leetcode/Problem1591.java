@@ -3,8 +3,7 @@ package com.will.asgard.algo.leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.will.asgard.algo.leetcode.ListNode;
-import com.will.asgard.algo.leetcode.ListNodeUtil;
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
 
 /**
  * @Description

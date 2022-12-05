@@ -1,4 +1,4 @@
-package com.will.asgard.algo.leetcode;
+package com.will.asgard.algo.leetcode.util;
 
 import java.util.Arrays;
 
@@ -39,6 +39,11 @@ public class ArrayUtil {
         }
     }
 
+    /**
+     * 打印二维数组。
+     *
+     * @param array 二维数组
+     */
     public static void printArray(int[][] array) {
         StringBuilder sb = new StringBuilder();
         for (int[] ints : array) {
@@ -47,7 +52,7 @@ public class ArrayUtil {
             }
             sb.append(Arrays.toString(ints));
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 
     public static boolean arrayEqualElement(int[] expected, int[] target) {

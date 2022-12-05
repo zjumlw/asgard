@@ -74,6 +74,6 @@ public class Problem106 {
         int[] inorder = new int[]{9, 3, 15, 20, 7};
         int[] postorder = new int[]{9, 15, 7, 20, 3};
         TreeNode root = problem106.buildTree(inorder, postorder);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

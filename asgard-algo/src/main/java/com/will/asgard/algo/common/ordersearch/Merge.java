@@ -1,6 +1,6 @@
 package com.will.asgard.algo.common.ordersearch;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @ClassName Merge

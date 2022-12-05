@@ -74,7 +74,7 @@ public class Problem530 {
         Problem530 problem530 = new Problem530();
         String data = "1,n,3,2,n,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int ans = problem530.getMinimumDifference(root);
         System.out.println(ans);

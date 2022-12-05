@@ -78,7 +78,7 @@ public class Problem103 {
         Problem103 problem103 = new Problem103();
         String data = "3,9,n,n,20,15,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<List<Integer>> ans = problem103.zigzagLevelOrder(root);
         System.out.println(GsonUtil.toJson(ans));

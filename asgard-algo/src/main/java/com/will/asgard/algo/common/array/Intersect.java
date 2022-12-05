@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @ClassName Intersect

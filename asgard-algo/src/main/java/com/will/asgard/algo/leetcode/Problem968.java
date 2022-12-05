@@ -94,7 +94,7 @@ public class Problem968 {
 
         String data = "0,0,0,null,null,0,null,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int num = problem968.minCameraCover(root);
         System.out.println(num);

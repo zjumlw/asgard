@@ -116,7 +116,7 @@ public class Problem113 {
         Problem113 problem113 = new Problem113();
         String data = "5,4,11,7,null,null,2,null,null,null,8,13,null,null,4,5,null,null,1,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int sum = 22;
         List<List<Integer>> ans = problem113.pathSum(root, sum);

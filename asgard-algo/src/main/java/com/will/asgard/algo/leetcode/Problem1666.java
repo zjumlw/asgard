@@ -1,6 +1,6 @@
 package com.will.asgard.algo.leetcode;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description 面试题 16.11. 跳水板

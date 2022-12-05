@@ -118,9 +118,9 @@ public class Problem617 {
 //        TreeNodeUtil.printTreeNode(t2);
 
         TreeNode ans = problem617.mergeTrees(t1, t2);
-        TreeNodeUtil.printTreeNode(ans);
+        TreeNodeUtil.printTree(ans);
 
         TreeNode ans2 = problem617.mergeTreesV2(t1, t2);
-        TreeNodeUtil.printTreeNode(ans2);
+        TreeNodeUtil.printTree(ans2);
     }
 }

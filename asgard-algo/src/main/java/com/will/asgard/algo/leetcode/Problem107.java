@@ -69,7 +69,7 @@ public class Problem107 {
         Problem107 problem107 = new Problem107();
         String data = "3,9,null,null,20,15,null,null,7,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<List<Integer>> ans = problem107.levelOrderBottom(root);
         System.out.println(GsonUtil.toJson(ans));

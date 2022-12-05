@@ -2,13 +2,11 @@ package com.will.asgard.algo.leetcode;
 
 import java.util.Arrays;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.will.asgard.algo.common.sort.SortUtil;
-
-import static org.junit.Assert.*;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description TODO

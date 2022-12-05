@@ -1,5 +1,7 @@
 package com.will.asgard.algo.leetcode;
 
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
+
 /**
  * @Description
  * 反转一个单链表。

@@ -1,0 +1,14 @@
+package com.will.asgard.pattern.factory.v1;
+
+import com.will.asgard.pattern.factory.Pizza;
+
+/**
+ * @author willmao
+ * @date 2022-11-22 23:01
+ **/
+public class CheesePizza extends Pizza {
+
+    public CheesePizza() {
+        name = "cheese pizza";
+    }
+}

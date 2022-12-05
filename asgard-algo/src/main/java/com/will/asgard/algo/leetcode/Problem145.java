@@ -146,7 +146,7 @@ public class Problem145 {
         Problem145 problem145 = new Problem145();
         String data = "3,9,n,n,4,5,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
 //        List<Integer> ans1 = problem145.postorderTraversal(root);
 //        System.out.println(ans1);

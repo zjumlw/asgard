@@ -44,9 +44,9 @@ public class Problem538 {
         Problem538 problem538 = new Problem538();
         String data = "5,2,null,null,13,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         TreeNode ans = problem538.convertBST(root);
-        TreeNodeUtil.printTreeNode(ans);
+        TreeNodeUtil.printTree(ans);
     }
 }

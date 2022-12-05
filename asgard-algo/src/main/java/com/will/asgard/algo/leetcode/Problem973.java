@@ -3,6 +3,8 @@ package com.will.asgard.algo.leetcode;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
+
 /**
  * @Description medium
  * 我们有一个由平面上的点组成的列表 points。需要从中找出 K 个距离原点 (0, 0) 最近的点。

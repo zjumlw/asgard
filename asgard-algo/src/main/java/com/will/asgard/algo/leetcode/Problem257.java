@@ -97,6 +97,6 @@ public class Problem257 {
         List<String> paths2 = problem.binaryTreePathsV2(root);
         System.out.println(paths2);
 
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

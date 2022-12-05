@@ -2,7 +2,7 @@ package com.will.asgard.algo.common.kmp;
 
 import java.util.Arrays;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description TODO

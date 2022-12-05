@@ -1,11 +1,9 @@
 package com.will.asgard.algo.leetcode;
 
-import java.util.Arrays;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Description TODO

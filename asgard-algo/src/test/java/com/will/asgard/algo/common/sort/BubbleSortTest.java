@@ -1,13 +1,12 @@
 package com.will.asgard.algo.common.sort;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 import com.will.asgard.algo.leetcode.ListNode;
-import com.will.asgard.algo.leetcode.ListNodeUtil;
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
 
 /**
  * @Description TODO

@@ -2,7 +2,7 @@ package com.will.asgard.algo.common.design;
 
 import java.util.Random;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @ClassName Solution

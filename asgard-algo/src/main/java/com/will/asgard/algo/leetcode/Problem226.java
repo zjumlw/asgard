@@ -41,10 +41,10 @@ public class Problem226 {
     public static void main(String[] args) {
         String data = "1,2,4,null,null,5,null,null,3,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         Problem226 problem226 = new Problem226();
         problem226.invertTree(root);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

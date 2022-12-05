@@ -147,7 +147,7 @@ public class Problem129 {
         Problem129 problem129 = new Problem129();
         String data = "1,n,5,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int ans = problem129.sumNumbers(root);
         System.out.println(ans);

@@ -110,7 +110,7 @@ public class Problem144 {
         Problem144 problem144 = new Problem144();
         String data = "1,n,2,3,n,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<Integer> ans = problem144.preorderTraversal(root);
         System.out.println(ans);

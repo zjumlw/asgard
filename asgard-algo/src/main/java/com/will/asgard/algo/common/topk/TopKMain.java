@@ -1,7 +1,7 @@
 package com.will.asgard.algo.common.topk;
 
 import com.will.asgard.common.util.RandomUtil;
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description TODO

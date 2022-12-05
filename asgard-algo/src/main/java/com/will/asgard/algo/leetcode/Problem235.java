@@ -113,7 +113,7 @@ public class Problem235 {
         Problem235 problem235 = new Problem235();
         String data = "6,2,0,n,n,4,3,n,n,5,n,n,8,7,n,n,9,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         TreeNode p = new TreeNode(3);
         TreeNode q = new TreeNode(5);

@@ -110,9 +110,9 @@ public class Problem701 {
         Problem701 problem701 = new Problem701();
         String data = "4,2,1,n,n,3,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         problem701.insertIntoBST(root, 5);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

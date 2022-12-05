@@ -15,13 +15,14 @@ public class TreeNodeUtil {
 
     /**
      * Encodes a tree to a single string.
+     * 序列化二叉树，一般有两个策略：广度优先搜索和深度优先搜索
+     * 1. 广度优先搜索，按照层次的顺序从上到下遍历所有的节点
+     * 2. 深度优先搜索，从一个跟节点开始，一直延伸到某个叶，然后回到根，到达另一个分支；又可以分为 先序遍历，中序遍历，后序遍历
+     *
+     * 我们这里采取先序遍历的方式
       */
     public static String serialize(TreeNode root) {
-        String tmp = serialize0(root, "");
-        if (tmp.endsWith(",")) {
-            tmp = tmp.substring(0, tmp.length() - 1);
-        }
-        return tmp;
+        return serialize0(root, "");
     }
 
     /**
@@ -66,14 +67,18 @@ public class TreeNodeUtil {
         return root;
     }
 
-    public static void printTreeNode(TreeNode root) {
+    /**
+     * 打印二叉树。
+     *
+     * @param root 根节点
+     */
+    public static void printTree(TreeNode root) {
         if (root == null) {
             return;
         }
         List<List<TreeNode>> lines = new ArrayList<>();
         List<TreeNode> currentLine = new LinkedList<>();
         currentLine.add(root);
-
         while (!currentLine.isEmpty()) {
             // 当前line是否所有node都是null
             boolean allNull = true;
@@ -96,49 +101,32 @@ public class TreeNodeUtil {
                     nextLine.add(null);
                 }
             }
-            // 当前行node都为null，则中止
+            // 当前行node都为null，则中止（该行不打印）
             if (allNull) {
                 break;
             }
+            // 当前行不是全为null，加入到结果中
             lines.add(currentLine);
+            // 遍历下一行
             currentLine = nextLine;
         }
 
-//        doPrintLines(lines);
-        doPrintLinesV2(lines);
+        doPrintLines(lines);
     }
 
     private static void doPrintLines(List<List<TreeNode>> lines) {
-        for (List<TreeNode> line : lines) {
-            printOneLine(line);
-        }
-    }
-
-    private static void printOneLine(List<TreeNode> line) {
-        StringBuilder sb = new StringBuilder();
-        for (TreeNode treeNode : line) {
-            if (sb.length() != 0) {
-                sb.append(" ");
-            }
-            sb.append(treeNode == null ? "N" : treeNode.val);
-        }
-        System.out.println(sb);
-    }
-
-    private static void doPrintLinesV2(List<List<TreeNode>> lines) {
         int n = lines.size();
         if (n == 0) {
             return;
         }
 
-//        System.out.println("新的打印方式");
         List<String> linesStr = new ArrayList<>();
-
+        // 1. 从最后一行开始，因为最后一行是最长的，要确定长度范围
         List<TreeNode> lastLine = lines.get(n - 1);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < lastLine.size(); i++) {
-            TreeNode tempNode = lastLine.get(i);
-            sb.append(tempNode == null ? "N" : tempNode.val);
+            TreeNode node = lastLine.get(i);
+            sb.append(node == null ? "N" : node.val);
             if (i != lastLine.size() - 1) {
                 sb.append(" ");
             }
@@ -146,41 +134,40 @@ public class TreeNodeUtil {
         String lastLineStr = sb.toString();
         linesStr.add(lastLineStr);
 
+        // 2. 从下往上遍历其他行
         String prevLineStr = lastLineStr;
-        boolean slot = true;
         for (int i = n - 2; i >= 0; i--) {
             // 清空 sb
             sb.delete(0, sb.length());
             List<TreeNode> currLine = lines.get(i);
             buildCurrLineStr(sb, prevLineStr, currLine);
-
             String currLineStr = sb.toString();
             linesStr.add(currLineStr);
             prevLineStr = currLineStr;
         }
 
+        // 3. 倒过来打印
         for (int i = linesStr.size() - 1; i >= 0; i--) {
             System.out.println(linesStr.get(i));
         }
     }
 
     private static void buildCurrLineStr(StringBuilder sb, String prevLineStr, List<TreeNode> currLine) {
-        int n = prevLineStr.length();
+        String blank = " ";
+        String[] split = prevLineStr.split(blank);
+        int n = 2 * split.length - 1;
         // 填空模版
         String[] template = new String[n];
-        Arrays.fill(template, " ");
-
-        for (int i = 0; i < n; i++) {
-            if (prevLineStr.charAt(i) != ' ') {
-                template[i] = "d";
-            }
+        Arrays.fill(template, blank);
+        for (int i = 0; i < split.length; i++) {
+            String s = split[i];
+            template[i * 2] = s;
         }
-//        System.out.println(Arrays.toString(template));
 
         for (int i = 0; i < n;) {
-            if (template[i].equals("d")) {
+            if (!blank.equals(template[i])) {
                 for (int j = i + 1; j < n; j++) {
-                    if (template[j].equals("d")) {
+                    if (!blank.equals(template[j])) {
                         int mid = (i + j) / 2;
                         template[mid] = "#";
                         i = j + 1;

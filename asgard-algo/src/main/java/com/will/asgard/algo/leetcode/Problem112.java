@@ -3,9 +3,6 @@ package com.will.asgard.algo.leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.will.asgard.algo.leetcode.TreeNode;
-import com.will.asgard.algo.leetcode.TreeNodeUtil;
-
 
 /**
  * @Description
@@ -84,6 +81,7 @@ public class Problem112 {
     public static void main(String[] args) {
         String data = "5,4,11,null,null,null,8,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
+        TreeNodeUtil.printTree(root);
         String str = TreeNodeUtil.serialize(root);
         System.out.println(str);
 

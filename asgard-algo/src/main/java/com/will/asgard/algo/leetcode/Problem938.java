@@ -88,7 +88,7 @@ public class Problem938 {
         Problem938 problem938 = new Problem938();
         String data = "10,5,3,n,n,7,n,n,15,n,18,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int ans = problem938.rangeSumBST(root, 5, 15);
         System.out.println(ans);

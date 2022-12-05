@@ -92,12 +92,12 @@ public class Problem897 {
         Problem897 problem897 = new Problem897();
         String data = "5,1,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         TreeNode ans = problem897.increasingBST(root);
-        TreeNodeUtil.printTreeNode(ans);
+        TreeNodeUtil.printTree(ans);
 
         TreeNode ans2 = problem897.increasingBSTV2(root);
-        TreeNodeUtil.printTreeNode(ans2);
+        TreeNodeUtil.printTree(ans2);
     }
 }
