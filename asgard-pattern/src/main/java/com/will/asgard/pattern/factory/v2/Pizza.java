@@ -1,21 +1,15 @@
-package com.will.asgard.pattern.factory;
+package com.will.asgard.pattern.factory.v2;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.will.asgard.pattern.factory.v2.Cheese;
-import com.will.asgard.pattern.factory.v2.Clams;
-import com.will.asgard.pattern.factory.v2.Pepperoni;
-import com.will.asgard.pattern.factory.v2.Veggies;
 
 import lombok.Getter;
 
 /**
  * @author willmao
- * @date 2022-11-22 12:54
+ * @date 2022-12-07 12:24
  **/
 public abstract class Pizza {
-
     /**
      * 名称
      */
@@ -31,14 +25,6 @@ public abstract class Pizza {
      * 酱料
      */
     protected String sauce;
-    
-    protected Veggies[] veggies;
-    
-    protected Cheese cheese;
-    
-    protected Pepperoni pepperoni;
-    
-    protected Clams clams;
 
     /**
      * 佐料

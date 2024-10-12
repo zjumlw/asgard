@@ -1,6 +1,5 @@
 package com.will.asgard.pattern.factory.v2;
 
-import com.will.asgard.pattern.factory.Pizza;
 import com.will.asgard.pattern.factory.PizzaType;
 
 /**
@@ -13,13 +12,13 @@ public class ChicagoStylePizzaStore extends PizzaStore {
     @Override
     Pizza createPizza(String type) {
         Pizza pizza = null;
-        if (type.equals(PizzaType.CHEESE.getName())) {
+        if (type.equals(PizzaType.CHEESE.getType())) {
             pizza = new ChicagoStyleCheesePizza();
-        } else if (type.equals(PizzaType.PEPPERONI.getName())) {
+        } else if (type.equals(PizzaType.PEPPERONI.getType())) {
             pizza = new ChicagoStylePepperoniPizza();
-        } else if (type.equals(PizzaType.CLAM.getName())) {
+        } else if (type.equals(PizzaType.CLAM.getType())) {
             pizza = new ChicagoStyleClamPizza();
-        } else if (type.equals(PizzaType.VEGGIE.getName())) {
+        } else if (type.equals(PizzaType.VEGGIE.getType())) {
             pizza = new ChicagoStyleVeggiePizza();
         }
         return pizza;

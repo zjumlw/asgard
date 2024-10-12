@@ -18,5 +18,5 @@ public enum PizzaType {
     ;
 
     @Getter
-    private String name;
+    private String type;
 }

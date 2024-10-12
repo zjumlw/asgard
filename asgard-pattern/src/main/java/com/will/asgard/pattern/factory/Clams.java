@@ -1,4 +1,4 @@
-package com.will.asgard.pattern.factory.v2;
+package com.will.asgard.pattern.factory;
 
 /**
  * 蛤蜊

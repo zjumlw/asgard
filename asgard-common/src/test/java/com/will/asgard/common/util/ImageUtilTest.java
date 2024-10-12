@@ -5,12 +5,11 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+import cn.hutool.core.codec.Base64Decoder;
+import cn.hutool.core.codec.Base64Encoder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 public class ImageUtilTest {
 
@@ -43,17 +42,15 @@ public class ImageUtilTest {
 
 	@Test
 	public void testAnotherBase64() throws IOException {
-		final BASE64Encoder encoder = new BASE64Encoder();
-		final BASE64Decoder decoder = new BASE64Decoder();
 		final byte[] textByte = text.getBytes(StandardCharsets.UTF_8);
 
-		final String encodedText = encoder.encode(textByte);
+		final String encodedText = Base64Encoder.encode(textByte);
 		Assert.assertEquals(expectedEncodedText, encodedText);
 
-		String decodedText = new String(decoder.decodeBuffer(encodedText), StandardCharsets.UTF_8);
+		String decodedText = new String(Base64Decoder.decode(encodedText), StandardCharsets.UTF_8);
 		Assert.assertEquals(text, decodedText);
 
-		byte[] val = decoder.decodeBuffer(encodedText);
+		byte[] val = Base64Decoder.decode(encodedText);
 		Assert.assertEquals(12, val.length);
 	}
 }

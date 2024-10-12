@@ -1,7 +1,5 @@
 package com.will.asgard.pattern.factory.v2;
 
-import com.will.asgard.pattern.factory.Pizza;
-
 /**
  * 将创建比萨的方法放回到 PizzaStore 中，但是设置为抽象方法，为每个区域风味创建一个 PizzaStore 的子类。
  *

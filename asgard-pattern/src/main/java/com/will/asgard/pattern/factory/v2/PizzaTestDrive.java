@@ -1,6 +1,5 @@
 package com.will.asgard.pattern.factory.v2;
 
-import com.will.asgard.pattern.factory.Pizza;
 import com.will.asgard.pattern.factory.PizzaType;
 
 /**
@@ -13,10 +12,10 @@ public class PizzaTestDrive {
         PizzaStore nyStore = new NYStylePizzaStore();
         PizzaStore chicagoStore = new ChicagoStylePizzaStore();
 
-        Pizza pizza = nyStore.orderPizza(PizzaType.CHEESE.getName());
+        Pizza pizza = nyStore.orderPizza(PizzaType.CHEESE.getType());
         System.out.println("Ethan ordered a " + pizza.getName() + "\n");
 
-        pizza = chicagoStore.orderPizza(PizzaType.CHEESE.getName());
+        pizza = chicagoStore.orderPizza(PizzaType.CHEESE.getType());
         System.out.println("Joel ordered a " + pizza.getName() + "\n");
     }
 }

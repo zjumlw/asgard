@@ -1,7 +1,5 @@
 package com.will.asgard.pattern.factory.v1;
 
-import com.will.asgard.pattern.factory.Pizza;
-
 /**
  * 比萨店对象。
  * 需要一个比萨工厂来创建比萨。

@@ -8,13 +8,13 @@ import com.will.asgard.pattern.observer.DisplayElement;
  **/
 public class HealthIndexDisplay implements Observer, DisplayElement {
 
+    private WeatherData weatherData;
+
     private float temperature;
 
     private float humidity;
 
     private float heatIndex;
-
-    private WeatherData weatherData;
 
     public HealthIndexDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;

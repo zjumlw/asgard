@@ -1,5 +1,7 @@
 package com.will.asgard.pattern.factory.v2;
 
+import com.will.asgard.pattern.factory.Veggies;
+
 /**
  * 洋葱
  *

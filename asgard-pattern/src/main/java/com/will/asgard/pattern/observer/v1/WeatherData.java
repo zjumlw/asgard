@@ -51,7 +51,12 @@ public class WeatherData implements Subject {
     }
 
     @Override
-    public void notifyObserver() {
+    public void removeObservers() {
+        observers.clear();
+    }
+
+    @Override
+    public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update(temperature, humidity, pressure);
         }
@@ -61,7 +66,7 @@ public class WeatherData implements Subject {
      * 气象测量更新，此方法就会被调用
      */
     public void measurementsChanged() {
-        notifyObserver();
+        notifyObservers();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {

@@ -23,7 +23,12 @@ public interface Subject {
     void removeObserver(Observer o);
 
     /**
+     * 删除所有观察者
+     */
+    void removeObservers();
+
+    /**
      * 通知所有观察者
      */
-    void notifyObserver();
+    void notifyObservers();
 }

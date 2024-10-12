@@ -1,5 +1,7 @@
 package com.will.asgard.pattern.factory.v2;
 
+import com.will.asgard.pattern.factory.Pepperoni;
+
 /**
  * 意大利辣香肠片
  *

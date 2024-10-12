@@ -14,10 +14,11 @@ import java.util.Base64;
 
 import com.google.common.base.Preconditions;
 
+import cn.hutool.core.codec.Base64Decoder;
+import cn.hutool.core.codec.Base64Encoder;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.util.Base64Utils;
-import sun.misc.BASE64Encoder;
 
 /**
  * @ClassName ImageUtil
@@ -155,8 +156,8 @@ public class ImageUtil {
 			}
 			inStream.close();
 			byte[] data = outStream.toByteArray();
-			BASE64Encoder encoder = new BASE64Encoder();
-			return encoder.encode(data); //返回Base64编码过的字节数组字符串
+            //返回Base64编码过的字节数组字符串
+            return Base64Encoder.encode(data);
 		} catch (IOException e) {
 			throw new Exception("Failed to get base64 from url", e);
 		}

@@ -8,14 +8,14 @@ import com.will.asgard.pattern.observer.DisplayElement;
  **/
 public class CurrentConditionDisplay implements Observer, DisplayElement {
 
-    private float temperature;
-
-    private float humidity;
-
     /**
      * 主题对象，如果以后要取消注册，持有该对象会比较方便
      */
     private Subject weatherData;
+
+    private float temperature;
+
+    private float humidity;
 
     /**
      * 构造器需要主题对象，并且完成注册。
