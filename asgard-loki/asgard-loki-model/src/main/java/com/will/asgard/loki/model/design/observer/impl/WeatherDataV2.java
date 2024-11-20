@@ -7,7 +7,7 @@ import lombok.Getter;
 /**
  * @ClassName WeatherData
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-25 01:25
  * @Version 1.0
  **/

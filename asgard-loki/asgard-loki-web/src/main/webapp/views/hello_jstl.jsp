@@ -15,7 +15,7 @@
 <h3><c:out value="Hello JSTL"></c:out> </h3>
 
 <%
-  pageContext.setAttribute("info", "<www.xiaomi.cn>");
+  pageContext.setAttribute("info", "<www.baidu.com>");
 %>
 <h3>yes: <c:out value="${info}"/></h3>
 <h3>yes escape true: <c:out value="${info}" escapeXml="true"/></h3>

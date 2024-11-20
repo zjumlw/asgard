@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * @ClassName Singleton
  * @Description 静态内部类实现单例
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-21 17:03
  * @Version 1.0
  **/

@@ -30,7 +30,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-06 12:01 上午
  * @Version 1.0
  */
@@ -69,7 +69,7 @@ public class Problem107 {
         Problem107 problem107 = new Problem107();
         String data = "3,9,null,null,20,15,null,null,7,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<List<Integer>> ans = problem107.levelOrderBottom(root);
         System.out.println(GsonUtil.toJson(ans));

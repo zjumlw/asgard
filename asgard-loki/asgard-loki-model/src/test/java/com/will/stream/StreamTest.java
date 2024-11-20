@@ -7,12 +7,11 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.junit.Test;
-import org.springframework.util.Assert;
-
 import com.google.common.collect.Lists;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import org.springframework.util.Assert;
 
 /**
  * Created by WillMao on 19-2-26
@@ -25,12 +24,6 @@ public class StreamTest {
 		List<Integer> nums = Lists.newArrayList(1, null, 3, 4, null, 6);
 		long cnt = nums.stream().filter(Objects::nonNull).count();
 		System.out.println(cnt);
-	}
-
-	@Test
-	public void testStreamOf() {
-		Stream<Integer> integerStream = Stream.of(1, 2, 3, 4);
-		Stream<String> stringStream = Stream.of("xiaomi");
 	}
 
 	@Test

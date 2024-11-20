@@ -25,7 +25,7 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/binary-tree-postorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-29 12:37 上午
  * @Version 1.0
  */
@@ -146,7 +146,7 @@ public class Problem145 {
         Problem145 problem145 = new Problem145();
         String data = "3,9,n,n,4,5,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
 //        List<Integer> ans1 = problem145.postorderTraversal(root);
 //        System.out.println(ans1);

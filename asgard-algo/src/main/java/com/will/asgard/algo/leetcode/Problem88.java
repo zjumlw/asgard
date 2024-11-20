@@ -1,10 +1,10 @@
 package com.will.asgard.algo.leetcode;
 
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
+
 /**
- * @Description
- * 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
- *
- *  
+ * @Description easy
+ * * 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
  *
  * 说明:
  *
@@ -24,7 +24,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/merge-sorted-array
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-20 5:03 下午
  * @Version 1.0
  */

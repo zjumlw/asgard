@@ -25,3 +25,7 @@ logs/
 # jvm
 *.hprof
 *.analysis/
+
+# macOs
+*.DS_Store
+.DS_Store

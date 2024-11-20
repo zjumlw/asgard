@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.chapter7;
 /**
  * @ClassName NotInitialization
  * @Description -XX:+TraceClassLoading
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-05 18:32
  * @Version 1.0
  **/

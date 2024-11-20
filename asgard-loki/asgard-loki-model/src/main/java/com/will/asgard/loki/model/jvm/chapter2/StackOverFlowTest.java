@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.chapter2;
 /**
  * @ClassName StackOverFlowTest
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-30 21:47
  * @Version 1.0
  **/

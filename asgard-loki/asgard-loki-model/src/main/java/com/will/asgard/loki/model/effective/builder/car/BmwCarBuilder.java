@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.builder.car;
 /**
  * @ClassName BmwCarBuilder
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-21 12:31
  * @Version 1.0
  **/

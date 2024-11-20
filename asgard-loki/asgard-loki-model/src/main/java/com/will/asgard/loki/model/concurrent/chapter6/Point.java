@@ -5,7 +5,7 @@ import java.util.concurrent.locks.StampedLock;
 /**
  * @ClassName Point
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-14 01:10
  * @Version 1.0
  **/

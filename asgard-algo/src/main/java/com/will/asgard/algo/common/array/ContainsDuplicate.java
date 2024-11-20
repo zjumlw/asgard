@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * 输入: [1,1,1,3,3,4,3,2,4,2]
  * 输出: true
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-14 00:46
  * @Version 1.0
  **/

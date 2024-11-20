@@ -1,0 +1,151 @@
+package com.will.asgard.algo.leetcode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+
+/**
+ * @Description medium
+ * 给定一个字符串，请将字符串里的字符按照出现的频率降序排列。
+ *
+ * 示例 1:
+ * 输入:
+ * "tree"
+ *
+ * 输出:
+ * "eert"
+ *
+ * 解释:
+ * 'e'出现两次，'r'和't'都只出现一次。
+ * 因此'e'必须出现在'r'和't'之前。此外，"eetr"也是一个有效的答案。
+ *
+ * 示例 2:
+ * 输入:
+ * "cccaaa"
+ *
+ * 输出:
+ * "cccaaa"
+ *
+ * 解释:
+ * 'c'和'a'都出现三次。此外，"aaaccc"也是有效的答案。
+ * 注意"cacaca"是不正确的，因为相同的字母必须放在一起。
+ *
+ * 示例 3:
+ * 输入:
+ * "Aabb"
+ *
+ * 输出:
+ * "bbAa"
+ *
+ * 解释:
+ * 此外，"bbaA"也是一个有效的答案，但"Aabb"是不正确的。
+ * 注意'A'和'a'被认为是两种不同的字符。
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/sort-characters-by-frequency
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * @Author zjumlw
+ * @Date 2021-07-03 9:10 上午
+ * @Version 1.0
+ **/
+public class Problem451 {
+
+    public String frequencySort(String s) {
+        int[] freq = new int[126];
+        char[] chars = s.toCharArray();
+        for (char c : chars) {
+            freq[c]++;
+        }
+//        System.out.println(Arrays.toString(freq));
+
+        PriorityQueue<int[]> queue = new PriorityQueue<>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o2[1] - o1[1];
+            }
+        });
+
+        for (int i = 0; i < freq.length; i++) {
+            if (freq[i] > 0) {
+                int[] val = new int[]{i, freq[i]};
+                queue.offer(val);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        while (!queue.isEmpty()) {
+            int[] tmp = queue.poll();
+//            System.out.println(Arrays.toString(tmp));
+            char c = (char) (tmp[0]);
+            int count = tmp[1];
+            while (count > 0) {
+                sb.append(c);
+                count--;
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public String frequencySortV2(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        List<Character> list = new ArrayList<>(map.keySet());
+        list.sort((a, b) -> map.get(b) - map.get(a));
+        StringBuilder sb = new StringBuilder();
+        for (char c : list) {
+            int freq = map.get(c);
+            for (int j = 0; j < freq; j++) {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
+
+    /**
+     * 桶排序
+     */
+    public String frequencySort_bucket(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int maxFreq = 0;
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            int freq = map.getOrDefault(c, 0) + 1;
+            map.put(c, freq);
+            maxFreq = Math.max(maxFreq, freq);
+        }
+
+        StringBuilder[] buckets = new StringBuilder[maxFreq + 1];
+        for (int i = 0; i <= maxFreq; i++) {
+            buckets[i] = new StringBuilder();
+        }
+
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            char c = e.getKey();
+            int freq = e.getValue();
+            buckets[freq].append(c);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = maxFreq; i > 0; i--) {
+            StringBuilder bucket = buckets[i];
+            int size = bucket.length();
+            for (int j = 0; j < size; j++) {
+                for (int k = 0; k < i; k++) {
+                    sb.append(bucket.charAt(j));
+                }
+            }
+        }
+        return sb.toString();
+    }
+}

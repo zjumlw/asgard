@@ -5,7 +5,7 @@ import lombok.Setter;
 
 /**
 * @Description MyBatis test model
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-12 3:24 下午
  * @Version 1.0
  */

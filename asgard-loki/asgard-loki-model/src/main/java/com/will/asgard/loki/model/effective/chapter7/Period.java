@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @ClassName Period
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-25 16:55
  * @Version 1.0
  **/

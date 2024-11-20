@@ -1,6 +1,6 @@
 package com.will.asgard.algo.common.sort;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description 了解
@@ -10,7 +10,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  *
  * 时间复杂度：未证明，leetcode p912 希尔排序9ms比插入排序629ms快很多
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 10:52 下午
  * @Version 1.0
  */
@@ -33,6 +33,7 @@ public class ShellSort {
             for (int i = h; i < len; i++) {
                 insertionForDelta(nums, h, i);
             }
+            // 缩小增量，直到1
             h = h / 3;
         }
     }
@@ -42,7 +43,7 @@ public class ShellSort {
      *
      * @param nums 数组
      * @param gap 间隔
-     * @param i
+     * @param i 待插入的元素下标
      */
     private void insertionForDelta(int[] nums, int gap, int i) {
         int temp = nums[i];

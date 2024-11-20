@@ -20,7 +20,7 @@ import org.junit.Test;
 /**
  * @ClassName HttpClientWithPoolTest
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-03-24 17:07
  * @Version 1.0
  **/

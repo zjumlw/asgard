@@ -8,7 +8,7 @@ import com.will.asgard.common.util.GsonUtil;
 /**
  * @ClassName AppleMain
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 01:41
  * @Version 1.0
  **/

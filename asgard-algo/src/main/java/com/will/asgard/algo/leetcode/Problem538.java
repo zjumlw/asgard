@@ -22,7 +22,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/convert-bst-to-greater-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Auther maolingwei
+ * @Author zjumlw
  * @Date 2020-09-21 10:36
  * @Version 1.0
  **/
@@ -44,9 +44,9 @@ public class Problem538 {
         Problem538 problem538 = new Problem538();
         String data = "5,2,null,null,13,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         TreeNode ans = problem538.convertBST(root);
-        TreeNodeUtil.printTreeNode(ans);
+        TreeNodeUtil.printTree(ans);
     }
 }

@@ -1,6 +1,6 @@
 package com.will.asgard.algo.leetcode;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description 面试题 16.11. 跳水板
@@ -23,7 +23,7 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/diving-board-lcci
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-07-08 10:20 下午
  * @Version 1.0
  */

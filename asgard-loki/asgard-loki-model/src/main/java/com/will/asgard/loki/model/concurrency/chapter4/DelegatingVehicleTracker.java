@@ -10,7 +10,7 @@ import com.will.asgard.common.util.GsonUtil;
 
 /**
  * @Description 委托给线程安全类的车辆追踪器
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-01 9:30 下午
  * @Version 1.0
  */

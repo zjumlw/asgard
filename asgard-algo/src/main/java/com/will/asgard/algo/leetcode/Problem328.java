@@ -1,5 +1,7 @@
 package com.will.asgard.algo.leetcode;
 
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
+
 /**
  * @Description medium
  * 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
@@ -23,7 +25,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/odd-even-linked-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-11-13 10:44 下午
  * @Version 1.0
  */

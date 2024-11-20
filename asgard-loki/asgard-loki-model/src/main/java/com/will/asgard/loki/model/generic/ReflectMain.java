@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.generic;
 
 /**
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-10-20 17:55
  * @Version 1.0
  **/

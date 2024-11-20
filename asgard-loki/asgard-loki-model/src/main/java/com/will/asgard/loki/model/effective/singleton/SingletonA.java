@@ -5,7 +5,7 @@ import java.lang.reflect.Constructor;
 /**
  * @ClassName SingletonA
  * @Description 单元素枚举的单例实现
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-21 17:05
  * @Version 1.0
  **/

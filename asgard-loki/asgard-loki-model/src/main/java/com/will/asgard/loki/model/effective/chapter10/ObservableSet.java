@@ -10,7 +10,7 @@ import com.will.asgard.loki.model.effective.chapter4.ForwardingSet;
 /**
  * @ClassName ObservableSet
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-17 00:51
  * @Version 1.0
  **/

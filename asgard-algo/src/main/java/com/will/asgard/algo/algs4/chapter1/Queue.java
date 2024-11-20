@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 /**
  * @ClassName Queue
  * @Description rt
- * @Auther maolingwei
+ * @Author zjumlw
  * @Date 2020-04-26 20:37
  * @Version 1.0
  **/

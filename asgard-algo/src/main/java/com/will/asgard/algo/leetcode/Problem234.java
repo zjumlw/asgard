@@ -1,5 +1,7 @@
 package com.will.asgard.algo.leetcode;
 
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
+
 /**
  * @Description
  * 请判断一个链表是否为回文链表。
@@ -19,7 +21,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/palindrome-linked-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-23 2:27 上午
  * @Version 1.0
  */

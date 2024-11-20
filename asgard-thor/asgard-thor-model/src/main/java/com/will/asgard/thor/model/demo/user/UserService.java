@@ -2,7 +2,7 @@ package com.will.asgard.thor.model.demo.user;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-03-10 下午9:47
  * @Version 1.0
  */

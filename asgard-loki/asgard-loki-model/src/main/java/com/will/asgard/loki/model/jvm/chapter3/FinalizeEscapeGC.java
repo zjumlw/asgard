@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.jvm.chapter3;
 /**
  * @ClassName FinalizeEscapeGC
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 15:48
  * @Version 1.0
  **/

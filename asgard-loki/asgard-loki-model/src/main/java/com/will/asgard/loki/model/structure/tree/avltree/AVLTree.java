@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.structure.tree.avltree;
 /**
  * @ClassName AVLTree
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-03-20 17:00
  * @Version 1.0
  **/

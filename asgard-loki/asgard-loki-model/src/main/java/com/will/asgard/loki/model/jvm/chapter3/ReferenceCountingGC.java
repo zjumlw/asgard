@@ -4,7 +4,7 @@ package com.will.asgard.loki.model.jvm.chapter3;
  * @ClassName ReferenceCountingGC
  * @Description
  * VM Args: -XX:+PrintGCDetails
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 15:25
  * @Version 1.0
  **/

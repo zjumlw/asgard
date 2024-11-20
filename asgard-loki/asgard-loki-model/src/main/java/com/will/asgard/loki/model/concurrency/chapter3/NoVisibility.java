@@ -2,7 +2,7 @@ package com.will.asgard.loki.model.concurrency.chapter3;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-02 10:16 下午
  * @Version 1.0
  */

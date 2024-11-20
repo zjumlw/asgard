@@ -3,9 +3,6 @@ package com.will.asgard.algo.leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.will.asgard.algo.leetcode.TreeNode;
-import com.will.asgard.algo.leetcode.TreeNodeUtil;
-
 
 /**
  * @Description
@@ -28,7 +25,7 @@ import com.will.asgard.algo.leetcode.TreeNodeUtil;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/path-sum
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-07-07 11:19 下午
  * @Version 1.0
  */
@@ -84,6 +81,7 @@ public class Problem112 {
     public static void main(String[] args) {
         String data = "5,4,11,null,null,null,8,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
+        TreeNodeUtil.printTree(root);
         String str = TreeNodeUtil.serialize(root);
         System.out.println(str);
 

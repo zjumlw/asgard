@@ -5,7 +5,7 @@ package com.will.asgard.loki.model.effective.builder;
 /**
  * @ClassName NutritioniFacts
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-21 11:50
  * @Version 1.0
  **/

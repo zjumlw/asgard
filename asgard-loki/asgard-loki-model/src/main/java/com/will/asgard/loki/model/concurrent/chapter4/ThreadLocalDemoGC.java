@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 /**
  * @ClassName ThreadLocalDemoGC
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-09 01:26
  * @Version 1.0
  **/

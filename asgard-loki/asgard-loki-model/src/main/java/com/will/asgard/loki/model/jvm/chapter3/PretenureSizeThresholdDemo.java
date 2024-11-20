@@ -5,7 +5,7 @@ package com.will.asgard.loki.model.jvm.chapter3;
  * @Description
  * VM Args: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails
  *  -XX:SurvivorRatio=8 -XX:PretenureSizeThreshold=3145728 -XX:+UseSerialGC
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 19:55
  * @Version 1.0
  **/

@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * @ClassName SingletonTest
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-01-21 17:10
  * @Version 1.0
  **/

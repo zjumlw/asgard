@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 /**
  * @ClassName ThreadPoolDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-07 22:32
  * @Version 1.0
  **/

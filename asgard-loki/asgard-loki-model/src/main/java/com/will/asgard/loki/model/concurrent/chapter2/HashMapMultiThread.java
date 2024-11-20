@@ -7,7 +7,7 @@ import com.google.common.collect.Maps;
 /**
  * @ClassName HashMapMultiThread
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-27 02:43
  * @Version 1.0
  **/

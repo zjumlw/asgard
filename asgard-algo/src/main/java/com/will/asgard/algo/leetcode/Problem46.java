@@ -25,7 +25,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 链接：https://leetcode-cn.com/problems/permutations
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Auther maolingwei
+ * @Author zjumlw
  * @Date 2020-09-18 11:32
  * @Version 1.0
  **/
@@ -34,33 +34,40 @@ public class Problem46 {
     private List<List<Integer>> ans = new ArrayList<>();
     private List<Integer> path = new ArrayList<>();
 
+    /**
+     * 时间复杂度 O(n*n!)
+     * 空间复杂度 O(n*n!)
+     * @param nums
+     * @return
+     */
     public List<List<Integer>> permute(int[] nums) {
         if (nums.length == 0) {
             return ans;
         }
+        int len = nums.length;
         boolean[] used = new boolean[nums.length];
-        dfs(nums, 0, used);
+        dfs(nums, len, 0, used);
         return ans;
     }
 
-    private void dfs(int[] nums, int depth, boolean[] used) {
-        int len = nums.length;
+    // Depth First Search
+    private void dfs(int[] nums, int len, int depth, boolean[] used) {
         if (depth == len) {
             ans.add(new ArrayList<>(path));
             return;
         }
 
         for (int i = 0; i < len; i++) {
-            if (!used[i]) {
-                path.add(nums[i]);
-                used[i] = true;
-                System.out.println("递归之前 ==> " + path);
-                dfs(nums, depth + 1, used);
-
-                used[i] = false;
-                path.remove(path.size() - 1);
-                System.out.println("递归之后 ==> " +path);
+            if (used[i]) {
+                continue;
             }
+            // 正操作，添加和标记已用
+            path.add(nums[i]);
+            used[i] = true;
+            dfs(nums, len, depth + 1, used);
+            // 回溯（逆操作）
+            used[i] = false;
+            path.remove(path.size() - 1);
         }
     }
 

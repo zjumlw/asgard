@@ -34,7 +34,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/binary-tree-cameras
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-22 9:41 下午
  * @Version 1.0
  */
@@ -94,7 +94,7 @@ public class Problem968 {
 
         String data = "0,0,0,null,null,0,null,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int num = problem968.minCameraCover(root);
         System.out.println(num);

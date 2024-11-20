@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.interview.jdk;
 /**
  * @ClassName InterfaceA
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-03 17:26
  * @Version 1.0
  **/

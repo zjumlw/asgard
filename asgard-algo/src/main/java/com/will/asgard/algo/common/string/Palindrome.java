@@ -15,7 +15,7 @@ package com.will.asgard.algo.common.string;
  *
  * 输入: "race a car"
  * 输出: false
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-15 01:34
  * @Version 1.0
  **/

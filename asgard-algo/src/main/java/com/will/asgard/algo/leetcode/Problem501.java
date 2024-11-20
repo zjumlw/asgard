@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
+
 /**
  * @Description
  * 给定一个有相同值的二叉搜索树（BST），找出 BST 中的所有众数（出现频率最高的元素）。
@@ -32,7 +34,7 @@ import java.util.Map;
  * 链接：https://leetcode-cn.com/problems/find-mode-in-binary-search-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-24 10:45 下午
  * @Version 1.0
  */
@@ -139,7 +141,7 @@ public class Problem501 {
         Problem501 problem501 = new Problem501();
         String data = "1,null,2,2,null,null,null";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         int[] ans = problem501.findModeV2(root);
         ArrayUtil.printArray(ans);

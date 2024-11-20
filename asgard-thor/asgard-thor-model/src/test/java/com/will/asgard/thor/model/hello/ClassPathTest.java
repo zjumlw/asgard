@@ -8,7 +8,7 @@ import org.junit.Test;
  * @Description 尽量使用URI形式的绝对路径资源。它可以很容易的转变为URI，URL，File对象
  *   尽量使用相对classpath的相对路径。不要使用绝对路径。
  *   绝对不要使用硬编码的绝对路径。因为，我们完全可以使用ClassLoader类的getResource（""）方法得到当前classpath的绝对路径。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-08-08 6:34 下午
  * @Version 1.0
  */

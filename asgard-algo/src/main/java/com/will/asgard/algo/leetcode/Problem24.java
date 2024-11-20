@@ -1,7 +1,6 @@
 package com.will.asgard.algo.leetcode;
 
-import com.will.asgard.algo.leetcode.ListNode;
-import com.will.asgard.algo.leetcode.ListNodeUtil;
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
 
 /**
  * @Description
@@ -18,7 +17,7 @@ import com.will.asgard.algo.leetcode.ListNodeUtil;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/swap-nodes-in-pairs
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-06-25 9:15 下午
  * @Version 1.0
  */
@@ -56,7 +55,7 @@ public class Problem24 {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int[] arr = new int[]{1, 2, 3, 4, 5};
         ListNode head = ListNodeUtil.initList(arr);
         ListNodeUtil.printList(head);
         head = swapPairsV2(head);

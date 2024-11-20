@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.dp;
 /**
  * @ClassName CoinCharge
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-09 00:34
  * @Version 1.0
  **/

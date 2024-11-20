@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * @ClassName Singleton
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-09 20:07
  * @Version 1.0
  **/

@@ -25,66 +25,57 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/binary-tree-inorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Auther maolingwei
+ * @Author zjumlw
  * @Date 2020-09-14 12:01
  * @Version 1.0
  **/
 public class Problem94 {
 
     /**
-     * 递归的方法
+     * 1. 递归的方法
+     * 时间复杂度 O(n)，n 为二叉树节点的个数。遍历中每个节点会被访问一次且只会被访问一次。
+     * 空间复杂度 O(n)，空间复杂度取决于递归的栈深度，当二叉树为一条链的情况下，会达到 O(n) 的级别。
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        helper(ans, root);
+        inorder(ans, root);
         return ans;
     }
 
-    public void helper(List<Integer> ans, TreeNode root) {
+    public void inorder(List<Integer> ans, TreeNode root) {
+        // 递归退出条件
         if (root == null) {
             return;
         }
-        if (root.left != null) {
-            helper(ans, root.left);
-        }
+        // 递归遍历 root 的左子树
+        inorder(ans, root.left);
+        // 将 root 加入答案
         ans.add(root.val);
-        if (root.right != null) {
-            helper(ans, root.right);
-        }
+        // 递归遍历 root 的右子树
+        inorder(ans, root.right);
     }
 
     /**
-     * 迭代的方法
+     * 2. 迭代的方法
+     *   迭代与递归是等价的，区别是递归隐式地维护了一个栈，迭代要显式地将这个栈模拟出来。
      */
     public List<Integer> inorderTraversalV2(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if (root == null) {
-            return ans;
-        }
-
-        TreeNode node = root;
         Deque<TreeNode> stack = new LinkedList<>();
-        while (node != null || !stack.isEmpty()) {
-            while (node != null) {
-                stack.push(node);
-                node = node.left;
+        // 当前节点不为 null 或者栈不为空时，循环继续
+        while (root != null || !stack.isEmpty()) {
+            // 当前节点不为 null，不断 push 节点和左子节点到栈中
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
             }
-            node = stack.pop();
-            ans.add(node.val);
-            node = node.right;
+            // pop 出最左下的子节点
+            root = stack.pop();
+            // 加入到结果中
+            ans.add(root.val);
+            // 左边的子节点已经遍历过了，需要再遍历右边的子节点
+            root = root.right;
         }
         return ans;
-    }
-
-    public static void main(String[] args) {
-        Problem94 problem94 = new Problem94();
-        String data = "1,null,2,3,null,null,null";
-        TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
-        List<Integer> ans = problem94.inorderTraversal(root);
-        System.out.println(ans);
-
-        List<Integer> ans2 = problem94.inorderTraversalV2(root);
-        System.out.println(ans2);
     }
 }

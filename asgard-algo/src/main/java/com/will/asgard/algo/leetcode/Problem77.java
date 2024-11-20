@@ -6,7 +6,7 @@ import java.util.List;
 import com.will.asgard.common.util.GsonUtil;
 
 /**
- * @Description
+ * @Description 77. 组合 medium
  * 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
  *
  * 示例:
@@ -25,7 +25,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/combinations
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-08 2:16 上午
  * @Version 1.0
  */

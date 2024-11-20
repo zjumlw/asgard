@@ -12,7 +12,7 @@
   <title>Create Url</title>
 </head>
 <body>
-<c:url value="https://www.xiaomi.cn" var="urlinfo">
+<c:url value="https://www.baidu.com" var="urlinfo">
   <c:param name="logo" value="mi"/>
 </c:url>
 <a href="${urlinfo}">new_url</a>

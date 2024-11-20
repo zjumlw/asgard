@@ -27,26 +27,29 @@ import java.util.Arrays;
  * 提示：
  *
  * 1 <= nums.length <= 2500
- * -104 <= nums[i] <= 104
+ * -10^4 <= nums[i] <= 10^4
  *  
  *
  * 进阶：
  *
- * 你可以设计时间复杂度为 O(n2) 的解决方案吗？
- * 你能将算法的时间复杂度降低到 O(n log(n)) 吗?
+ * 你可以设计时间复杂度为 O(n^2) 的解决方案吗？
+ * 你能将算法的时间复杂度降低到 O(nlog(n)) 吗?
  *
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/longest-increasing-subsequence
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-03-05 下午5:20
  * @Version 1.0
  */
 public class Problem300 {
 
     /**
-     * 动态规划，dp[i]由dp[j]而来，dp[i] = Math.max(dp[j]) + 1，0 <= j < i且num[j] < num[i]
+     * 动态规划，dp[i] 表示以 nums[i] 为结尾的上升子序列的长度。这是一种"无后效性"的思考方法。
+     * dp[i]由dp[j]而来，dp[i] = Math.max(dp[j]) + 1，0 <= j < i且num[j] < num[i]
+     * 时间复杂度 O(n^2)
+     * 空间复杂度 O(n)
      */
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
@@ -70,36 +73,40 @@ public class Problem300 {
 
     /**
      * 贪心算法 + 二分
+     * 思路：记录在长度固定的情况下，结尾最小的那个元素的数值
      */
     public int lengthOfLISV2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
+        int n = nums.length;
+        if (n <= 1) {
+            return n;
         }
-        int length = nums.length;
-        int[] d = new int[length + 1];
-        int len = 1;
-        d[len] = nums[0];
-        for (int i = 1; i < length; i++) {
-            if (nums[i] > d[len]) {
-                len = len + 1;
-                d[len] = nums[i];
-            } else {
-                int l = 1;
-                int r = len;
-                int pos = 0;
-                while (l <= r) {
-                    int mid = l + (r - l) / 2;
-                    if (d[mid] < nums[i]) {
-                        pos = mid;
-                        l = mid + 1;
+
+        // tail[i] 表示长度为 i+1 的所有上升子序列的结尾的最小值
+        // tail 数组是一个严格上升的有序数组
+        int[] tail = new int[n];
+        tail[0] = nums[0];
+        int end = 0;
+        for (int i = 1; i < n; i++) {
+            // 当前数大于tail最后的元素，直接加到最后面
+            if (nums[i] > tail[end]) {
+                end++;
+                tail[end] = nums[i];
+            } else { // 二分查找第一个大于等于nums[i]的数
+                int left = 0;
+                int right = end;
+                while(left < right) {
+                    int mid = left + (right - left)/2;
+                    if (tail[mid] < nums[i]) {
+                        left = mid + 1;
                     } else {
-                        r = mid - 1;
+                        right = mid;
                     }
                 }
-                d[pos + 1] = nums[i];
+                // 将大的数换成较小的数，这样就有可能组成更长的子序列。贪心的思想。
+                tail[left] = nums[i];
             }
         }
-        return len;
+        return end + 1;
     }
 
     public static void main(String[] args) {

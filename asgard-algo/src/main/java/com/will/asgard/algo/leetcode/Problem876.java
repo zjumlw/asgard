@@ -1,5 +1,7 @@
 package com.will.asgard.algo.leetcode;
 
+import com.will.asgard.algo.leetcode.util.ListNodeUtil;
+
 /**
  * @Description
  * 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。
@@ -30,7 +32,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/middle-of-the-linked-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-10-20 12:46 上午
  * @Version 1.0
  */

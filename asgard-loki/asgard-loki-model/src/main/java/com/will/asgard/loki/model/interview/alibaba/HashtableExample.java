@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @ClassName HashTableExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-26 14:41
  * @Version 1.0
  **/

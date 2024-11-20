@@ -37,7 +37,7 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-27 12:09 上午
  * @Version 1.0
  */
@@ -113,7 +113,7 @@ public class Problem235 {
         Problem235 problem235 = new Problem235();
         String data = "6,2,0,n,n,4,3,n,n,5,n,n,8,7,n,n,9,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         TreeNode p = new TreeNode(3);
         TreeNode q = new TreeNode(5);

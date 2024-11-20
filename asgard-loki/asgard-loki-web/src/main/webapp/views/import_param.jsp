@@ -14,7 +14,7 @@
 <body>
 <c:import url="param.jsp" charEncoding="utf-8">
   <c:param name="name" value="Mao"/>
-  <c:param name="url" value="https://www.xiaomi.cn"/>
+  <c:param name="url" value="https://www.baidu.com"/>
 </c:import>
 </body>
 </html>

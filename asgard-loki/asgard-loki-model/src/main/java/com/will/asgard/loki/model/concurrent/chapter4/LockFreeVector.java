@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 /**
  * @ClassName LockFreeVector
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-09 14:45
  * @Version 1.0
  **/

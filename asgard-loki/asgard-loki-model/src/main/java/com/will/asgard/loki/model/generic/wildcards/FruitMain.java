@@ -8,7 +8,7 @@ import com.will.asgard.common.util.GsonUtil;
 /**
  * @ClassName FruitMain
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-26 15:03
  * @Version 1.0
  **/

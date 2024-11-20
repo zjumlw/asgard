@@ -9,7 +9,7 @@ import com.will.asgard.common.util.GsonUtil;
 /**
  * @ClassName Stack
  * @Description Generic stack
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 22:47
  * @Version 1.0
  **/

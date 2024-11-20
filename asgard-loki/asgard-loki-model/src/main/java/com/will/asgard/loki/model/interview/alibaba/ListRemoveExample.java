@@ -10,7 +10,7 @@ import com.will.asgard.common.util.GsonUtil;
 /**
  * @ClassName ListRemoveExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-03 17:04
  * @Version 1.0
  **/

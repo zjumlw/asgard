@@ -1,6 +1,6 @@
 package com.will.asgard.algo.common.sort;
 
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description 熟悉
@@ -12,9 +12,10 @@ import com.will.asgard.algo.leetcode.ArrayUtil;
  * 时间复杂度：平均O(n2) 最好O(n) 最差O(n2)
  * 空间复杂度：O(1)
  * 原地排序
- * 稳定：在接近有序的情况下，表现优异
+ * 稳定
+ * 在接近有序的情况下，表现优异
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-19 9:14 下午
  * @Version 1.0
  */
@@ -30,6 +31,7 @@ public class InsertionSort {
 
         int len = nums.length;
         for (int i = 1; i < len; i++) {
+            // 内循环从尾到头
             for (int j = i; j > 0; j--) {
                 // 前面的数严格大于后面的数，才会进行交换
                 if (nums[j - 1] > nums[j]) {
@@ -63,10 +65,11 @@ public class InsertionSort {
             // 注意边界
             // 可以提前终止内层循环（体现在 nums[j - 1] > temp 不满足时）
             // 在数组「几乎有序」的前提下，「插入排序」的时间复杂度可以达到 O(n) ，因此「插入排序」可以作为高级排序算法的一个子过程
-            while (j > 0 && nums[j - 1] > temp) {
+            while (j >= 1 && nums[j - 1] > temp) { // 目的：找到第一个小于等于temp的数，插到它后面
                 nums[j] = nums[j - 1];
                 j--;
             }
+            // 循环停止后，nums[j - 1] <= temp 了，nums[j] > temp
             nums[j] = temp;
         }
     }

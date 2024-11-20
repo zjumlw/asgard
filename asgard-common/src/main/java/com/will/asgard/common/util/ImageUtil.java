@@ -1,5 +1,8 @@
 package com.will.asgard.common.util;
 
+import javax.annotation.Nullable;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,22 +12,18 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
 
-import javax.annotation.Nullable;
-import javax.imageio.ImageIO;
-
-import org.springframework.util.Base64Utils;
-
 import com.google.common.base.Preconditions;
 
+import cn.hutool.core.codec.Base64Decoder;
+import cn.hutool.core.codec.Base64Encoder;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import org.springframework.util.Base64Utils;
 
 /**
  * @ClassName ImageUtil
  * @Description rt
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-28 23:53
  * @Version 1.0
  **/
@@ -157,10 +156,35 @@ public class ImageUtil {
 			}
 			inStream.close();
 			byte[] data = outStream.toByteArray();
-			BASE64Encoder encoder = new BASE64Encoder();
-			return encoder.encode(data); //返回Base64编码过的字节数组字符串
+            //返回Base64编码过的字节数组字符串
+            return Base64Encoder.encode(data);
 		} catch (IOException e) {
 			throw new Exception("Failed to get base64 from url", e);
 		}
 	}
+
+    public static BufferedImage rotateImage(BufferedImage originImage, int rotateAngle) {
+        if (rotateAngle <= 0) {
+            return originImage;
+        }
+
+        int originWidth = originImage.getWidth();
+        int originHeight = originImage.getHeight();
+        int fixedWidth = originWidth;
+        int fixedHeight = originHeight;
+
+        if (rotateAngle == 90 || rotateAngle == 270) {
+            fixedWidth = originHeight;
+            fixedHeight = originWidth;
+        }
+
+        Rectangle rectangle = new Rectangle(new Dimension(fixedWidth, fixedHeight));
+        BufferedImage res = new BufferedImage(rectangle.width, rectangle.height, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2 = res.createGraphics();
+        g2.translate((rectangle.width - originWidth) / 2, (rectangle.height - originHeight) / 2);
+        g2.rotate(Math.toRadians(rotateAngle), originWidth / 2, originHeight / 2);
+        g2.drawImage(originImage, null, null);
+
+        return res;
+    }
 }

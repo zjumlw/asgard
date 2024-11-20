@@ -7,7 +7,7 @@ import lombok.Setter;
 /**
  * @ClassName DeadlockExample
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-26 11:23
  * @Version 1.0
  **/

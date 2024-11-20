@@ -9,7 +9,7 @@ import com.will.asgard.common.util.RandomUtil;
 /**
  * @ClassName Consumer
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-10 15:36
  * @Version 1.0
  **/

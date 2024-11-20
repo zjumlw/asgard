@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * @ClassName StopThreadUnsafe
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-23 22:34
  * @Version 1.0
  **/

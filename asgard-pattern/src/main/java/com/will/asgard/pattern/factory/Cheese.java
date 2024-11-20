@@ -1,0 +1,10 @@
+package com.will.asgard.pattern.factory;
+
+/**
+ * 芝士
+ *
+ * @author willmao
+ * @date 2022-12-02 00:34
+ **/
+public abstract class Cheese {
+}

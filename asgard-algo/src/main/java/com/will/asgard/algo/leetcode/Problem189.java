@@ -30,7 +30,7 @@ import java.util.Arrays;
  * 链接：https://leetcode-cn.com/problems/rotate-array
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-01-08 下午2:44
  * @Version 1.0
  */

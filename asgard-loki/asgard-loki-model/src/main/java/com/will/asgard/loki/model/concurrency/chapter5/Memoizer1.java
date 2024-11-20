@@ -7,7 +7,7 @@ import javax.annotation.concurrent.GuardedBy;
 
 /**
  * @Description 用HashMap缓存计算结果，由于对整个compute方法加上了同步，所以可伸缩性差，并发性糟糕
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-10-30 14:56
  * @Version 1.0
  **/

@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * @ClassName HttpClientWithoutPoolTets
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-03-24 16:53
  * @Version 1.0
  **/

@@ -32,7 +32,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 链接：https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-12-24 上午11:00
  * @Version 1.0
  */
@@ -78,7 +78,7 @@ public class Problem103 {
         Problem103 problem103 = new Problem103();
         String data = "3,9,n,n,20,15,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<List<Integer>> ans = problem103.zigzagLevelOrder(root);
         System.out.println(GsonUtil.toJson(ans));

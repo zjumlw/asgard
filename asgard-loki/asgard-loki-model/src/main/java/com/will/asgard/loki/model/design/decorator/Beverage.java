@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.design.decorator;
 /**
  * @ClassName Beverage
  * @Description 饮料
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-25 20:08
  * @Version 1.0
  **/

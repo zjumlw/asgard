@@ -25,7 +25,7 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/binary-tree-preorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-29 12:56 上午
  * @Version 1.0
  */
@@ -110,7 +110,7 @@ public class Problem144 {
         Problem144 problem144 = new Problem144();
         String data = "1,n,2,3,n,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         List<Integer> ans = problem144.preorderTraversal(root);
         System.out.println(ans);

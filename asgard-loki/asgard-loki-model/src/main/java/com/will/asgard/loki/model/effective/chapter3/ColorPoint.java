@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.chapter3;
 /**
  * @ClassName ColorPoint
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-20 13:23
  * @Version 1.0
  **/

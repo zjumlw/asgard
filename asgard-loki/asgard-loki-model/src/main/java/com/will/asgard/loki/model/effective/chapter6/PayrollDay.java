@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.effective.chapter6;
 /**
  * @ClassName PayrollDay
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-03-02 17:59
  * @Version 1.0
  **/

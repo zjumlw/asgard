@@ -1,11 +1,11 @@
 package com.will.asgard.algo.common.topk;
 
 import com.will.asgard.common.util.RandomUtil;
-import com.will.asgard.algo.leetcode.ArrayUtil;
+import com.will.asgard.algo.leetcode.util.ArrayUtil;
 
 /**
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-10 1:34 上午
  * @Version 1.0
  */

@@ -3,7 +3,7 @@ package com.will.asgard.algo.common.other;
 /**
  * @ClassName HammingWeight
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-13 03:13
  * @Version 1.0
  **/

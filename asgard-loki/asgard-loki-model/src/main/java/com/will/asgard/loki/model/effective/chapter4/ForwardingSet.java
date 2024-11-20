@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * @ClassName ForwardingSet
  * @Description Reusable forwarding class
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-25 21:46
  * @Version 1.0
  **/

@@ -15,7 +15,7 @@ import com.will.asgard.common.util.GsonUtil;
  * 2. 如果 n 是5的倍数，输出“Buzz”；
  *
  * 3.如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-13 03:05
  * @Version 1.0
  **/

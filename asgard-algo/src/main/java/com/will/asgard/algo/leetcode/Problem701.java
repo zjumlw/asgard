@@ -48,7 +48,7 @@ package com.will.asgard.algo.leetcode;
  * 链接：https://leetcode-cn.com/problems/insert-into-a-binary-search-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-30 12:09 上午
  * @Version 1.0
  */
@@ -110,9 +110,9 @@ public class Problem701 {
         Problem701 problem701 = new Problem701();
         String data = "4,2,1,n,n,3,n,n,7,n,n";
         TreeNode root = TreeNodeUtil.deserialize(data);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
 
         problem701.insertIntoBST(root, 5);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

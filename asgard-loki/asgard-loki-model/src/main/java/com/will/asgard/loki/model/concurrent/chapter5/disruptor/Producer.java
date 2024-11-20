@@ -7,7 +7,7 @@ import com.lmax.disruptor.RingBuffer;
 /**
  * @ClassName Producer
  * @Description TODO
- * @Auther maolingwei
+ * @Auther zjumlw
  * @Date 2020-04-10 20:06
  * @Version 1.0
  **/

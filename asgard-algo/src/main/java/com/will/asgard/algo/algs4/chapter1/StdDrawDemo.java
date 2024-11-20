@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdDraw;
 /**
  * @ClassName StdDrawDemo
  * @Description TODO
- * @Auther maolingwei
+ * @Author zjumlw
  * @Date 2020-04-26 17:19
  * @Version 1.0
  **/

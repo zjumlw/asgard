@@ -15,9 +15,8 @@
 <body>
 <%
   List<String> all = new ArrayList<>();
-  all.add("www.xiaomi.cn");
-  all.add("www.mi.com");
-  all.add("www.miui.com");
+  all.add("www.baidu.com");
+  all.add("www.163.com");
   request.setAttribute("all", all);
 %>
 <will:present name="all" scope="request">

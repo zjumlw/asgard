@@ -6,7 +6,7 @@ import com.will.asgard.loki.model.design.command.Light;
 /**
  * @ClassName LightOnCommand
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-27 03:28
  * @Version 1.0
  **/

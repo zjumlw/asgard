@@ -31,7 +31,7 @@ import java.util.Queue;
  * 链接：https://leetcode-cn.com/problems/merge-two-binary-trees
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-23 12:27 上午
  * @Version 1.0
  */
@@ -118,9 +118,9 @@ public class Problem617 {
 //        TreeNodeUtil.printTreeNode(t2);
 
         TreeNode ans = problem617.mergeTrees(t1, t2);
-        TreeNodeUtil.printTreeNode(ans);
+        TreeNodeUtil.printTree(ans);
 
         TreeNode ans2 = problem617.mergeTreesV2(t1, t2);
-        TreeNodeUtil.printTreeNode(ans2);
+        TreeNodeUtil.printTree(ans2);
     }
 }

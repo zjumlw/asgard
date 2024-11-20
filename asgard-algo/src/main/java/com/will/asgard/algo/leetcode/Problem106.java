@@ -26,7 +26,7 @@ import java.util.Map;
  * 链接：https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-09-25 9:36 下午
  * @Version 1.0
  */
@@ -74,6 +74,6 @@ public class Problem106 {
         int[] inorder = new int[]{9, 3, 15, 20, 7};
         int[] postorder = new int[]{9, 15, 7, 20, 3};
         TreeNode root = problem106.buildTree(inorder, postorder);
-        TreeNodeUtil.printTreeNode(root);
+        TreeNodeUtil.printTree(root);
     }
 }

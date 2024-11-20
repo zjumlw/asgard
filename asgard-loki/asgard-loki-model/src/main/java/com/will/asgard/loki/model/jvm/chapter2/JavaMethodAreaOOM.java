@@ -20,7 +20,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
  * Exception in thread "main"
  * Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "main"
  *
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-05-01 15:01
  * @Version 1.0
  **/

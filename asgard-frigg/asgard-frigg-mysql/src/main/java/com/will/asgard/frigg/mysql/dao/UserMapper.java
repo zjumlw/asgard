@@ -8,7 +8,7 @@ import com.will.asgard.frigg.model.User;
 /**
  * @Description 使用xml配置开发
  *  resources/mapper/userMapper.xml
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2021-03-13 上午12:36
  * @Version 1.0
  */

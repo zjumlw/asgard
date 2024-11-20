@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 
 /**
  * @Description 双重检查加锁式单例
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-07-25 10:10 下午
  * @Version 1.0
  */

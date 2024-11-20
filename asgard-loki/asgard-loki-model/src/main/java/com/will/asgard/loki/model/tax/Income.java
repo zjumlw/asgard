@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * @ClassName Income
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-07 21:30
  * @Version 1.0
  **/

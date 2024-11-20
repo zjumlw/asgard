@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * @ClassName GenericErasure
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-02-27 18:34
  * @Version 1.0
  **/

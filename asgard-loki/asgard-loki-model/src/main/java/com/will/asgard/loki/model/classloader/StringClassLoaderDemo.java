@@ -3,7 +3,7 @@ package com.will.asgard.loki.model.classloader;
 /**
  * @ClassName StringClassLoaderDemo
  * @Description TODO
- * @Author maolingwei
+ * @Author zjumlw
  * @Date 2020-04-29 23:25
  * @Version 1.0
  **/

@@ -25,7 +25,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <springframework.version>5.2.1.RELEASE</springframework.version>
         <springframework.security.version>5.4.6</springframework.security.version>
-        <apache.logging.log4j.versin>2.12.1</apache.logging.log4j.versin>
+        <apache.logging.log4j.versin>2.14.1</apache.logging.log4j.versin>
         <mysql-connector-java.version>8.0.18</mysql-connector-java.version>
         <mybatis.version>3.5.6</mybatis.version>
         <mybatis-spring.version>2.0.6</mybatis-spring.version>
@@ -167,7 +167,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>4.13.1</version>
                 <scope>test</scope>
             </dependency>
             <!-- log4j2日志依赖 -->
