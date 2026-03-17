@@ -1,14 +1,12 @@
 package com.will.asgard.common.util;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.internal.framed.Header;
 
 /**
  * @Description TODO

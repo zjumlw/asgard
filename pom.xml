@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.sersion>1.8</java.sersion>
-        <commons-lang3.version>3.9</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <springframework.version>5.2.1.RELEASE</springframework.version>
         <springframework.security.version>5.7.12</springframework.security.version>
@@ -151,7 +151,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>20.0</version>
+                <version>33.4.8-jre</version>
             </dependency>
             <!-- spring cloud begin -->
             <dependency>
@@ -162,7 +162,7 @@
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>2.3.1</version>
+                <version>2.10.1</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
