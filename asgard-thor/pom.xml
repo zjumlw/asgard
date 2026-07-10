@@ -17,6 +17,7 @@
         <module>asgard-thor-mysql</module>
         <module>asgard-thor-service</module>
         <module>asgard-thor-web</module>
+        <module>asgard-thor-hammer</module>
     </modules>
 
     <properties>

@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: asgard-thor-hammer
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    root: INFO
+    com.will.asgard.thor.hammer: DEBUG
