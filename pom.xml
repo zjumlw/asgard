@@ -25,7 +25,7 @@
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         
         <!-- Spring 框架版本 -->
-        <springframework.version>5.3.39</springframework.version>
+        <springframework.version>6.2.10</springframework.version>
         <springframework.security.version>5.8.15</springframework.security.version>
         <spring-cloud.version>3.1.9</spring-cloud.version>
         
